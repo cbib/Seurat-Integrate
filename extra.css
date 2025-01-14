@@ -1,0 +1,36 @@
+.row > main {
+  max-width: 80%;
+}
+
+@media only screen and (min-width: 640px) {
+  main + .col-md-3 {
+    margin-left: unset;
+    padding-left: 5rem;
+    max-width: 75%;
+  }
+}
+
+.code {
+  hyphens: none;
+}
+
+main table {
+  display:inline-table;
+}
+
+
+.column-left{
+  float: left;
+  width: 45%;
+  text-align: left;
+}
+/*.column-center{
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}*/
+.column-right{
+  float: right;
+  width: 45%;
+  text-align: right;
+}

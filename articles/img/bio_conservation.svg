@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="210mm"
+   viewBox="0 0 210 210"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (1:1.4+202410161351+e7c3feb100)"
+   sodipodi:docname="bio_conservation_2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.73242844"
+     inkscape:cx="309.92789"
+     inkscape:cy="303.10128"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="0.85"
+       markerHeight="0.85"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="0.85"
+       markerHeight="0.85"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path3" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#0000ff;fill-opacity:0.495716;stroke:#483c3c;stroke-width:2.52817"
+       id="circle4"
+       cx="148.95625"
+       cy="31.391659"
+       r="16.685915" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0.451049;stroke:#483c3c;stroke-width:1.68099;stroke-dasharray:none"
+       id="ellipse4"
+       cx="153.14079"
+       cy="23.804173"
+       rx="6.6857548"
+       ry="4.8433371" />
+    <circle
+       style="fill:#0000ff;fill-opacity:0.495716;stroke:#483c3c;stroke-width:2.528;stroke-dasharray:none"
+       id="circle4-2"
+       cx="190.72292"
+       cy="56.579166"
+       r="16.685915" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0.451049;stroke:#483c3c;stroke-width:1.68099;stroke-dasharray:none"
+       id="ellipse4-4"
+       cx="194.90746"
+       cy="48.99168"
+       rx="6.6857548"
+       ry="4.8433371" />
+    <circle
+       style="fill:#0000ff;fill-opacity:0.495716;stroke:#483c3c;stroke-width:2.52817"
+       id="circle4-1"
+       cx="187.01875"
+       cy="19.5375"
+       r="16.685915" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0.451049;stroke:#483c3c;stroke-width:1.68099;stroke-dasharray:none"
+       id="ellipse4-2"
+       cx="191.20329"
+       cy="11.950013"
+       rx="6.6857548"
+       ry="4.8433371" />
+    <circle
+       style="fill:#00ff00;fill-opacity:0.495716;stroke:#483c3c;stroke-width:2.4507"
+       id="circle2"
+       cx="69.647919"
+       cy="179.02917"
+       r="16.174646" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0.451049;stroke:#483c3c;stroke-width:1.62948;stroke-dasharray:none"
+       id="ellipse2"
+       cx="65.333817"
+       cy="185.53342"
+       rx="6.4808989"
+       ry="4.6949339" />
+    <circle
+       style="fill:#00ff00;fill-opacity:0.495716;stroke:#483c3c;stroke-width:2.4507"
+       id="circle2-6"
+       cx="107.17918"
+       cy="192.375"
+       r="16.174646" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0.451049;stroke:#483c3c;stroke-width:1.62948;stroke-dasharray:none"
+       id="ellipse2-6"
+       cx="102.86507"
+       cy="198.87924"
+       rx="6.4808989"
+       ry="4.6949339" />
+    <circle
+       style="fill:#00ff00;fill-opacity:0.495716;stroke:#483c3c;stroke-width:2.4507"
+       id="circle2-6-5"
+       cx="27.983328"
+       cy="192.55415"
+       r="16.174646" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0.451049;stroke:#483c3c;stroke-width:1.62948;stroke-dasharray:none"
+       id="ellipse2-6-2"
+       cx="23.669218"
+       cy="199.0584"
+       rx="6.4808989"
+       ry="4.6949339" />
+    <circle
+       style="fill:#00ff00;fill-opacity:0.495716;stroke:#483c3c;stroke-width:2.4507"
+       id="circle2-6-9"
+       cx="24.808329"
+       cy="163.45"
+       r="16.174646" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0.451049;stroke:#483c3c;stroke-width:1.62948;stroke-dasharray:none"
+       id="ellipse2-6-9"
+       cx="20.494219"
+       cy="169.95424"
+       rx="6.4808989"
+       ry="4.6949339" />
+    <circle
+       style="fill:#00ff00;fill-opacity:0.495716;stroke:#483c3c;stroke-width:2.4507"
+       id="circle2-6-58"
+       cx="32.745827"
+       cy="125.34999"
+       r="16.174646" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0.451049;stroke:#483c3c;stroke-width:1.62948;stroke-dasharray:none"
+       id="ellipse2-6-5"
+       cx="28.431719"
+       cy="131.85423"
+       rx="6.4808989"
+       ry="4.6949339" />
+    <circle
+       style="fill:#00ff00;fill-opacity:0.495716;stroke:#483c3c;stroke-width:2.4507"
+       id="circle2-6-8"
+       cx="65.024994"
+       cy="145.45833"
+       r="16.174646" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0.451049;stroke:#483c3c;stroke-width:1.62948;stroke-dasharray:none"
+       id="ellipse2-6-95"
+       cx="60.710884"
+       cy="151.96257"
+       rx="6.4808989"
+       ry="4.6949339" />
+    <circle
+       style="fill:#00ff00;fill-opacity:0.495716;stroke:#483c3c;stroke-width:2.4507"
+       id="circle2-6-6"
+       cx="107.35833"
+       cy="159.48125"
+       r="16.174646" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0.451049;stroke:#483c3c;stroke-width:1.62948;stroke-dasharray:none"
+       id="ellipse2-6-0"
+       cx="103.04422"
+       cy="165.98549"
+       rx="6.4808989"
+       ry="4.6949339" />
+    <ellipse
+       style="fill:none;fill-opacity:0.85;stroke:#006500;stroke-width:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path1"
+       cx="35.016663"
+       cy="195.79999"
+       rx="110.55"
+       ry="96.433334" />
+    <ellipse
+       style="fill:none;fill-opacity:0.85;stroke:#000084;stroke-width:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path1-1"
+       cx="164.10355"
+       cy="136.78464"
+       rx="110.55"
+       ry="96.433334"
+       transform="rotate(-46.043699)" />
+    <path
+       style="fill:none;fill-opacity:0.85;stroke:#000000;stroke-width:3;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker3);marker-end:url(#ConcaveTriangle)"
+       d="M 91.41629,37.024143 62.44963,76.624147"
+       id="path2" />
+    <path
+       style="fill:none;fill-opacity:0.85;stroke:#000000;stroke-width:3;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker3);marker-end:url(#ConcaveTriangle)"
+       d="m 185.57558,102.8344 -28.96666,39.6"
+       id="path4" />
+  </g>
+</svg>
