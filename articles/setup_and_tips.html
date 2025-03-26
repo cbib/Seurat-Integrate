@@ -73,7 +73,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Generic advice about setting up and using conda environments</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/cbib/Seurat-Integrate/blob/HEAD/vignettes/setup_and_tips.Rmd" class="external-link"><code>vignettes/setup_and_tips.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/cbib/Seurat-Integrate/blob/main/vignettes/setup_and_tips.Rmd" class="external-link"><code>vignettes/setup_and_tips.Rmd</code></a></small>
       <div class="d-none name"><code>setup_and_tips.Rmd</code></div>
     </div>
 
@@ -471,8 +471,8 @@ long.</p>
 <p>It has a unexpected side-effect. It slows down
 <code>CCAIntegration</code> and <code>RPCAIntegration</code> a lot when
 they are input with Seurat objects normalised with
-<code>SCTransform()</code>. Indeed, they both call
-<code>FindIntegrationAnchors()</code> -&gt; <code><a href="https://rdrr.io/r/base/merge.html" class="external-link">merge()</a></code> -&gt;
+<code><a href="https://satijalab.org/seurat/reference/SCTransform.html" class="external-link">SCTransform()</a></code>. Indeed, they both call
+<code><a href="https://satijalab.org/seurat/reference/FindIntegrationAnchors.html" class="external-link">FindIntegrationAnchors()</a></code> -&gt; <code><a href="https://rdrr.io/r/base/merge.html" class="external-link">merge()</a></code> -&gt;
 <code>merge.SCTAssay()</code>. The latter performs a <code>grep</code>
 on the previous calls (output of <code><a href="https://rdrr.io/r/base/sys.parent.html" class="external-link">sys.calls()</a></code>). In a
 multisession future, big objects such as the Seurat Assay object are

@@ -1,4 +1,4 @@
-pandoc: '3.2'
+pandoc: 3.1.11
 pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
@@ -7,7 +7,7 @@ articles:
   memo_score: memo_score.html
   setup_and_tips: setup_and_tips.html
   SeuratIntegrate: SeuratIntegrate.html
-last_built: 2025-01-14T23:01Z
+last_built: 2025-03-26T17:11Z
 urls:
   reference: https://cbib.github.io/Seurat-Integrate/reference
   article: https://cbib.github.io/Seurat-Integrate/articles

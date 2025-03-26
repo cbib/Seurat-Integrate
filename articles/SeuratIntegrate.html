@@ -73,7 +73,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Introduction to SeuratIntegrate</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/cbib/Seurat-Integrate/blob/HEAD/vignettes/SeuratIntegrate.Rmd" class="external-link"><code>vignettes/SeuratIntegrate.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/cbib/Seurat-Integrate/blob/main/vignettes/SeuratIntegrate.Rmd" class="external-link"><code>vignettes/SeuratIntegrate.Rmd</code></a></small>
       <div class="d-none name"><code>SeuratIntegrate.Rmd</code></div>
     </div>
 
@@ -391,7 +391,7 @@ have been updated:</p>
 <p>We also want to make sure we have a conda environment with a
 umap-learn version compatible with Seurat:</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">reticulate</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/reticulate/reference/conda-tools.html" class="external-link">conda_create</a></span><span class="op">(</span><span class="st">'umap_0.5.4'</span>, packages <span class="op">=</span> <span class="st">'umap=0.5.4'</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">reticulate</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/reticulate/reference/conda-tools.html" class="external-link">conda_create</a></span><span class="op">(</span><span class="st">'umap_0.5.4'</span>, packages <span class="op">=</span> <span class="st">'umap-learn=0.5.4'</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="preprocessing-with-seurat">Preprocessing with Seurat<a class="anchor" aria-label="anchor" href="#preprocessing-with-seurat"></a>
@@ -405,16 +405,16 @@ designating “ID_sample” as the batch variable.</p>
 <code class="sourceCode R"><span><span class="va">batch.var</span> <span class="op">&lt;-</span> <span class="st">"ID_sample"</span>  <span class="co"># save for later</span></span>
 <span></span>
 <span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/split.html" class="external-link">split</a></span><span class="op">(</span><span class="va">liver_small</span>, f <span class="op">=</span> <span class="va">liver_small</span><span class="op">$</span><span class="va">ID_sample</span><span class="op">)</span></span>
-<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu">SCTransform</span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span></span>
+<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/SCTransform.html" class="external-link">SCTransform</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu">RunPCA</span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span></span>
-<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu">FindNeighbors</span><span class="op">(</span><span class="va">liver_small</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, k.param <span class="op">=</span> <span class="fl">15L</span><span class="op">)</span></span>
-<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu">RunUMAP</span><span class="op">(</span><span class="va">liver_small</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, n.neighbors <span class="op">=</span> <span class="fl">15</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/RunPCA.html" class="external-link">RunPCA</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span></span>
+<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/FindNeighbors.html" class="external-link">FindNeighbors</a></span><span class="op">(</span><span class="va">liver_small</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, k.param <span class="op">=</span> <span class="fl">15L</span><span class="op">)</span></span>
+<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/RunUMAP.html" class="external-link">RunUMAP</a></span><span class="op">(</span><span class="va">liver_small</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, n.neighbors <span class="op">=</span> <span class="fl">15</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">DimPlot</span><span class="op">(</span><span class="va">liver_small</span>, group.by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"First_author"</span>, <span class="st">"ID_sample"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://satijalab.org/seurat/reference/DimPlot.html" class="external-link">DimPlot</a></span><span class="op">(</span><span class="va">liver_small</span>, group.by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"First_author"</span>, <span class="st">"ID_sample"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="SeuratIntegrate_files/figure-html/unnamed-chunk-13-1.png" alt="UMAP of unintegrated liver data with cells colored by first author and sample id (i.e. batch)" width="864"></p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">DimPlot</span><span class="op">(</span><span class="va">liver_small</span>, group.by <span class="op">=</span> <span class="va">cell.var</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://satijalab.org/seurat/reference/DimPlot.html" class="external-link">DimPlot</a></span><span class="op">(</span><span class="va">liver_small</span>, group.by <span class="op">=</span> <span class="va">cell.var</span><span class="op">)</span></span></code></pre></div>
 <p><img src="SeuratIntegrate_files/figure-html/unnamed-chunk-14-1.png" alt="UMAP of unintegrated liver data with cells colored by cell type label" width="480"></p>
 </div>
 <div class="section level2">
@@ -488,16 +488,16 @@ several scores cannot be computed on knn graphs, hence knn graph outputs
 <p>Below is a summary for each output type (bracketed steps are not
 always necessary):</p>
 <ul>
-<li>corrected counts: [<code>ScaleData()</code>] -&gt;
-<code>RunPCA()</code> -&gt; [<code>FindNeighbors()</code> -&gt;
+<li>corrected counts: [<code><a href="https://satijalab.org/seurat/reference/ScaleData.html" class="external-link">ScaleData()</a></code>] -&gt;
+<code><a href="https://satijalab.org/seurat/reference/RunPCA.html" class="external-link">RunPCA()</a></code> -&gt; [<code><a href="https://satijalab.org/seurat/reference/FindNeighbors.html" class="external-link">FindNeighbors()</a></code> -&gt;
 <code><a href="../reference/FindOptimalClusters.html">FindOptimalClusters()</a></code>]</li>
-<li>Dimension reduction: [<code>RunPCA()</code>] -&gt;
-[<code>FindNeighbors()</code> -&gt;
+<li>Dimension reduction: [<code><a href="https://satijalab.org/seurat/reference/RunPCA.html" class="external-link">RunPCA()</a></code>] -&gt;
+[<code><a href="https://satijalab.org/seurat/reference/FindNeighbors.html" class="external-link">FindNeighbors()</a></code> -&gt;
 <code><a href="../reference/FindOptimalClusters.html">FindOptimalClusters()</a></code>]</li>
 <li>knn graph: [<code><a href="../reference/FindOptimalClusters.html">FindOptimalClusters()</a></code>]</li>
 </ul>
 <p>Here, we will use <code><a href="../reference/SymmetrizeKnn.html">SymmetrizeKnn()</a></code> between
-<code>FindNeighbors()</code> and <code><a href="../reference/FindOptimalClusters.html">FindOptimalClusters()</a></code>
+<code><a href="https://satijalab.org/seurat/reference/FindNeighbors.html" class="external-link">FindNeighbors()</a></code> and <code><a href="../reference/FindOptimalClusters.html">FindOptimalClusters()</a></code>
 because <code>return.neighbor = TRUE</code>. This is useful to keep the
 distances between cells in the <code>KNN</code> graph. Although not
 compulsory, this is used to stay in line with BBKNN’s output. To prevent
@@ -506,12 +506,12 @@ singletons, we “<em>symmetrize</em>” the matrix which makes the graph
 “undirected”.</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># corrected counts outputs</span></span>
-<span><span class="fu">DefaultAssay</span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"combat.reconstructed"</span></span>
-<span><span class="fu">VariableFeatures</span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu">VariableFeatures</span><span class="op">(</span><span class="va">liver_small</span><span class="op">[[</span><span class="st">"SCT"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span>
-<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu">ScaleData</span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://mojaveazure.github.io/seurat-object/reference/DefaultAssay.html" class="external-link">DefaultAssay</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"combat.reconstructed"</span></span>
+<span><span class="fu"><a href="https://mojaveazure.github.io/seurat-object/reference/VariableFeatures.html" class="external-link">VariableFeatures</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mojaveazure.github.io/seurat-object/reference/VariableFeatures.html" class="external-link">VariableFeatures</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">[[</span><span class="st">"SCT"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/ScaleData.html" class="external-link">ScaleData</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu">RunPCA</span><span class="op">(</span><span class="va">liver_small</span>, npcs <span class="op">=</span> <span class="fl">50L</span>, reduction.name <span class="op">=</span> <span class="st">"pca.combat"</span><span class="op">)</span></span>
-<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu">FindNeighbors</span><span class="op">(</span><span class="va">liver_small</span>, reduction <span class="op">=</span> <span class="st">"pca.combat"</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>,</span>
+<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/RunPCA.html" class="external-link">RunPCA</a></span><span class="op">(</span><span class="va">liver_small</span>, npcs <span class="op">=</span> <span class="fl">50L</span>, reduction.name <span class="op">=</span> <span class="st">"pca.combat"</span><span class="op">)</span></span>
+<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/FindNeighbors.html" class="external-link">FindNeighbors</a></span><span class="op">(</span><span class="va">liver_small</span>, reduction <span class="op">=</span> <span class="st">"pca.combat"</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>,</span>
 <span>                     return.neighbor <span class="op">=</span> <span class="cn">TRUE</span>, graph.name <span class="op">=</span> <span class="st">"knn.combat"</span><span class="op">)</span></span>
 <span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/SymmetrizeKnn.html">SymmetrizeKnn</a></span><span class="op">(</span><span class="va">liver_small</span>, graph.name <span class="op">=</span> <span class="st">"knn.combat"</span><span class="op">)</span></span>
 <span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/FindOptimalClusters.html">FindOptimalClusters</a></span><span class="op">(</span><span class="va">liver_small</span>, graph.name <span class="op">=</span> <span class="st">"knn.combat_symmetric"</span>,</span>
@@ -519,10 +519,10 @@ singletons, we “<em>symmetrize</em>” the matrix which makes the graph
 <span>                           cell.var <span class="op">=</span> <span class="va">cell.var</span>,</span>
 <span>                           optimisation.metric <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"nmi"</span>, <span class="st">"ari"</span><span class="op">)</span><span class="op">)</span> <span class="co"># default, compute both</span></span>
 <span></span>
-<span><span class="fu">DefaultAssay</span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"SCT"</span></span></code></pre></div>
+<span><span class="fu"><a href="https://mojaveazure.github.io/seurat-object/reference/DefaultAssay.html" class="external-link">DefaultAssay</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"SCT"</span></span></code></pre></div>
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># dimension reduction outputs</span></span>
-<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu">FindNeighbors</span><span class="op">(</span><span class="va">liver_small</span>, reduction <span class="op">=</span> <span class="st">"pca"</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, k.param <span class="op">=</span> <span class="fl">20L</span>,</span>
+<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/FindNeighbors.html" class="external-link">FindNeighbors</a></span><span class="op">(</span><span class="va">liver_small</span>, reduction <span class="op">=</span> <span class="st">"pca"</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, k.param <span class="op">=</span> <span class="fl">20L</span>,</span>
 <span>                     return.neighbor <span class="op">=</span> <span class="cn">TRUE</span>, graph.name <span class="op">=</span> <span class="st">"knn.unintegrated"</span><span class="op">)</span></span>
 <span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/SymmetrizeKnn.html">SymmetrizeKnn</a></span><span class="op">(</span><span class="va">liver_small</span>, graph.name <span class="op">=</span> <span class="st">"knn.unintegrated"</span><span class="op">)</span></span>
 <span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/FindOptimalClusters.html">FindOptimalClusters</a></span><span class="op">(</span><span class="va">liver_small</span>, graph.name <span class="op">=</span> <span class="st">"knn.unintegrated_symmetric"</span>,</span>
@@ -530,7 +530,7 @@ singletons, we “<em>symmetrize</em>” the matrix which makes the graph
 <span>                           cell.var <span class="op">=</span> <span class="va">cell.var</span><span class="op">)</span></span>
 <span></span>
 <span></span>
-<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu">FindNeighbors</span><span class="op">(</span><span class="va">liver_small</span>, reduction <span class="op">=</span> <span class="st">"harmony"</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>,</span>
+<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/FindNeighbors.html" class="external-link">FindNeighbors</a></span><span class="op">(</span><span class="va">liver_small</span>, reduction <span class="op">=</span> <span class="st">"harmony"</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>,</span>
 <span>                     return.neighbor <span class="op">=</span> <span class="cn">TRUE</span>, graph.name <span class="op">=</span> <span class="st">"knn.harmony"</span><span class="op">)</span></span>
 <span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/SymmetrizeKnn.html">SymmetrizeKnn</a></span><span class="op">(</span><span class="va">liver_small</span>, graph.name <span class="op">=</span> <span class="st">"knn.harmony"</span><span class="op">)</span></span>
 <span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/FindOptimalClusters.html">FindOptimalClusters</a></span><span class="op">(</span><span class="va">liver_small</span>, graph.name <span class="op">=</span> <span class="st">"knn.harmony_symmetric"</span>, cell.var <span class="op">=</span> <span class="va">cell.var</span>,</span>
@@ -715,59 +715,57 @@ first figure.</p>
 integration’s output, as a complementary (visual) inspection of
 integration performances.</p>
 <div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu">RunUMAP</span><span class="op">(</span><span class="va">liver_small</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, reduction <span class="op">=</span> <span class="st">"pca.combat"</span>,</span>
+<code class="sourceCode R"><span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/RunUMAP.html" class="external-link">RunUMAP</a></span><span class="op">(</span><span class="va">liver_small</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, reduction <span class="op">=</span> <span class="st">"pca.combat"</span>,</span>
 <span>                       reduction.name <span class="op">=</span> <span class="st">"umap.combat"</span><span class="op">)</span></span>
-<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu">RunUMAP</span><span class="op">(</span><span class="va">liver_small</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, reduction <span class="op">=</span> <span class="st">"harmony"</span>,</span>
+<span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/RunUMAP.html" class="external-link">RunUMAP</a></span><span class="op">(</span><span class="va">liver_small</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, reduction <span class="op">=</span> <span class="st">"harmony"</span>,</span>
 <span>                       reduction.name <span class="op">=</span> <span class="st">"umap.harmony"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://future.futureverse.org" class="external-link">future</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://future.futureverse.org/reference/plan.html" class="external-link">plan</a></span><span class="op">(</span><span class="va">multisession</span><span class="op">)</span></span>
 <span><span class="va">liver_small</span> <span class="op"><a href="https://future.futureverse.org/reference/future.html" class="external-link">%&lt;-%</a></span> <span class="op">{</span></span>
 <span>  <span class="fu">reticulate</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/reticulate/reference/use_python.html" class="external-link">use_condaenv</a></span><span class="op">(</span><span class="st">'umap_0.5.4'</span><span class="op">)</span></span>
-<span>  <span class="fu">RunUMAP</span><span class="op">(</span><span class="va">liver_small</span>, graph <span class="op">=</span> <span class="st">"bbknn_ridge.residuals_connectivities"</span>,</span>
+<span>  <span class="fu"><a href="https://satijalab.org/seurat/reference/RunUMAP.html" class="external-link">RunUMAP</a></span><span class="op">(</span><span class="va">liver_small</span>, graph <span class="op">=</span> <span class="st">"bbknn_ridge.residuals_connectivities"</span>,</span>
 <span>          umap.method <span class="op">=</span> <span class="st">"umap-learn"</span>, n.epochs <span class="op">=</span> <span class="fl">200L</span>,</span>
 <span>          reduction.name <span class="op">=</span> <span class="st">"umap.bbknn"</span><span class="op">)</span> <span class="op">}</span></span>
 <span><span class="va">liver_small</span></span>
 <span><span class="fu"><a href="https://future.futureverse.org/reference/plan.html" class="external-link">plan</a></span><span class="op">(</span><span class="va">sequential</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">DimPlot</span><span class="op">(</span><span class="va">liver_small</span>, group.by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">batch.var</span>, <span class="va">cell.var</span><span class="op">)</span>, reduction <span class="op">=</span> <span class="st">"umap"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://satijalab.org/seurat/reference/DimPlot.html" class="external-link">DimPlot</a></span><span class="op">(</span><span class="va">liver_small</span>, group.by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">batch.var</span>, <span class="va">cell.var</span><span class="op">)</span>, reduction <span class="op">=</span> <span class="st">"umap"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
 <img src="SeuratIntegrate_files/figure-html/unnamed-chunk-25-1.png" alt="UMAP of unintegrated data" width="864"><p class="caption">
 UMAP of unintegrated data
 </p>
 </div>
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">DimPlot</span><span class="op">(</span><span class="va">liver_small</span>, group.by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">batch.var</span>, <span class="va">cell.var</span><span class="op">)</span>, reduction <span class="op">=</span> <span class="st">"umap.combat"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://satijalab.org/seurat/reference/DimPlot.html" class="external-link">DimPlot</a></span><span class="op">(</span><span class="va">liver_small</span>, group.by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">batch.var</span>, <span class="va">cell.var</span><span class="op">)</span>, reduction <span class="op">=</span> <span class="st">"umap.combat"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
 <img src="SeuratIntegrate_files/figure-html/unnamed-chunk-26-1.png" alt="UMAP of ComBat integration" width="864"><p class="caption">
 UMAP of ComBat integration
 </p>
 </div>
 <div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">DimPlot</span><span class="op">(</span><span class="va">liver_small</span>, group.by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">batch.var</span>, <span class="va">cell.var</span><span class="op">)</span>, reduction <span class="op">=</span> <span class="st">"umap.bbknn"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://satijalab.org/seurat/reference/DimPlot.html" class="external-link">DimPlot</a></span><span class="op">(</span><span class="va">liver_small</span>, group.by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">batch.var</span>, <span class="va">cell.var</span><span class="op">)</span>, reduction <span class="op">=</span> <span class="st">"umap.bbknn"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
 <img src="SeuratIntegrate_files/figure-html/unnamed-chunk-27-1.png" alt="UMAP of BBKNN integration" width="864"><p class="caption">
 UMAP of BBKNN integration
 </p>
 </div>
 <details><summary><strong>Session info</strong>
-</summary><pre><code><span>  <span class="co">## R version 4.4.2 (2024-10-31)</span></span>
+</summary><pre><code><span>  <span class="co">## R version 4.4.3 (2025-02-28)</span></span>
 <span>  <span class="co">## Platform: x86_64-pc-linux-gnu</span></span>
-<span>  <span class="co">## Running under: Linux Mint 21</span></span>
+<span>  <span class="co">## Running under: Ubuntu 24.04.2 LTS</span></span>
 <span>  <span class="co">## </span></span>
 <span>  <span class="co">## Matrix products: default</span></span>
-<span>  <span class="co">## BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0 </span></span>
-<span>  <span class="co">## LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0</span></span>
+<span>  <span class="co">## BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 </span></span>
+<span>  <span class="co">## LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0</span></span>
 <span>  <span class="co">## </span></span>
 <span>  <span class="co">## locale:</span></span>
-<span>  <span class="co">##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              </span></span>
-<span>  <span class="co">##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    </span></span>
-<span>  <span class="co">##  [5] LC_MONETARY=fr_FR.UTF-8    LC_MESSAGES=en_US.UTF-8   </span></span>
-<span>  <span class="co">##  [7] LC_PAPER=fr_FR.UTF-8       LC_NAME=C                 </span></span>
-<span>  <span class="co">##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            </span></span>
-<span>  <span class="co">## [11] LC_MEASUREMENT=fr_FR.UTF-8 LC_IDENTIFICATION=C       </span></span>
+<span>  <span class="co">##  [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       </span></span>
+<span>  <span class="co">##  [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   </span></span>
+<span>  <span class="co">##  [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          </span></span>
+<span>  <span class="co">## [10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   </span></span>
 <span>  <span class="co">## </span></span>
-<span>  <span class="co">## time zone: Europe/Paris</span></span>
+<span>  <span class="co">## time zone: UTC</span></span>
 <span>  <span class="co">## tzcode source: system (glibc)</span></span>
 <span>  <span class="co">## </span></span>
 <span>  <span class="co">## attached base packages:</span></span>
@@ -775,98 +773,97 @@ UMAP of BBKNN integration
 <span>  <span class="co">## </span></span>
 <span>  <span class="co">## other attached packages:</span></span>
 <span>  <span class="co">## [1] future_1.34.0         dplyr_1.1.4           SeuratIntegrate_0.4.0</span></span>
-<span>  <span class="co">## [4] Seurat_5.1.0          SeuratObject_5.0.2    sp_2.1-4             </span></span>
+<span>  <span class="co">## [4] Seurat_5.2.1          SeuratObject_5.0.2    sp_2.2-0             </span></span>
 <span>  <span class="co">## </span></span>
 <span>  <span class="co">## loaded via a namespace (and not attached):</span></span>
-<span>  <span class="co">##   [1] RcppAnnoy_0.0.22            splines_4.4.2              </span></span>
-<span>  <span class="co">##   [3] later_1.4.1                 batchelor_1.20.0           </span></span>
+<span>  <span class="co">##   [1] RcppAnnoy_0.0.22            splines_4.4.3              </span></span>
+<span>  <span class="co">##   [3] later_1.4.1                 batchelor_1.22.0           </span></span>
 <span>  <span class="co">##   [5] tibble_3.2.1                polyclip_1.10-7            </span></span>
-<span>  <span class="co">##   [7] XML_3.99-0.17               fastDummies_1.7.4          </span></span>
-<span>  <span class="co">##   [9] lifecycle_1.0.4             edgeR_4.2.2                </span></span>
+<span>  <span class="co">##   [7] XML_3.99-0.18               fastDummies_1.7.5          </span></span>
+<span>  <span class="co">##   [9] lifecycle_1.0.4             edgeR_4.4.2                </span></span>
 <span>  <span class="co">##  [11] globals_0.16.3              lattice_0.22-6             </span></span>
-<span>  <span class="co">##  [13] MASS_7.3-61                 backports_1.5.0            </span></span>
-<span>  <span class="co">##  [15] magrittr_2.0.3              limma_3.60.6               </span></span>
+<span>  <span class="co">##  [13] MASS_7.3-64                 backports_1.5.0            </span></span>
+<span>  <span class="co">##  [15] magrittr_2.0.3              limma_3.62.2               </span></span>
 <span>  <span class="co">##  [17] plotly_4.10.4               sass_0.4.9                 </span></span>
 <span>  <span class="co">##  [19] rmarkdown_2.29              jquerylib_0.1.4            </span></span>
 <span>  <span class="co">##  [21] yaml_2.3.10                 httpuv_1.6.15              </span></span>
-<span>  <span class="co">##  [23] glmGamPoi_1.16.0            sctransform_0.4.1          </span></span>
-<span>  <span class="co">##  [25] spam_2.11-0                 spatstat.sparse_3.1-0      </span></span>
-<span>  <span class="co">##  [27] reticulate_1.40.0           DBI_1.2.3                  </span></span>
+<span>  <span class="co">##  [23] glmGamPoi_1.18.0            sctransform_0.4.1          </span></span>
+<span>  <span class="co">##  [25] spam_2.11-1                 spatstat.sparse_3.1-0      </span></span>
+<span>  <span class="co">##  [27] reticulate_1.42.0           DBI_1.2.3                  </span></span>
 <span>  <span class="co">##  [29] cowplot_1.1.3               pbapply_1.7-2              </span></span>
-<span>  <span class="co">##  [31] RColorBrewer_1.1-3          ResidualMatrix_1.14.1      </span></span>
-<span>  <span class="co">##  [33] abind_1.4-8                 zlibbioc_1.50.0            </span></span>
-<span>  <span class="co">##  [35] Rtsne_0.17                  GenomicRanges_1.56.2       </span></span>
-<span>  <span class="co">##  [37] purrr_1.0.2                 BiocGenerics_0.50.0        </span></span>
+<span>  <span class="co">##  [31] RColorBrewer_1.1-3          ResidualMatrix_1.16.0      </span></span>
+<span>  <span class="co">##  [33] abind_1.4-8                 zlibbioc_1.52.0            </span></span>
+<span>  <span class="co">##  [35] Rtsne_0.17                  GenomicRanges_1.58.0       </span></span>
+<span>  <span class="co">##  [37] purrr_1.0.4                 BiocGenerics_0.52.0        </span></span>
 <span>  <span class="co">##  [39] tweenr_2.0.3                rappdirs_0.3.3             </span></span>
-<span>  <span class="co">##  [41] sva_3.52.0                  GenomeInfoDbData_1.2.12    </span></span>
-<span>  <span class="co">##  [43] IRanges_2.38.1              S4Vectors_0.42.1           </span></span>
+<span>  <span class="co">##  [41] sva_3.54.0                  GenomeInfoDbData_1.2.13    </span></span>
+<span>  <span class="co">##  [43] IRanges_2.40.1              S4Vectors_0.44.0           </span></span>
 <span>  <span class="co">##  [45] ggrepel_0.9.6               irlba_2.3.5.1              </span></span>
-<span>  <span class="co">##  [47] listenv_0.9.1               spatstat.utils_3.1-1       </span></span>
-<span>  <span class="co">##  [49] genefilter_1.86.0           goftest_1.2-3              </span></span>
-<span>  <span class="co">##  [51] RSpectra_0.16-2             annotate_1.82.0            </span></span>
-<span>  <span class="co">##  [53] spatstat.random_3.3-2       fitdistrplus_1.2-1         </span></span>
-<span>  <span class="co">##  [55] parallelly_1.41.0           pkgdown_2.1.1              </span></span>
-<span>  <span class="co">##  [57] DelayedMatrixStats_1.26.0   leiden_0.4.3.1             </span></span>
-<span>  <span class="co">##  [59] codetools_0.2-20            DelayedArray_0.30.1        </span></span>
-<span>  <span class="co">##  [61] ggforce_0.4.2               scuttle_1.14.0             </span></span>
-<span>  <span class="co">##  [63] tidyselect_1.2.1            UCSC.utils_1.0.0           </span></span>
-<span>  <span class="co">##  [65] farver_2.1.2                ScaledMatrix_1.12.0        </span></span>
-<span>  <span class="co">##  [67] matrixStats_1.4.1           stats4_4.4.2               </span></span>
-<span>  <span class="co">##  [69] spatstat.explore_3.3-3      jsonlite_1.8.9             </span></span>
-<span>  <span class="co">##  [71] BiocNeighbors_1.22.0        progressr_0.15.1           </span></span>
-<span>  <span class="co">##  [73] ggridges_0.5.6              survival_3.8-3             </span></span>
-<span>  <span class="co">##  [75] systemfonts_1.1.0           tools_4.4.2                </span></span>
-<span>  <span class="co">##  [77] ragg_1.3.3                  ica_1.0-3                  </span></span>
-<span>  <span class="co">##  [79] Rcpp_1.0.13-1               glue_1.8.0                 </span></span>
-<span>  <span class="co">##  [81] gridExtra_2.3               SparseArray_1.4.8          </span></span>
-<span>  <span class="co">##  [83] mgcv_1.9-1                  xfun_0.49                  </span></span>
-<span>  <span class="co">##  [85] MatrixGenerics_1.16.0       GenomeInfoDb_1.40.1        </span></span>
-<span>  <span class="co">##  [87] withr_3.0.2                 fastmap_1.2.0              </span></span>
-<span>  <span class="co">##  [89] digest_0.6.37               rsvd_1.0.5                 </span></span>
-<span>  <span class="co">##  [91] R6_2.5.1                    mime_0.12                  </span></span>
-<span>  <span class="co">##  [93] textshaping_0.4.1           colorspace_2.1-1           </span></span>
-<span>  <span class="co">##  [95] scattermore_1.2             tensor_1.5                 </span></span>
-<span>  <span class="co">##  [97] RSQLite_2.3.9               spatstat.data_3.1-4        </span></span>
-<span>  <span class="co">##  [99] RhpcBLASctl_0.23-42         tidyr_1.3.1                </span></span>
-<span>  <span class="co">## [101] generics_0.1.3              data.table_1.16.4          </span></span>
-<span>  <span class="co">## [103] httr_1.4.7                  htmlwidgets_1.6.4          </span></span>
-<span>  <span class="co">## [105] S4Arrays_1.4.1              uwot_0.2.2                 </span></span>
-<span>  <span class="co">## [107] pkgconfig_2.0.3             gtable_0.3.6               </span></span>
-<span>  <span class="co">## [109] blob_1.2.4                  lmtest_0.9-40              </span></span>
-<span>  <span class="co">## [111] SingleCellExperiment_1.26.0 XVector_0.44.0             </span></span>
-<span>  <span class="co">## [113] htmltools_0.5.8.1           dotCall64_1.2              </span></span>
-<span>  <span class="co">## [115] scales_1.3.0                Biobase_2.64.0             </span></span>
-<span>  <span class="co">## [117] png_0.1-8                   lisi_1.0                   </span></span>
-<span>  <span class="co">## [119] harmony_1.2.3               spatstat.univar_3.1-1      </span></span>
-<span>  <span class="co">## [121] knitr_1.49                  rstudioapi_0.17.1          </span></span>
-<span>  <span class="co">## [123] reshape2_1.4.4              nlme_3.1-166               </span></span>
-<span>  <span class="co">## [125] cachem_1.1.0                zoo_1.8-12                 </span></span>
-<span>  <span class="co">## [127] stringr_1.5.1               KernSmooth_2.23-24         </span></span>
-<span>  <span class="co">## [129] parallel_4.4.2              miniUI_0.1.1.1             </span></span>
-<span>  <span class="co">## [131] AnnotationDbi_1.66.0        desc_1.4.3                 </span></span>
-<span>  <span class="co">## [133] pillar_1.10.0               grid_4.4.2                 </span></span>
-<span>  <span class="co">## [135] vctrs_0.6.5                 RANN_2.6.2                 </span></span>
-<span>  <span class="co">## [137] promises_1.3.2              BiocSingular_1.20.0        </span></span>
-<span>  <span class="co">## [139] distances_0.1.11            beachmat_2.20.0            </span></span>
-<span>  <span class="co">## [141] xtable_1.8-4                cluster_2.1.8              </span></span>
-<span>  <span class="co">## [143] evaluate_1.0.1              locfit_1.5-9.10            </span></span>
-<span>  <span class="co">## [145] cli_3.6.3                   compiler_4.4.2             </span></span>
-<span>  <span class="co">## [147] rlang_1.1.4                 crayon_1.5.3               </span></span>
-<span>  <span class="co">## [149] future.apply_1.11.3         labeling_0.4.3             </span></span>
-<span>  <span class="co">## [151] plyr_1.8.9                  forcats_1.0.0              </span></span>
-<span>  <span class="co">## [153] fs_1.6.5                    stringi_1.8.4              </span></span>
-<span>  <span class="co">## [155] viridisLite_0.4.2           deldir_2.0-4               </span></span>
-<span>  <span class="co">## [157] BiocParallel_1.38.0         Biostrings_2.72.1          </span></span>
-<span>  <span class="co">## [159] munsell_0.5.1               lazyeval_0.2.2             </span></span>
-<span>  <span class="co">## [161] spatstat.geom_3.3-4         Matrix_1.7-1               </span></span>
-<span>  <span class="co">## [163] RcppHNSW_0.6.0              patchwork_1.3.0            </span></span>
-<span>  <span class="co">## [165] bit64_4.5.2                 sparseMatrixStats_1.16.0   </span></span>
-<span>  <span class="co">## [167] ggplot2_3.5.1               statmod_1.5.0              </span></span>
-<span>  <span class="co">## [169] KEGGREST_1.44.1             shiny_1.10.0               </span></span>
-<span>  <span class="co">## [171] SummarizedExperiment_1.34.0 ROCR_1.0-11                </span></span>
-<span>  <span class="co">## [173] memoise_2.0.1               igraph_2.1.2               </span></span>
-<span>  <span class="co">## [175] broom_1.0.7                 bslib_0.8.0                </span></span>
-<span>  <span class="co">## [177] bit_4.5.0.1</span></span></code></pre>
+<span>  <span class="co">##  [47] listenv_0.9.1               spatstat.utils_3.1-3       </span></span>
+<span>  <span class="co">##  [49] genefilter_1.88.0           goftest_1.2-3              </span></span>
+<span>  <span class="co">##  [51] RSpectra_0.16-2             annotate_1.84.0            </span></span>
+<span>  <span class="co">##  [53] spatstat.random_3.3-3       fitdistrplus_1.2-2         </span></span>
+<span>  <span class="co">##  [55] parallelly_1.43.0           pkgdown_2.1.1              </span></span>
+<span>  <span class="co">##  [57] DelayedMatrixStats_1.28.1   codetools_0.2-20           </span></span>
+<span>  <span class="co">##  [59] DelayedArray_0.32.0         ggforce_0.4.2              </span></span>
+<span>  <span class="co">##  [61] scuttle_1.16.0              tidyselect_1.2.1           </span></span>
+<span>  <span class="co">##  [63] UCSC.utils_1.2.0            farver_2.1.2               </span></span>
+<span>  <span class="co">##  [65] ScaledMatrix_1.14.0         matrixStats_1.5.0          </span></span>
+<span>  <span class="co">##  [67] stats4_4.4.3                spatstat.explore_3.4-2     </span></span>
+<span>  <span class="co">##  [69] jsonlite_1.9.1              BiocNeighbors_2.0.1        </span></span>
+<span>  <span class="co">##  [71] progressr_0.15.1            ggridges_0.5.6             </span></span>
+<span>  <span class="co">##  [73] survival_3.8-3              systemfonts_1.2.1          </span></span>
+<span>  <span class="co">##  [75] tools_4.4.3                 ragg_1.3.3                 </span></span>
+<span>  <span class="co">##  [77] ica_1.0-3                   Rcpp_1.0.14                </span></span>
+<span>  <span class="co">##  [79] glue_1.8.0                  gridExtra_2.3              </span></span>
+<span>  <span class="co">##  [81] SparseArray_1.6.2           mgcv_1.9-1                 </span></span>
+<span>  <span class="co">##  [83] xfun_0.51                   MatrixGenerics_1.18.1      </span></span>
+<span>  <span class="co">##  [85] GenomeInfoDb_1.42.3         withr_3.0.2                </span></span>
+<span>  <span class="co">##  [87] fastmap_1.2.0               digest_0.6.37              </span></span>
+<span>  <span class="co">##  [89] rsvd_1.0.5                  R6_2.6.1                   </span></span>
+<span>  <span class="co">##  [91] mime_0.13                   textshaping_1.0.0          </span></span>
+<span>  <span class="co">##  [93] colorspace_2.1-1            scattermore_1.2            </span></span>
+<span>  <span class="co">##  [95] tensor_1.5                  RSQLite_2.3.9              </span></span>
+<span>  <span class="co">##  [97] spatstat.data_3.1-6         RhpcBLASctl_0.23-42        </span></span>
+<span>  <span class="co">##  [99] tidyr_1.3.1                 generics_0.1.3             </span></span>
+<span>  <span class="co">## [101] data.table_1.17.0           httr_1.4.7                 </span></span>
+<span>  <span class="co">## [103] htmlwidgets_1.6.4           S4Arrays_1.6.0             </span></span>
+<span>  <span class="co">## [105] uwot_0.2.3                  pkgconfig_2.0.3            </span></span>
+<span>  <span class="co">## [107] gtable_0.3.6                blob_1.2.4                 </span></span>
+<span>  <span class="co">## [109] lmtest_0.9-40               SingleCellExperiment_1.28.1</span></span>
+<span>  <span class="co">## [111] XVector_0.46.0              htmltools_0.5.8.1          </span></span>
+<span>  <span class="co">## [113] dotCall64_1.2               scales_1.3.0               </span></span>
+<span>  <span class="co">## [115] Biobase_2.66.0              png_0.1-8                  </span></span>
+<span>  <span class="co">## [117] lisi_1.0                    harmony_1.2.3              </span></span>
+<span>  <span class="co">## [119] spatstat.univar_3.1-2       knitr_1.50                 </span></span>
+<span>  <span class="co">## [121] reshape2_1.4.4              nlme_3.1-167               </span></span>
+<span>  <span class="co">## [123] cachem_1.1.0                zoo_1.8-13                 </span></span>
+<span>  <span class="co">## [125] stringr_1.5.1               KernSmooth_2.23-26         </span></span>
+<span>  <span class="co">## [127] parallel_4.4.3              miniUI_0.1.1.1             </span></span>
+<span>  <span class="co">## [129] AnnotationDbi_1.68.0        desc_1.4.3                 </span></span>
+<span>  <span class="co">## [131] pillar_1.10.1               grid_4.4.3                 </span></span>
+<span>  <span class="co">## [133] vctrs_0.6.5                 RANN_2.6.2                 </span></span>
+<span>  <span class="co">## [135] promises_1.3.2              BiocSingular_1.22.0        </span></span>
+<span>  <span class="co">## [137] distances_0.1.11            beachmat_2.22.0            </span></span>
+<span>  <span class="co">## [139] xtable_1.8-4                cluster_2.1.8              </span></span>
+<span>  <span class="co">## [141] evaluate_1.0.3              locfit_1.5-9.12            </span></span>
+<span>  <span class="co">## [143] cli_3.6.4                   compiler_4.4.3             </span></span>
+<span>  <span class="co">## [145] rlang_1.1.5                 crayon_1.5.3               </span></span>
+<span>  <span class="co">## [147] future.apply_1.11.3         labeling_0.4.3             </span></span>
+<span>  <span class="co">## [149] plyr_1.8.9                  forcats_1.0.0              </span></span>
+<span>  <span class="co">## [151] fs_1.6.5                    stringi_1.8.4              </span></span>
+<span>  <span class="co">## [153] viridisLite_0.4.2           deldir_2.0-4               </span></span>
+<span>  <span class="co">## [155] BiocParallel_1.40.0         Biostrings_2.74.1          </span></span>
+<span>  <span class="co">## [157] munsell_0.5.1               lazyeval_0.2.2             </span></span>
+<span>  <span class="co">## [159] spatstat.geom_3.3-6         Matrix_1.7-2               </span></span>
+<span>  <span class="co">## [161] RcppHNSW_0.6.0              patchwork_1.3.0            </span></span>
+<span>  <span class="co">## [163] bit64_4.6.0-1               sparseMatrixStats_1.18.0   </span></span>
+<span>  <span class="co">## [165] ggplot2_3.5.1               statmod_1.5.0              </span></span>
+<span>  <span class="co">## [167] KEGGREST_1.46.0             shiny_1.10.0               </span></span>
+<span>  <span class="co">## [169] SummarizedExperiment_1.36.0 ROCR_1.0-11                </span></span>
+<span>  <span class="co">## [171] memoise_2.0.1               igraph_2.1.4               </span></span>
+<span>  <span class="co">## [173] broom_1.0.7                 bslib_0.9.0                </span></span>
+<span>  <span class="co">## [175] bit_4.6.0</span></span></code></pre>
 </details>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
