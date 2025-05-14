@@ -6,13 +6,18 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Memo: Integration methods • SeuratIntegrate</title>
-<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+<link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" sizes="any" href="../favicon.ico">
+<link rel="manifest" href="../site.webmanifest">
+<!-- mathjax math --><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script><script>
+  window.MathJax = {
+    chtml: {
+      fontURL: "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/output/chtml/fonts/woff-v2"
+    }
+  };
+</script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
@@ -52,6 +57,7 @@
     <li><a class="dropdown-item" href="../articles/memo_score.html">Scoring metrics</a></li>
   </ul>
 </li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
 <li class="nav-item"><form class="form-inline" role="search">
@@ -106,7 +112,7 @@ SeuratIntegrate</caption>
 <tbody>
 <tr class="odd">
 <td align="left">ComBat</td>
-<td align="center"><img src="img%2Flogo_R.svg" title="R logo" width="40" alt="R logo"></td>
+<td align="center"><img src="img/logo_R.svg" title="R logo" width="40" alt="R logo"></td>
 <td align="center">
 <a href="https://doi.org/doi:10.18129/B9.bioc.sva" class="external-link">sva</a>
 (Bioconductor)</td>
@@ -116,7 +122,7 @@ SeuratIntegrate</caption>
 </tr>
 <tr class="even">
 <td align="left">Harmony</td>
-<td align="center"><img src="img%2Flogo_R.svg" title="R logo" width="40" alt="R logo"></td>
+<td align="center"><img src="img/logo_R.svg" title="R logo" width="40" alt="R logo"></td>
 <td align="center">
 <a href="https://cran.r-project.org/package=harmony" class="external-link">harmony</a>
 (CRAN)</td>
@@ -126,7 +132,7 @@ SeuratIntegrate</caption>
 </tr>
 <tr class="odd">
 <td align="left">MNN</td>
-<td align="center"><img src="img%2Flogo_R.svg" title="R logo" width="40" alt="R logo"></td>
+<td align="center"><img src="img/logo_R.svg" title="R logo" width="40" alt="R logo"></td>
 <td align="center">
 <a href="https://doi.org/doi:10.18129/B9.bioc.batchelor" class="external-link">batchelor</a>
 (Bioconductor)</td>
@@ -136,7 +142,7 @@ et al., 2018</a></td>
 </tr>
 <tr class="even">
 <td align="left">BBKNN</td>
-<td align="center"><img src="img%2Flogo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
+<td align="center"><img src="img/logo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
 <td align="center">
 <a href="https://github.com/Teichlab/bbknn" class="external-link">bbknn</a>
 (GitHub)</td>
@@ -146,7 +152,7 @@ et al., 2018</a></td>
 </tr>
 <tr class="odd">
 <td align="left">scVI</td>
-<td align="center"><img src="img%2Flogo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
+<td align="center"><img src="img/logo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
 <td align="center">
 <a href="https://github.com/scverse/scvi-tools" class="external-link">scvi-tools</a>
 (GitHub)</td>
@@ -156,7 +162,7 @@ et al., 2018</a></td>
 </tr>
 <tr class="even">
 <td align="left">scANVI</td>
-<td align="center"><img src="img%2Flogo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
+<td align="center"><img src="img/logo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
 <td align="center">
 <a href="https://github.com/scverse/scvi-tools" class="external-link">scvi-tools</a>
 (GitHub)</td>
@@ -166,7 +172,7 @@ al., 2021</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Scanorama</td>
-<td align="center"><img src="img%2Flogo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
+<td align="center"><img src="img/logo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
 <td align="center">
 <a href="https://github.com/brianhie/scanorama" class="external-link">scanorama</a> (GitHub)</td>
 <td align="center">Manifold alignment</td>
@@ -175,7 +181,7 @@ al., 2021</a></td>
 </tr>
 <tr class="even">
 <td align="left">trVAE</td>
-<td align="center"><img src="img%2Flogo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
+<td align="center"><img src="img/logo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
 <td align="center">
 <a href="https://github.com/theislab/scarches" class="external-link">scArches</a> (GitHub)</td>
 <td align="center">Conditional variational autoencoder</td>
@@ -309,7 +315,7 @@ connectivities)</td>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
 </div>
 
     </footer>

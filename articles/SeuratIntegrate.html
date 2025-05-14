@@ -6,13 +6,18 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Introduction to SeuratIntegrate • SeuratIntegrate</title>
-<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+<link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" sizes="any" href="../favicon.ico">
+<link rel="manifest" href="../site.webmanifest">
+<!-- mathjax math --><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script><script>
+  window.MathJax = {
+    chtml: {
+      fontURL: "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/output/chtml/fonts/woff-v2"
+    }
+  };
+</script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
@@ -52,6 +57,7 @@
     <li><a class="dropdown-item" href="../articles/memo_score.html">Scoring metrics</a></li>
   </ul>
 </li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
 <li class="nav-item"><form class="form-inline" role="search">
@@ -117,7 +123,7 @@ SeuratIntegrate</caption>
 <tbody>
 <tr class="odd">
 <td align="left">ComBat</td>
-<td align="center"><img src="img%2Flogo_R.svg" title="R logo" width="40" alt="R logo"></td>
+<td align="center"><img src="img/logo_R.svg" title="R logo" width="40" alt="R logo"></td>
 <td align="center">
 <a href="https://doi.org/doi:10.18129/B9.bioc.sva" class="external-link">sva</a>
 (Bioconductor)</td>
@@ -127,7 +133,7 @@ SeuratIntegrate</caption>
 </tr>
 <tr class="even">
 <td align="left">Harmony</td>
-<td align="center"><img src="img%2Flogo_R.svg" title="R logo" width="40" alt="R logo"></td>
+<td align="center"><img src="img/logo_R.svg" title="R logo" width="40" alt="R logo"></td>
 <td align="center">
 <a href="https://cran.r-project.org/package=harmony" class="external-link">harmony</a>
 (CRAN)</td>
@@ -137,7 +143,7 @@ SeuratIntegrate</caption>
 </tr>
 <tr class="odd">
 <td align="left">MNN</td>
-<td align="center"><img src="img%2Flogo_R.svg" title="R logo" width="40" alt="R logo"></td>
+<td align="center"><img src="img/logo_R.svg" title="R logo" width="40" alt="R logo"></td>
 <td align="center">
 <a href="https://doi.org/doi:10.18129/B9.bioc.batchelor" class="external-link">batchelor</a>
 (Bioconductor)</td>
@@ -147,7 +153,7 @@ et al., 2018</a></td>
 </tr>
 <tr class="even">
 <td align="left">BBKNN</td>
-<td align="center"><img src="img%2Flogo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
+<td align="center"><img src="img/logo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
 <td align="center">
 <a href="https://github.com/Teichlab/bbknn" class="external-link">bbknn</a>
 (GitHub)</td>
@@ -157,7 +163,7 @@ et al., 2018</a></td>
 </tr>
 <tr class="odd">
 <td align="left">scVI</td>
-<td align="center"><img src="img%2Flogo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
+<td align="center"><img src="img/logo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
 <td align="center">
 <a href="https://github.com/scverse/scvi-tools" class="external-link">scvi-tools</a>
 (GitHub)</td>
@@ -167,7 +173,7 @@ et al., 2018</a></td>
 </tr>
 <tr class="even">
 <td align="left">scANVI</td>
-<td align="center"><img src="img%2Flogo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
+<td align="center"><img src="img/logo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
 <td align="center">
 <a href="https://github.com/scverse/scvi-tools" class="external-link">scvi-tools</a>
 (GitHub)</td>
@@ -177,7 +183,7 @@ al., 2021</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Scanorama</td>
-<td align="center"><img src="img%2Flogo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
+<td align="center"><img src="img/logo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
 <td align="center">
 <a href="https://github.com/brianhie/scanorama" class="external-link">scanorama</a> (GitHub)</td>
 <td align="center">Manifold alignment</td>
@@ -186,7 +192,7 @@ al., 2021</a></td>
 </tr>
 <tr class="even">
 <td align="left">trVAE</td>
-<td align="center"><img src="img%2Flogo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
+<td align="center"><img src="img/logo_Python.svg" title="Python logo" width="40" alt="Python logo"></td>
 <td align="center">
 <a href="https://github.com/theislab/scarches" class="external-link">scArches</a> (GitHub)</td>
 <td align="center">Conditional variational autoencoder</td>
@@ -204,9 +210,9 @@ compatible with <code>CCA</code> and <code>RPCA</code> (included in <a href="htt
 <h3 id="scoring">Scoring<a class="anchor" aria-label="anchor" href="#scoring"></a>
 </h3>
 <p>SeuratIntegrate incorporates 11 scoring metrics: 6 quantify the
-degree of batch mixing <img src="img%2Fbatch_correction.svg" title="batch correction" width="30" alt="batch correction"> (<em>batch
+degree of batch mixing <img src="img/batch_correction.svg" title="batch correction" width="30" alt="batch correction"> (<em>batch
 correction</em>), while 5 assess the preservation of biological
-differences <img src="img%2Fbio_conservation.svg" title="bio-conservation" width="30" alt="bio-conservation"> (<em>bio-conservation</em>) based
+differences <img src="img/bio_conservation.svg" title="bio-conservation" width="30" alt="bio-conservation"> (<em>bio-conservation</em>) based
 on ground truth cell type labels.</p>
 <p>Below is a table summarising each score’s input and type:</p>
 <table class="table">
@@ -231,94 +237,94 @@ type of scores it belongs to.</caption>
 <td align="left">Cell cycle regression</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center"><img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
-<td align="right"><img src="img%2Fbio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
+<td align="center"><img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
+<td align="right"><img src="img/bio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
 </tr>
 <tr class="even">
 <td align="left">PCA regression</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center"><img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
-<td align="right"><img src="img%2Fbatch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
+<td align="center"><img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
+<td align="right"><img src="img/batch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
 </tr>
 <tr class="odd">
 <td align="left">PCA density</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center"><img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
-<td align="right"><img src="img%2Fbatch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
+<td align="center"><img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
+<td align="right"><img src="img/batch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
 </tr>
 <tr class="even">
 <td align="left">ASW batch</td>
-<td align="center"><img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
+<td align="center"><img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
 <td align="center"></td>
-<td align="center"><img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
-<td align="right"><img src="img%2Fbatch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
+<td align="center"><img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
+<td align="right"><img src="img/batch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
 </tr>
 <tr class="odd">
 <td align="left">ASW</td>
-<td align="center"><img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
+<td align="center"><img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
 <td align="center"></td>
-<td align="center"><img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
-<td align="right"><img src="img%2Fbio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
+<td align="center"><img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
+<td align="right"><img src="img/bio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
 </tr>
 <tr class="even">
 <td align="left">ARI</td>
-<td align="center"><img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
-<td align="center"><img src="img%2Fcell_cluster.svg" title="clustering variable" alt="clustering variable"></td>
+<td align="center"><img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
+<td align="center"><img src="img/cell_cluster.svg" title="clustering variable" alt="clustering variable"></td>
 <td align="center"></td>
-<td align="right"><img src="img%2Fbio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
+<td align="right"><img src="img/bio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
 </tr>
 <tr class="odd">
 <td align="left">NMI</td>
-<td align="center"><img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
-<td align="center"><img src="img%2Fcell_cluster.svg" title="clustering variable" alt="clustering variable"></td>
+<td align="center"><img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
+<td align="center"><img src="img/cell_cluster.svg" title="clustering variable" alt="clustering variable"></td>
 <td align="center"></td>
-<td align="right"><img src="img%2Fbio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
+<td align="right"><img src="img/bio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
 </tr>
 <tr class="even">
 <td align="left">cLISI</td>
-<td align="center"><img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
+<td align="center"><img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
 <td align="center"></td>
 <td align="center">
-<img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"> or
-<img src="img%2Fnetwork.svg" title="KNN graph" width="60" alt="KNN graph">
+<img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"> or
+<img src="img/network.svg" title="KNN graph" width="60" alt="KNN graph">
 </td>
-<td align="right"><img src="img%2Fbio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
+<td align="right"><img src="img/bio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
 </tr>
 <tr class="odd">
 <td align="left">iLISI</td>
-<td align="center"><img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
+<td align="center"><img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
 <td align="center"></td>
 <td align="center">
-<img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"> or
-<img src="img%2Fnetwork.svg" title="KNN graph" width="60" alt="KNN graph">
+<img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"> or
+<img src="img/network.svg" title="KNN graph" width="60" alt="KNN graph">
 </td>
-<td align="right"><img src="img%2Fbatch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
+<td align="right"><img src="img/batch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
 </tr>
 <tr class="even">
 <td align="left">kBET</td>
-<td align="center"><img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
+<td align="center"><img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
 <td align="center"></td>
 <td align="center">
-<img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"> or
-<img src="img%2Fnetwork.svg" title="KNN graph" width="60" alt="KNN graph">
+<img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"> or
+<img src="img/network.svg" title="KNN graph" width="60" alt="KNN graph">
 </td>
-<td align="right"><img src="img%2Fbatch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
+<td align="right"><img src="img/batch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
 </tr>
 <tr class="odd">
 <td align="left">Graph connectivity</td>
 <td align="center">
-<img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable">
+<img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable">
 (<code>per.component = TRUE</code>)</td>
 <td align="center"></td>
-<td align="center"><img src="img%2Fnetwork.svg" title="KNN graph" width="60" alt="KNN graph"></td>
-<td align="right"><img src="img%2Fbatch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
+<td align="center"><img src="img/network.svg" title="KNN graph" width="60" alt="KNN graph"></td>
+<td align="right"><img src="img/batch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
 </tr>
 </tbody>
 </table>
-<p>Most scores are computed on an embedding <img src="img%2Fembedding.svg" title="DimReduc object" width="30" alt="DimReduc object">
-(<code>Seurat::DimReduc</code> object) or a graph <img src="img%2Fnetwork.svg" title="Graph or Neighbor object" width="30" alt="Graph or Neighbor object"> (<code>Seurat::Neighbor</code> or
+<p>Most scores are computed on an embedding <img src="img/embedding.svg" title="DimReduc object" width="30" alt="DimReduc object">
+(<code>Seurat::DimReduc</code> object) or a graph <img src="img/network.svg" title="Graph or Neighbor object" width="30" alt="Graph or Neighbor object"> (<code>Seurat::Neighbor</code> or
 <code>Seurat::Graph</code> object). The exceptions are ARI and NMI,
 which compare two categorical variables thus don’t need anything else
 than a cell-type and a cluster assignment variables.d anything else than
@@ -373,7 +379,7 @@ is a Python method, so we need to have a conda environment to be able to
 use it. Right now, we don’t have such an environment:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/getCache.html">getCache</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="img%2Fconda_envs_unset.png" alt="Unset conda environments" width="100%" style="display: block; margin: auto;"></p>
+<p><img src="img/conda_envs_unset.png" alt="Unset conda environments" width="100%" style="display: block; margin: auto;"></p>
 <p>Hopefully, SeuratIntegrate facilitates the task with
 <code><a href="../reference/UpdateEnvCache.html">UpdateEnvCache()</a></code>:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
@@ -387,7 +393,7 @@ their corresponding conda environments.
 have been updated:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/getCache.html">getCache</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="img%2Fconda_envs_bbknn.png" alt="Conda environment set for BBKNN" width="100%" style="display: block; margin: auto;"></p>
+<p><img src="img/conda_envs_bbknn.png" alt="Conda environment set for BBKNN" width="100%" style="display: block; margin: auto;"></p>
 <p>We also want to make sure we have a conda environment with a
 umap-learn version compatible with Seurat:</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
@@ -438,10 +444,10 @@ designating “ID_sample” as the batch variable.</p>
 <span><span class="co">## Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Number of nodes: 200</span></span>
-<span><span class="co">## Number of edges: 1784</span></span>
+<span><span class="co">## Number of edges: 1788</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Running Louvain algorithm...</span></span>
-<span><span class="co">## Maximum modularity in 10 random starts: 0.6251</span></span>
+<span><span class="co">## Maximum modularity in 10 random starts: 0.6217</span></span>
 <span><span class="co">## Number of communities: 5</span></span>
 <span><span class="co">## Elapsed time: 0 seconds</span></span>
 <span><span class="co">## Integration 3 in 3: integrating using 'SeuratIntegrate::HarmonyIntegration'</span></span></code></pre>
@@ -506,8 +512,8 @@ singletons, we “<em>symmetrize</em>” the matrix which makes the graph
 “undirected”.</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># corrected counts outputs</span></span>
-<span><span class="fu"><a href="https://mojaveazure.github.io/seurat-object/reference/DefaultAssay.html" class="external-link">DefaultAssay</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"combat.reconstructed"</span></span>
-<span><span class="fu"><a href="https://mojaveazure.github.io/seurat-object/reference/VariableFeatures.html" class="external-link">VariableFeatures</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mojaveazure.github.io/seurat-object/reference/VariableFeatures.html" class="external-link">VariableFeatures</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">[[</span><span class="st">"SCT"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://satijalab.github.io/seurat-object/reference/DefaultAssay.html" class="external-link">DefaultAssay</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"combat.reconstructed"</span></span>
+<span><span class="fu"><a href="https://satijalab.github.io/seurat-object/reference/VariableFeatures.html" class="external-link">VariableFeatures</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.github.io/seurat-object/reference/VariableFeatures.html" class="external-link">VariableFeatures</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">[[</span><span class="st">"SCT"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span>
 <span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/ScaleData.html" class="external-link">ScaleData</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/RunPCA.html" class="external-link">RunPCA</a></span><span class="op">(</span><span class="va">liver_small</span>, npcs <span class="op">=</span> <span class="fl">50L</span>, reduction.name <span class="op">=</span> <span class="st">"pca.combat"</span><span class="op">)</span></span>
@@ -519,7 +525,7 @@ singletons, we “<em>symmetrize</em>” the matrix which makes the graph
 <span>                           cell.var <span class="op">=</span> <span class="va">cell.var</span>,</span>
 <span>                           optimisation.metric <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"nmi"</span>, <span class="st">"ari"</span><span class="op">)</span><span class="op">)</span> <span class="co"># default, compute both</span></span>
 <span></span>
-<span><span class="fu"><a href="https://mojaveazure.github.io/seurat-object/reference/DefaultAssay.html" class="external-link">DefaultAssay</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"SCT"</span></span></code></pre></div>
+<span><span class="fu"><a href="https://satijalab.github.io/seurat-object/reference/DefaultAssay.html" class="external-link">DefaultAssay</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"SCT"</span></span></code></pre></div>
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># dimension reduction outputs</span></span>
 <span><span class="va">liver_small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/FindNeighbors.html" class="external-link">FindNeighbors</a></span><span class="op">(</span><span class="va">liver_small</span>, reduction <span class="op">=</span> <span class="st">"pca"</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, k.param <span class="op">=</span> <span class="fl">20L</span>,</span>
@@ -688,7 +694,7 @@ interpretability.</p>
 <p>Now, let’s plot the integrations.</p>
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/PlotScores.html">PlotScores</a></span><span class="op">(</span><span class="va">liver_small</span><span class="op">)</span></span></code></pre></div>
-<p><img src="SeuratIntegrate_files/figure-html/unnamed-chunk-21-1.png" alt="Dot plot to compare performance of integrations based on scores" width="864"></p>
+<p><img src="SeuratIntegrate_files/figure-html/unnamed-chunk-22-1.png" alt="Dot plot to compare performance of integrations based on scores" width="864"></p>
 <p>We can observe that 3 overall scores have been computed, namely batch
 correction, bio-conservation and overall (the average of the last two).
 To balance each score’s contribution to the overall scores, a min-max
@@ -697,13 +703,13 @@ original score’s bounds to zero and one.</p>
 <p>It can be disabled to preview the original scores:</p>
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/PlotScores.html">PlotScores</a></span><span class="op">(</span><span class="va">liver_small</span>, rescale <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
-<p><img src="SeuratIntegrate_files/figure-html/unnamed-chunk-22-1.png" alt="Dot plot of scores without min-max rescaling" width="864"></p>
+<p><img src="SeuratIntegrate_files/figure-html/unnamed-chunk-23-1.png" alt="Dot plot of scores without min-max rescaling" width="864"></p>
 <p>We can also hide scores or integrations. For instance, “PCA.density”
 and “PCA.regression” are hardly informative. Let’s exclude them and see
 how it affects overall scores:</p>
 <div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/PlotScores.html">PlotScores</a></span><span class="op">(</span><span class="va">liver_small</span>, rescale <span class="op">=</span> <span class="cn">FALSE</span>, exclude.score <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"PCA.density"</span>, <span class="st">"PCA.regression"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="SeuratIntegrate_files/figure-html/unnamed-chunk-23-1.png" alt="Dot plot of scores without min-max rescaling, excluding non-informative scores" width="768"></p>
+<p><img src="SeuratIntegrate_files/figure-html/unnamed-chunk-24-1.png" alt="Dot plot of scores without min-max rescaling, excluding non-informative scores" width="768"></p>
 <p>Interestingly, we obtained the same ranking of integrations as in the
 first figure.</p>
 </div>
@@ -722,36 +728,43 @@ integration performances.</p>
 <span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://future.futureverse.org" class="external-link">future</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://future.futureverse.org/reference/plan.html" class="external-link">plan</a></span><span class="op">(</span><span class="va">multisession</span><span class="op">)</span></span>
-<span><span class="va">liver_small</span> <span class="op"><a href="https://future.futureverse.org/reference/future.html" class="external-link">%&lt;-%</a></span> <span class="op">{</span></span>
+<span><span class="va">liver_small</span> <span class="op"><a href="https://future.futureverse.org/reference/futureAssign.html" class="external-link">%&lt;-%</a></span> <span class="op">{</span></span>
 <span>  <span class="fu">reticulate</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/reticulate/reference/use_python.html" class="external-link">use_condaenv</a></span><span class="op">(</span><span class="st">'umap_0.5.4'</span><span class="op">)</span></span>
 <span>  <span class="fu"><a href="https://satijalab.org/seurat/reference/RunUMAP.html" class="external-link">RunUMAP</a></span><span class="op">(</span><span class="va">liver_small</span>, graph <span class="op">=</span> <span class="st">"bbknn_ridge.residuals_connectivities"</span>,</span>
 <span>          umap.method <span class="op">=</span> <span class="st">"umap-learn"</span>, n.epochs <span class="op">=</span> <span class="fl">200L</span>,</span>
 <span>          reduction.name <span class="op">=</span> <span class="st">"umap.bbknn"</span><span class="op">)</span> <span class="op">}</span></span>
-<span><span class="va">liver_small</span></span>
-<span><span class="fu"><a href="https://future.futureverse.org/reference/plan.html" class="external-link">plan</a></span><span class="op">(</span><span class="va">sequential</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<span><span class="va">liver_small</span></span></code></pre></div>
+<pre><code><span><span class="co">## Warning: UNRELIABLE VALUE: Future (NULL) unexpectedly generated random numbers</span></span>
+<span><span class="co">## without specifying argument 'seed'. There is a risk that those random numbers</span></span>
+<span><span class="co">## are not statistically sound and the overall results might be invalid. To fix</span></span>
+<span><span class="co">## this, specify 'seed=TRUE'. This ensures that proper, parallel-safe random</span></span>
+<span><span class="co">## numbers are produced. To disable this check, use 'seed=NULL', or set option</span></span>
+<span><span class="co">## 'future.rng.onMisuse' to "ignore".</span></span></code></pre>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://future.futureverse.org/reference/plan.html" class="external-link">plan</a></span><span class="op">(</span><span class="va">sequential</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://satijalab.org/seurat/reference/DimPlot.html" class="external-link">DimPlot</a></span><span class="op">(</span><span class="va">liver_small</span>, group.by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">batch.var</span>, <span class="va">cell.var</span><span class="op">)</span>, reduction <span class="op">=</span> <span class="st">"umap"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
-<img src="SeuratIntegrate_files/figure-html/unnamed-chunk-25-1.png" alt="UMAP of unintegrated data" width="864"><p class="caption">
+<img src="SeuratIntegrate_files/figure-html/unnamed-chunk-26-1.png" alt="UMAP of unintegrated data" width="864"><p class="caption">
 UMAP of unintegrated data
 </p>
 </div>
-<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://satijalab.org/seurat/reference/DimPlot.html" class="external-link">DimPlot</a></span><span class="op">(</span><span class="va">liver_small</span>, group.by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">batch.var</span>, <span class="va">cell.var</span><span class="op">)</span>, reduction <span class="op">=</span> <span class="st">"umap.combat"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
-<img src="SeuratIntegrate_files/figure-html/unnamed-chunk-26-1.png" alt="UMAP of ComBat integration" width="864"><p class="caption">
+<img src="SeuratIntegrate_files/figure-html/unnamed-chunk-27-1.png" alt="UMAP of ComBat integration" width="864"><p class="caption">
 UMAP of ComBat integration
 </p>
 </div>
-<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://satijalab.org/seurat/reference/DimPlot.html" class="external-link">DimPlot</a></span><span class="op">(</span><span class="va">liver_small</span>, group.by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">batch.var</span>, <span class="va">cell.var</span><span class="op">)</span>, reduction <span class="op">=</span> <span class="st">"umap.bbknn"</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
-<img src="SeuratIntegrate_files/figure-html/unnamed-chunk-27-1.png" alt="UMAP of BBKNN integration" width="864"><p class="caption">
+<img src="SeuratIntegrate_files/figure-html/unnamed-chunk-28-1.png" alt="UMAP of BBKNN integration" width="864"><p class="caption">
 UMAP of BBKNN integration
 </p>
 </div>
 <details><summary><strong>Session info</strong>
-</summary><pre><code><span>  <span class="co">## R version 4.4.3 (2025-02-28)</span></span>
+</summary><pre><code><span>  <span class="co">## R version 4.5.0 (2025-04-11)</span></span>
 <span>  <span class="co">## Platform: x86_64-pc-linux-gnu</span></span>
 <span>  <span class="co">## Running under: Ubuntu 24.04.2 LTS</span></span>
 <span>  <span class="co">## </span></span>
@@ -772,98 +785,96 @@ UMAP of BBKNN integration
 <span>  <span class="co">## [1] stats     graphics  grDevices utils     datasets  methods   base     </span></span>
 <span>  <span class="co">## </span></span>
 <span>  <span class="co">## other attached packages:</span></span>
-<span>  <span class="co">## [1] future_1.34.0         dplyr_1.1.4           SeuratIntegrate_0.4.0</span></span>
-<span>  <span class="co">## [4] Seurat_5.2.1          SeuratObject_5.0.2    sp_2.2-0             </span></span>
+<span>  <span class="co">## [1] future_1.49.0         dplyr_1.1.4           SeuratIntegrate_0.4.0</span></span>
+<span>  <span class="co">## [4] Seurat_5.3.0          SeuratObject_5.1.0    sp_2.2-0             </span></span>
 <span>  <span class="co">## </span></span>
 <span>  <span class="co">## loaded via a namespace (and not attached):</span></span>
-<span>  <span class="co">##   [1] RcppAnnoy_0.0.22            splines_4.4.3              </span></span>
-<span>  <span class="co">##   [3] later_1.4.1                 batchelor_1.22.0           </span></span>
+<span>  <span class="co">##   [1] RcppAnnoy_0.0.22            splines_4.5.0              </span></span>
+<span>  <span class="co">##   [3] later_1.4.2                 batchelor_1.24.0           </span></span>
 <span>  <span class="co">##   [5] tibble_3.2.1                polyclip_1.10-7            </span></span>
 <span>  <span class="co">##   [7] XML_3.99-0.18               fastDummies_1.7.5          </span></span>
-<span>  <span class="co">##   [9] lifecycle_1.0.4             edgeR_4.4.2                </span></span>
-<span>  <span class="co">##  [11] globals_0.16.3              lattice_0.22-6             </span></span>
-<span>  <span class="co">##  [13] MASS_7.3-64                 backports_1.5.0            </span></span>
-<span>  <span class="co">##  [15] magrittr_2.0.3              limma_3.62.2               </span></span>
-<span>  <span class="co">##  [17] plotly_4.10.4               sass_0.4.9                 </span></span>
+<span>  <span class="co">##   [9] lifecycle_1.0.4             edgeR_4.6.2                </span></span>
+<span>  <span class="co">##  [11] globals_0.18.0              lattice_0.22-6             </span></span>
+<span>  <span class="co">##  [13] MASS_7.3-65                 backports_1.5.0            </span></span>
+<span>  <span class="co">##  [15] magrittr_2.0.3              limma_3.64.0               </span></span>
+<span>  <span class="co">##  [17] plotly_4.10.4               sass_0.4.10                </span></span>
 <span>  <span class="co">##  [19] rmarkdown_2.29              jquerylib_0.1.4            </span></span>
-<span>  <span class="co">##  [21] yaml_2.3.10                 httpuv_1.6.15              </span></span>
-<span>  <span class="co">##  [23] glmGamPoi_1.18.0            sctransform_0.4.1          </span></span>
+<span>  <span class="co">##  [21] yaml_2.3.10                 httpuv_1.6.16              </span></span>
+<span>  <span class="co">##  [23] glmGamPoi_1.20.0            sctransform_0.4.2          </span></span>
 <span>  <span class="co">##  [25] spam_2.11-1                 spatstat.sparse_3.1-0      </span></span>
 <span>  <span class="co">##  [27] reticulate_1.42.0           DBI_1.2.3                  </span></span>
 <span>  <span class="co">##  [29] cowplot_1.1.3               pbapply_1.7-2              </span></span>
-<span>  <span class="co">##  [31] RColorBrewer_1.1-3          ResidualMatrix_1.16.0      </span></span>
-<span>  <span class="co">##  [33] abind_1.4-8                 zlibbioc_1.52.0            </span></span>
-<span>  <span class="co">##  [35] Rtsne_0.17                  GenomicRanges_1.58.0       </span></span>
-<span>  <span class="co">##  [37] purrr_1.0.4                 BiocGenerics_0.52.0        </span></span>
-<span>  <span class="co">##  [39] tweenr_2.0.3                rappdirs_0.3.3             </span></span>
-<span>  <span class="co">##  [41] sva_3.54.0                  GenomeInfoDbData_1.2.13    </span></span>
-<span>  <span class="co">##  [43] IRanges_2.40.1              S4Vectors_0.44.0           </span></span>
-<span>  <span class="co">##  [45] ggrepel_0.9.6               irlba_2.3.5.1              </span></span>
-<span>  <span class="co">##  [47] listenv_0.9.1               spatstat.utils_3.1-3       </span></span>
-<span>  <span class="co">##  [49] genefilter_1.88.0           goftest_1.2-3              </span></span>
-<span>  <span class="co">##  [51] RSpectra_0.16-2             annotate_1.84.0            </span></span>
-<span>  <span class="co">##  [53] spatstat.random_3.3-3       fitdistrplus_1.2-2         </span></span>
-<span>  <span class="co">##  [55] parallelly_1.43.0           pkgdown_2.1.1              </span></span>
-<span>  <span class="co">##  [57] DelayedMatrixStats_1.28.1   codetools_0.2-20           </span></span>
-<span>  <span class="co">##  [59] DelayedArray_0.32.0         ggforce_0.4.2              </span></span>
-<span>  <span class="co">##  [61] scuttle_1.16.0              tidyselect_1.2.1           </span></span>
-<span>  <span class="co">##  [63] UCSC.utils_1.2.0            farver_2.1.2               </span></span>
-<span>  <span class="co">##  [65] ScaledMatrix_1.14.0         matrixStats_1.5.0          </span></span>
-<span>  <span class="co">##  [67] stats4_4.4.3                spatstat.explore_3.4-2     </span></span>
-<span>  <span class="co">##  [69] jsonlite_1.9.1              BiocNeighbors_2.0.1        </span></span>
-<span>  <span class="co">##  [71] progressr_0.15.1            ggridges_0.5.6             </span></span>
-<span>  <span class="co">##  [73] survival_3.8-3              systemfonts_1.2.1          </span></span>
-<span>  <span class="co">##  [75] tools_4.4.3                 ragg_1.3.3                 </span></span>
-<span>  <span class="co">##  [77] ica_1.0-3                   Rcpp_1.0.14                </span></span>
-<span>  <span class="co">##  [79] glue_1.8.0                  gridExtra_2.3              </span></span>
-<span>  <span class="co">##  [81] SparseArray_1.6.2           mgcv_1.9-1                 </span></span>
-<span>  <span class="co">##  [83] xfun_0.51                   MatrixGenerics_1.18.1      </span></span>
-<span>  <span class="co">##  [85] GenomeInfoDb_1.42.3         withr_3.0.2                </span></span>
-<span>  <span class="co">##  [87] fastmap_1.2.0               digest_0.6.37              </span></span>
-<span>  <span class="co">##  [89] rsvd_1.0.5                  R6_2.6.1                   </span></span>
-<span>  <span class="co">##  [91] mime_0.13                   textshaping_1.0.0          </span></span>
-<span>  <span class="co">##  [93] colorspace_2.1-1            scattermore_1.2            </span></span>
-<span>  <span class="co">##  [95] tensor_1.5                  RSQLite_2.3.9              </span></span>
-<span>  <span class="co">##  [97] spatstat.data_3.1-6         RhpcBLASctl_0.23-42        </span></span>
-<span>  <span class="co">##  [99] tidyr_1.3.1                 generics_0.1.3             </span></span>
-<span>  <span class="co">## [101] data.table_1.17.0           httr_1.4.7                 </span></span>
-<span>  <span class="co">## [103] htmlwidgets_1.6.4           S4Arrays_1.6.0             </span></span>
-<span>  <span class="co">## [105] uwot_0.2.3                  pkgconfig_2.0.3            </span></span>
-<span>  <span class="co">## [107] gtable_0.3.6                blob_1.2.4                 </span></span>
-<span>  <span class="co">## [109] lmtest_0.9-40               SingleCellExperiment_1.28.1</span></span>
-<span>  <span class="co">## [111] XVector_0.46.0              htmltools_0.5.8.1          </span></span>
-<span>  <span class="co">## [113] dotCall64_1.2               scales_1.3.0               </span></span>
-<span>  <span class="co">## [115] Biobase_2.66.0              png_0.1-8                  </span></span>
-<span>  <span class="co">## [117] lisi_1.0                    harmony_1.2.3              </span></span>
-<span>  <span class="co">## [119] spatstat.univar_3.1-2       knitr_1.50                 </span></span>
-<span>  <span class="co">## [121] reshape2_1.4.4              nlme_3.1-167               </span></span>
-<span>  <span class="co">## [123] cachem_1.1.0                zoo_1.8-13                 </span></span>
-<span>  <span class="co">## [125] stringr_1.5.1               KernSmooth_2.23-26         </span></span>
-<span>  <span class="co">## [127] parallel_4.4.3              miniUI_0.1.1.1             </span></span>
-<span>  <span class="co">## [129] AnnotationDbi_1.68.0        desc_1.4.3                 </span></span>
-<span>  <span class="co">## [131] pillar_1.10.1               grid_4.4.3                 </span></span>
-<span>  <span class="co">## [133] vctrs_0.6.5                 RANN_2.6.2                 </span></span>
-<span>  <span class="co">## [135] promises_1.3.2              BiocSingular_1.22.0        </span></span>
-<span>  <span class="co">## [137] distances_0.1.11            beachmat_2.22.0            </span></span>
-<span>  <span class="co">## [139] xtable_1.8-4                cluster_2.1.8              </span></span>
-<span>  <span class="co">## [141] evaluate_1.0.3              locfit_1.5-9.12            </span></span>
-<span>  <span class="co">## [143] cli_3.6.4                   compiler_4.4.3             </span></span>
-<span>  <span class="co">## [145] rlang_1.1.5                 crayon_1.5.3               </span></span>
-<span>  <span class="co">## [147] future.apply_1.11.3         labeling_0.4.3             </span></span>
-<span>  <span class="co">## [149] plyr_1.8.9                  forcats_1.0.0              </span></span>
-<span>  <span class="co">## [151] fs_1.6.5                    stringi_1.8.4              </span></span>
-<span>  <span class="co">## [153] viridisLite_0.4.2           deldir_2.0-4               </span></span>
-<span>  <span class="co">## [155] BiocParallel_1.40.0         Biostrings_2.74.1          </span></span>
-<span>  <span class="co">## [157] munsell_0.5.1               lazyeval_0.2.2             </span></span>
-<span>  <span class="co">## [159] spatstat.geom_3.3-6         Matrix_1.7-2               </span></span>
-<span>  <span class="co">## [161] RcppHNSW_0.6.0              patchwork_1.3.0            </span></span>
-<span>  <span class="co">## [163] bit64_4.6.0-1               sparseMatrixStats_1.18.0   </span></span>
-<span>  <span class="co">## [165] ggplot2_3.5.1               statmod_1.5.0              </span></span>
-<span>  <span class="co">## [167] KEGGREST_1.46.0             shiny_1.10.0               </span></span>
-<span>  <span class="co">## [169] SummarizedExperiment_1.36.0 ROCR_1.0-11                </span></span>
-<span>  <span class="co">## [171] memoise_2.0.1               igraph_2.1.4               </span></span>
-<span>  <span class="co">## [173] broom_1.0.7                 bslib_0.9.0                </span></span>
-<span>  <span class="co">## [175] bit_4.6.0</span></span></code></pre>
+<span>  <span class="co">##  [31] RColorBrewer_1.1-3          ResidualMatrix_1.18.0      </span></span>
+<span>  <span class="co">##  [33] abind_1.4-8                 Rtsne_0.17                 </span></span>
+<span>  <span class="co">##  [35] GenomicRanges_1.60.0        purrr_1.0.4                </span></span>
+<span>  <span class="co">##  [37] BiocGenerics_0.54.0         tweenr_2.0.3               </span></span>
+<span>  <span class="co">##  [39] rappdirs_0.3.3              sva_3.56.0                 </span></span>
+<span>  <span class="co">##  [41] GenomeInfoDbData_1.2.14     IRanges_2.42.0             </span></span>
+<span>  <span class="co">##  [43] S4Vectors_0.46.0            ggrepel_0.9.6              </span></span>
+<span>  <span class="co">##  [45] irlba_2.3.5.1               listenv_0.9.1              </span></span>
+<span>  <span class="co">##  [47] spatstat.utils_3.1-3        genefilter_1.90.0          </span></span>
+<span>  <span class="co">##  [49] goftest_1.2-3               RSpectra_0.16-2            </span></span>
+<span>  <span class="co">##  [51] spatstat.random_3.3-3       annotate_1.86.0            </span></span>
+<span>  <span class="co">##  [53] fitdistrplus_1.2-2          parallelly_1.44.0          </span></span>
+<span>  <span class="co">##  [55] pkgdown_2.1.2               DelayedMatrixStats_1.30.0  </span></span>
+<span>  <span class="co">##  [57] codetools_0.2-20            DelayedArray_0.34.1        </span></span>
+<span>  <span class="co">##  [59] ggforce_0.4.2               scuttle_1.18.0             </span></span>
+<span>  <span class="co">##  [61] tidyselect_1.2.1            UCSC.utils_1.4.0           </span></span>
+<span>  <span class="co">##  [63] farver_2.1.2                ScaledMatrix_1.16.0        </span></span>
+<span>  <span class="co">##  [65] matrixStats_1.5.0           stats4_4.5.0               </span></span>
+<span>  <span class="co">##  [67] spatstat.explore_3.4-2      jsonlite_2.0.0             </span></span>
+<span>  <span class="co">##  [69] BiocNeighbors_2.2.0         progressr_0.15.1           </span></span>
+<span>  <span class="co">##  [71] ggridges_0.5.6              survival_3.8-3             </span></span>
+<span>  <span class="co">##  [73] systemfonts_1.2.3           tools_4.5.0                </span></span>
+<span>  <span class="co">##  [75] ragg_1.4.0                  ica_1.0-3                  </span></span>
+<span>  <span class="co">##  [77] Rcpp_1.0.14                 glue_1.8.0                 </span></span>
+<span>  <span class="co">##  [79] gridExtra_2.3               SparseArray_1.8.0          </span></span>
+<span>  <span class="co">##  [81] mgcv_1.9-1                  xfun_0.52                  </span></span>
+<span>  <span class="co">##  [83] MatrixGenerics_1.20.0       GenomeInfoDb_1.44.0        </span></span>
+<span>  <span class="co">##  [85] withr_3.0.2                 fastmap_1.2.0              </span></span>
+<span>  <span class="co">##  [87] digest_0.6.37               rsvd_1.0.5                 </span></span>
+<span>  <span class="co">##  [89] R6_2.6.1                    mime_0.13                  </span></span>
+<span>  <span class="co">##  [91] textshaping_1.0.1           scattermore_1.2            </span></span>
+<span>  <span class="co">##  [93] tensor_1.5                  RSQLite_2.3.11             </span></span>
+<span>  <span class="co">##  [95] spatstat.data_3.1-6         RhpcBLASctl_0.23-42        </span></span>
+<span>  <span class="co">##  [97] tidyr_1.3.1                 generics_0.1.4             </span></span>
+<span>  <span class="co">##  [99] data.table_1.17.2           httr_1.4.7                 </span></span>
+<span>  <span class="co">## [101] htmlwidgets_1.6.4           S4Arrays_1.8.0             </span></span>
+<span>  <span class="co">## [103] uwot_0.2.3                  pkgconfig_2.0.3            </span></span>
+<span>  <span class="co">## [105] gtable_0.3.6                blob_1.2.4                 </span></span>
+<span>  <span class="co">## [107] lmtest_0.9-40               SingleCellExperiment_1.30.1</span></span>
+<span>  <span class="co">## [109] XVector_0.48.0              htmltools_0.5.8.1          </span></span>
+<span>  <span class="co">## [111] dotCall64_1.2               scales_1.4.0               </span></span>
+<span>  <span class="co">## [113] Biobase_2.68.0              png_0.1-8                  </span></span>
+<span>  <span class="co">## [115] lisi_1.0                    harmony_1.2.3              </span></span>
+<span>  <span class="co">## [117] spatstat.univar_3.1-3       knitr_1.50                 </span></span>
+<span>  <span class="co">## [119] reshape2_1.4.4              nlme_3.1-168               </span></span>
+<span>  <span class="co">## [121] cachem_1.1.0                zoo_1.8-14                 </span></span>
+<span>  <span class="co">## [123] stringr_1.5.1               KernSmooth_2.23-26         </span></span>
+<span>  <span class="co">## [125] parallel_4.5.0              miniUI_0.1.2               </span></span>
+<span>  <span class="co">## [127] AnnotationDbi_1.70.0        desc_1.4.3                 </span></span>
+<span>  <span class="co">## [129] pillar_1.10.2               grid_4.5.0                 </span></span>
+<span>  <span class="co">## [131] vctrs_0.6.5                 RANN_2.6.2                 </span></span>
+<span>  <span class="co">## [133] promises_1.3.2              BiocSingular_1.24.0        </span></span>
+<span>  <span class="co">## [135] distances_0.1.12            beachmat_2.24.0            </span></span>
+<span>  <span class="co">## [137] xtable_1.8-4                cluster_2.1.8.1            </span></span>
+<span>  <span class="co">## [139] evaluate_1.0.3              locfit_1.5-9.12            </span></span>
+<span>  <span class="co">## [141] cli_3.6.5                   compiler_4.5.0             </span></span>
+<span>  <span class="co">## [143] rlang_1.1.6                 crayon_1.5.3               </span></span>
+<span>  <span class="co">## [145] future.apply_1.11.3         labeling_0.4.3             </span></span>
+<span>  <span class="co">## [147] plyr_1.8.9                  forcats_1.0.0              </span></span>
+<span>  <span class="co">## [149] fs_1.6.6                    stringi_1.8.7              </span></span>
+<span>  <span class="co">## [151] viridisLite_0.4.2           deldir_2.0-4               </span></span>
+<span>  <span class="co">## [153] BiocParallel_1.42.0         Biostrings_2.76.0          </span></span>
+<span>  <span class="co">## [155] lazyeval_0.2.2              spatstat.geom_3.3-6        </span></span>
+<span>  <span class="co">## [157] Matrix_1.7-3                RcppHNSW_0.6.0             </span></span>
+<span>  <span class="co">## [159] patchwork_1.3.0             bit64_4.6.0-1              </span></span>
+<span>  <span class="co">## [161] sparseMatrixStats_1.20.0    ggplot2_3.5.2              </span></span>
+<span>  <span class="co">## [163] statmod_1.5.0               KEGGREST_1.48.0            </span></span>
+<span>  <span class="co">## [165] shiny_1.10.0                SummarizedExperiment_1.38.1</span></span>
+<span>  <span class="co">## [167] ROCR_1.0-11                 memoise_2.0.1              </span></span>
+<span>  <span class="co">## [169] igraph_2.1.4                broom_1.0.8                </span></span>
+<span>  <span class="co">## [171] bslib_0.9.0                 bit_4.6.0</span></span></code></pre>
 </details>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -877,7 +888,7 @@ UMAP of BBKNN integration
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
 </div>
 
     </footer>

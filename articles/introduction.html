@@ -6,13 +6,18 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Integration example with of the pbmcsca data • SeuratIntegrate</title>
-<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+<link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" sizes="any" href="../favicon.ico">
+<link rel="manifest" href="../site.webmanifest">
+<!-- mathjax math --><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script><script>
+  window.MathJax = {
+    chtml: {
+      fontURL: "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/output/chtml/fonts/woff-v2"
+    }
+  };
+</script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
@@ -52,6 +57,7 @@
     <li><a class="dropdown-item" href="../articles/memo_score.html">Scoring metrics</a></li>
   </ul>
 </li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
 <li class="nav-item"><form class="form-inline" role="search">
@@ -173,10 +179,10 @@ dispersion of cells on a UMAP dimension reduction.</p>
 <pre><code><span><span class="co">## Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Number of nodes: 1000</span></span>
-<span><span class="co">## Number of edges: 43767</span></span>
+<span><span class="co">## Number of edges: 43784</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Running Louvain algorithm...</span></span>
-<span><span class="co">## Maximum modularity in 10 random starts: 0.8715</span></span>
+<span><span class="co">## Maximum modularity in 10 random starts: 0.8717</span></span>
 <span><span class="co">## Number of communities: 8</span></span>
 <span><span class="co">## Elapsed time: 0 seconds</span></span></code></pre>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
@@ -382,20 +388,14 @@ scvi-tools suite. Let’s make sure they are available straight away:</p>
 <span><span class="co">## Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Number of nodes: 1000</span></span>
-<span><span class="co">## Number of edges: 6866</span></span>
+<span><span class="co">## Number of edges: 6848</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Running Louvain algorithm...</span></span>
-<span><span class="co">## Maximum modularity in 10 random starts: 0.6812</span></span>
+<span><span class="co">## Maximum modularity in 10 random starts: 0.6753</span></span>
 <span><span class="co">## Number of communities: 10</span></span>
 <span><span class="co">## Elapsed time: 0 seconds</span></span>
 <span><span class="co">## Integration 2 in 3: integrating using 'ScanoramaIntegration'</span></span>
-<span><span class="co">## Found 3000 genes among all datasets</span></span>
-<span><span class="co">## Processing datasets (0, 1)</span></span>
-<span><span class="co">## Processing datasets (0, 2)</span></span>
-<span><span class="co">## Processing datasets (1, 2)</span></span>
-<span><span class="co">## Integration 3 in 3: integrating using 'scANVIIntegration'</span></span>
-<span><span class="co">## <span style="color: #0000BB;">INFO    </span> Training for <span style="color: #00BBBB; font-weight: bold;">20</span> epochs.                                                </span></span>
-<span><span class="co">## Training:   0%|          | 0/20 [00:00&lt;?, ?it/s]Epoch 1/20:   0%|          | 0/20 [00:00&lt;?, ?it/s]Epoch 1/20:   5%|▌         | 1/20 [00:01&lt;00:34,  1.83s/it]Epoch 1/20:   5%|▌         | 1/20 [00:01&lt;00:34,  1.83s/it, v_num=1, train_loss_step=1.45e+4, train_loss_epoch=1.69e+4]Epoch 2/20:   5%|▌         | 1/20 [00:01&lt;00:34,  1.83s/it, v_num=1, train_loss_step=1.45e+4, train_loss_epoch=1.69e+4]Epoch 2/20:  10%|█         | 2/20 [00:03&lt;00:32,  1.78s/it, v_num=1, train_loss_step=1.45e+4, train_loss_epoch=1.69e+4]Epoch 2/20:  10%|█         | 2/20 [00:03&lt;00:32,  1.78s/it, v_num=1, train_loss_step=1.38e+4, train_loss_epoch=1.37e+4]Epoch 3/20:  10%|█         | 2/20 [00:03&lt;00:32,  1.78s/it, v_num=1, train_loss_step=1.38e+4, train_loss_epoch=1.37e+4]Epoch 3/20:  15%|█▌        | 3/20 [00:05&lt;00:29,  1.75s/it, v_num=1, train_loss_step=1.38e+4, train_loss_epoch=1.37e+4]Epoch 3/20:  15%|█▌        | 3/20 [00:05&lt;00:29,  1.75s/it, v_num=1, train_loss_step=1.07e+4, train_loss_epoch=1.18e+4]Epoch 4/20:  15%|█▌        | 3/20 [00:05&lt;00:29,  1.75s/it, v_num=1, train_loss_step=1.07e+4, train_loss_epoch=1.18e+4]Epoch 4/20:  20%|██        | 4/20 [00:06&lt;00:27,  1.73s/it, v_num=1, train_loss_step=1.07e+4, train_loss_epoch=1.18e+4]Epoch 4/20:  20%|██        | 4/20 [00:06&lt;00:27,  1.73s/it, v_num=1, train_loss_step=1.66e+4, train_loss_epoch=1.08e+4]Epoch 5/20:  20%|██        | 4/20 [00:06&lt;00:27,  1.73s/it, v_num=1, train_loss_step=1.66e+4, train_loss_epoch=1.08e+4]Epoch 5/20:  25%|██▌       | 5/20 [00:08&lt;00:25,  1.71s/it, v_num=1, train_loss_step=1.66e+4, train_loss_epoch=1.08e+4]Epoch 5/20:  25%|██▌       | 5/20 [00:08&lt;00:25,  1.71s/it, v_num=1, train_loss_step=9.38e+3, train_loss_epoch=1.03e+4]Epoch 6/20:  25%|██▌       | 5/20 [00:08&lt;00:25,  1.71s/it, v_num=1, train_loss_step=9.38e+3, train_loss_epoch=1.03e+4]Epoch 6/20:  30%|███       | 6/20 [00:10&lt;00:23,  1.69s/it, v_num=1, train_loss_step=9.38e+3, train_loss_epoch=1.03e+4]Epoch 6/20:  30%|███       | 6/20 [00:10&lt;00:23,  1.69s/it, v_num=1, train_loss_step=1.72e+4, train_loss_epoch=9.9e+3] Epoch 7/20:  30%|███       | 6/20 [00:10&lt;00:23,  1.69s/it, v_num=1, train_loss_step=1.72e+4, train_loss_epoch=9.9e+3]Epoch 7/20:  35%|███▌      | 7/20 [00:11&lt;00:21,  1.68s/it, v_num=1, train_loss_step=1.72e+4, train_loss_epoch=9.9e+3]Epoch 7/20:  35%|███▌      | 7/20 [00:11&lt;00:21,  1.68s/it, v_num=1, train_loss_step=1.05e+4, train_loss_epoch=9.68e+3]Epoch 8/20:  35%|███▌      | 7/20 [00:11&lt;00:21,  1.68s/it, v_num=1, train_loss_step=1.05e+4, train_loss_epoch=9.68e+3]Epoch 8/20:  40%|████      | 8/20 [00:13&lt;00:20,  1.69s/it, v_num=1, train_loss_step=1.05e+4, train_loss_epoch=9.68e+3]Epoch 8/20:  40%|████      | 8/20 [00:13&lt;00:20,  1.69s/it, v_num=1, train_loss_step=1.78e+4, train_loss_epoch=9.5e+3] Epoch 9/20:  40%|████      | 8/20 [00:13&lt;00:20,  1.69s/it, v_num=1, train_loss_step=1.78e+4, train_loss_epoch=9.5e+3]Epoch 9/20:  45%|████▌     | 9/20 [00:15&lt;00:18,  1.68s/it, v_num=1, train_loss_step=1.78e+4, train_loss_epoch=9.5e+3]Epoch 9/20:  45%|████▌     | 9/20 [00:15&lt;00:18,  1.68s/it, v_num=1, train_loss_step=7.85e+3, train_loss_epoch=9.37e+3]Epoch 10/20:  45%|████▌     | 9/20 [00:15&lt;00:18,  1.68s/it, v_num=1, train_loss_step=7.85e+3, train_loss_epoch=9.37e+3]Epoch 10/20:  50%|█████     | 10/20 [00:17&lt;00:16,  1.67s/it, v_num=1, train_loss_step=7.85e+3, train_loss_epoch=9.37e+3]Epoch 10/20:  50%|█████     | 10/20 [00:17&lt;00:16,  1.67s/it, v_num=1, train_loss_step=7.37e+3, train_loss_epoch=9.26e+3]Epoch 11/20:  50%|█████     | 10/20 [00:17&lt;00:16,  1.67s/it, v_num=1, train_loss_step=7.37e+3, train_loss_epoch=9.26e+3]Epoch 11/20:  55%|█████▌    | 11/20 [00:18&lt;00:15,  1.67s/it, v_num=1, train_loss_step=7.37e+3, train_loss_epoch=9.26e+3]Epoch 11/20:  55%|█████▌    | 11/20 [00:18&lt;00:15,  1.67s/it, v_num=1, train_loss_step=9.05e+3, train_loss_epoch=9.18e+3]Epoch 12/20:  55%|█████▌    | 11/20 [00:18&lt;00:15,  1.67s/it, v_num=1, train_loss_step=9.05e+3, train_loss_epoch=9.18e+3]Epoch 12/20:  60%|██████    | 12/20 [00:20&lt;00:13,  1.67s/it, v_num=1, train_loss_step=9.05e+3, train_loss_epoch=9.18e+3]Epoch 12/20:  60%|██████    | 12/20 [00:20&lt;00:13,  1.67s/it, v_num=1, train_loss_step=9.66e+3, train_loss_epoch=9.11e+3]Epoch 13/20:  60%|██████    | 12/20 [00:20&lt;00:13,  1.67s/it, v_num=1, train_loss_step=9.66e+3, train_loss_epoch=9.11e+3]Epoch 13/20:  65%|██████▌   | 13/20 [00:22&lt;00:11,  1.67s/it, v_num=1, train_loss_step=9.66e+3, train_loss_epoch=9.11e+3]Epoch 13/20:  65%|██████▌   | 13/20 [00:22&lt;00:11,  1.67s/it, v_num=1, train_loss_step=3.98e+3, train_loss_epoch=9.06e+3]Epoch 14/20:  65%|██████▌   | 13/20 [00:22&lt;00:11,  1.67s/it, v_num=1, train_loss_step=3.98e+3, train_loss_epoch=9.06e+3]Epoch 14/20:  70%|███████   | 14/20 [00:23&lt;00:10,  1.68s/it, v_num=1, train_loss_step=3.98e+3, train_loss_epoch=9.06e+3]Epoch 14/20:  70%|███████   | 14/20 [00:23&lt;00:10,  1.68s/it, v_num=1, train_loss_step=1.16e+4, train_loss_epoch=8.98e+3]Epoch 15/20:  70%|███████   | 14/20 [00:23&lt;00:10,  1.68s/it, v_num=1, train_loss_step=1.16e+4, train_loss_epoch=8.98e+3]Epoch 15/20:  75%|███████▌  | 15/20 [00:25&lt;00:08,  1.67s/it, v_num=1, train_loss_step=1.16e+4, train_loss_epoch=8.98e+3]Epoch 15/20:  75%|███████▌  | 15/20 [00:25&lt;00:08,  1.67s/it, v_num=1, train_loss_step=1.49e+4, train_loss_epoch=8.9e+3] Epoch 16/20:  75%|███████▌  | 15/20 [00:25&lt;00:08,  1.67s/it, v_num=1, train_loss_step=1.49e+4, train_loss_epoch=8.9e+3]Epoch 16/20:  80%|████████  | 16/20 [00:27&lt;00:06,  1.68s/it, v_num=1, train_loss_step=1.49e+4, train_loss_epoch=8.9e+3]Epoch 16/20:  80%|████████  | 16/20 [00:27&lt;00:06,  1.68s/it, v_num=1, train_loss_step=4.98e+3, train_loss_epoch=8.86e+3]Epoch 17/20:  80%|████████  | 16/20 [00:27&lt;00:06,  1.68s/it, v_num=1, train_loss_step=4.98e+3, train_loss_epoch=8.86e+3]Epoch 17/20:  85%|████████▌ | 17/20 [00:28&lt;00:05,  1.68s/it, v_num=1, train_loss_step=4.98e+3, train_loss_epoch=8.86e+3]Epoch 17/20:  85%|████████▌ | 17/20 [00:28&lt;00:05,  1.68s/it, v_num=1, train_loss_step=6.78e+3, train_loss_epoch=8.81e+3]Epoch 18/20:  85%|████████▌ | 17/20 [00:28&lt;00:05,  1.68s/it, v_num=1, train_loss_step=6.78e+3, train_loss_epoch=8.81e+3]Epoch 18/20:  90%|█████████ | 18/20 [00:30&lt;00:03,  1.72s/it, v_num=1, train_loss_step=6.78e+3, train_loss_epoch=8.81e+3]Epoch 18/20:  90%|█████████ | 18/20 [00:30&lt;00:03,  1.72s/it, v_num=1, train_loss_step=5.82e+3, train_loss_epoch=8.79e+3]Epoch 19/20:  90%|█████████ | 18/20 [00:30&lt;00:03,  1.72s/it, v_num=1, train_loss_step=5.82e+3, train_loss_epoch=8.79e+3]Epoch 19/20:  95%|█████████▌| 19/20 [00:32&lt;00:01,  1.70s/it, v_num=1, train_loss_step=5.82e+3, train_loss_epoch=8.79e+3]Epoch 19/20:  95%|█████████▌| 19/20 [00:32&lt;00:01,  1.70s/it, v_num=1, train_loss_step=5.13e+3, train_loss_epoch=8.72e+3]Epoch 20/20:  95%|█████████▌| 19/20 [00:32&lt;00:01,  1.70s/it, v_num=1, train_loss_step=5.13e+3, train_loss_epoch=8.72e+3]Epoch 20/20: 100%|██████████| 20/20 [00:33&lt;00:00,  1.71s/it, v_num=1, train_loss_step=5.13e+3, train_loss_epoch=8.72e+3]Epoch 20/20: 100%|██████████| 20/20 [00:33&lt;00:00,  1.71s/it, v_num=1, train_loss_step=1.44e+4, train_loss_epoch=8.68e+3]Epoch 20/20: 100%|██████████| 20/20 [00:33&lt;00:00,  1.70s/it, v_num=1, train_loss_step=1.44e+4, train_loss_epoch=8.68e+3]</span></span></code></pre>
+<span><span class="co">## Integration 3 in 3: integrating using 'scANVIIntegration'</span></span></code></pre>
 <blockquote>
 <p>Note: set <code>max_epochs = 20L</code> for
 <code>scANVIIntegration</code> is only to save time ! The default number
@@ -413,9 +413,9 @@ enriched with many objects:</p>
 <span><span class="co">##  8 dimensional reductions calculated: pca, umap, harmony, cca.integrated, rpca.integrated, pca.bbknn, integrated.scanorama, integrated.scANVI</span></span></code></pre>
 <div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="st">"Graph objects:"</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="fu">Graphs</span><span class="op">(</span><span class="va">seu</span><span class="op">)</span>, collapse <span class="op">=</span> <span class="st">", "</span><span class="op">)</span>, <span class="st">"\n"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="st">"Neighbor objects:"</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="fu"><a href="https://mojaveazure.github.io/seurat-object/reference/ObjectAccess.html" class="external-link">Neighbors</a></span><span class="op">(</span><span class="va">seu</span><span class="op">)</span>, collapse <span class="op">=</span> <span class="st">", "</span><span class="op">)</span>, <span class="st">"\n"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="st">"Reduction dimensions:"</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="fu"><a href="https://mojaveazure.github.io/seurat-object/reference/ObjectAccess.html" class="external-link">Reductions</a></span><span class="op">(</span><span class="va">seu</span><span class="op">)</span>, collapse <span class="op">=</span> <span class="st">", "</span><span class="op">)</span>, <span class="st">"\n"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="st">"Assays:"</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="fu"><a href="https://mojaveazure.github.io/seurat-object/reference/ObjectAccess.html" class="external-link">Assays</a></span><span class="op">(</span><span class="va">seu</span><span class="op">)</span>, collapse <span class="op">=</span> <span class="st">", "</span><span class="op">)</span>, <span class="st">"\n"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="st">"Neighbor objects:"</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="fu"><a href="https://satijalab.github.io/seurat-object/reference/ObjectAccess.html" class="external-link">Neighbors</a></span><span class="op">(</span><span class="va">seu</span><span class="op">)</span>, collapse <span class="op">=</span> <span class="st">", "</span><span class="op">)</span>, <span class="st">"\n"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="st">"Reduction dimensions:"</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="fu"><a href="https://satijalab.github.io/seurat-object/reference/ObjectAccess.html" class="external-link">Reductions</a></span><span class="op">(</span><span class="va">seu</span><span class="op">)</span>, collapse <span class="op">=</span> <span class="st">", "</span><span class="op">)</span>, <span class="st">"\n"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="st">"Assays:"</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="fu"><a href="https://satijalab.github.io/seurat-object/reference/ObjectAccess.html" class="external-link">Assays</a></span><span class="op">(</span><span class="va">seu</span><span class="op">)</span>, collapse <span class="op">=</span> <span class="st">", "</span><span class="op">)</span>, <span class="st">"\n"</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## Graph objects: SCT_nn, SCT_snn, bbknn_scale.data_connectivities, bbknn_scale.data_distances, bbknn_ridge.residuals_connectivities, bbknn_ridge.residuals_distances </span></span>
 <span><span class="co">## Neighbor objects:  </span></span>
 <span><span class="co">## Reduction dimensions: pca, umap, harmony, cca.integrated, rpca.integrated, pca.bbknn, integrated.scanorama, integrated.scANVI </span></span>
@@ -478,7 +478,7 @@ singletons, we “<em>symmetrize</em>” the matrix which makes the graph
 “undirected”.</p>
 <div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># corrected counts outputs</span></span>
-<span><span class="fu"><a href="https://mojaveazure.github.io/seurat-object/reference/DefaultAssay.html" class="external-link">DefaultAssay</a></span><span class="op">(</span><span class="va">seu</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"scanorama.reconstructed"</span></span>
+<span><span class="fu"><a href="https://satijalab.github.io/seurat-object/reference/DefaultAssay.html" class="external-link">DefaultAssay</a></span><span class="op">(</span><span class="va">seu</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"scanorama.reconstructed"</span></span>
 <span><span class="va">seu</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/ScaleData.html" class="external-link">ScaleData</a></span><span class="op">(</span><span class="va">seu</span><span class="op">)</span></span>
 <span><span class="va">seu</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/RunPCA.html" class="external-link">RunPCA</a></span><span class="op">(</span><span class="va">seu</span>, npcs <span class="op">=</span> <span class="fl">50L</span>, reduction.name <span class="op">=</span> <span class="st">"pca.scanorama_counts"</span><span class="op">)</span></span>
 <span><span class="va">seu</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/FindNeighbors.html" class="external-link">FindNeighbors</a></span><span class="op">(</span><span class="va">seu</span>, reduction <span class="op">=</span> <span class="st">"pca.scanorama_counts"</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">30</span>, return.neighbor <span class="op">=</span> <span class="cn">TRUE</span>,</span>
@@ -491,7 +491,7 @@ singletons, we “<em>symmetrize</em>” the matrix which makes the graph
 <span></span>
 <span></span>
 <span><span class="co"># dimension reduction outputs</span></span>
-<span><span class="fu"><a href="https://mojaveazure.github.io/seurat-object/reference/DefaultAssay.html" class="external-link">DefaultAssay</a></span><span class="op">(</span><span class="va">seu</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"SCT"</span></span>
+<span><span class="fu"><a href="https://satijalab.github.io/seurat-object/reference/DefaultAssay.html" class="external-link">DefaultAssay</a></span><span class="op">(</span><span class="va">seu</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"SCT"</span></span>
 <span><span class="va">seu</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://satijalab.org/seurat/reference/FindNeighbors.html" class="external-link">FindNeighbors</a></span><span class="op">(</span><span class="va">seu</span>, reduction <span class="op">=</span> <span class="st">"pca"</span>, dims <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">30</span>, k.param <span class="op">=</span> <span class="fl">20L</span>,</span>
 <span>                     return.neighbor <span class="op">=</span> <span class="cn">TRUE</span>, graph.name <span class="op">=</span> <span class="st">"knn.unintegrated"</span><span class="op">)</span></span>
 <span><span class="va">seu</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/SymmetrizeKnn.html">SymmetrizeKnn</a></span><span class="op">(</span><span class="va">seu</span>, graph.name <span class="op">=</span> <span class="st">"knn.unintegrated"</span><span class="op">)</span></span>
@@ -549,7 +549,7 @@ object:</p>
 <code class="sourceCode R"><span><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/paged_table.html" class="external-link">paged_table</a></span><span class="op">(</span><span class="va">seu</span><span class="op">[[</span><span class="op">]</span><span class="op">]</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">grep</a></span><span class="op">(</span><span class="st">"CellType_[arinm]{3}$"</span>, <span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">seu</span><span class="op">[[</span><span class="op">]</span><span class="op">]</span><span class="op">)</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["scanorama_counts_CellType_nmi"],"name":[1],"type":["fct"],"align":["left"]},{"label":["scanorama_counts_CellType_ari"],"name":[2],"type":["fct"],"align":["left"]},{"label":["unintegrated_CellType_nmi"],"name":[3],"type":["fct"],"align":["left"]},{"label":["unintegrated_CellType_ari"],"name":[4],"type":["fct"],"align":["left"]},{"label":["scanorama_reduction_CellType_nmi"],"name":[5],"type":["fct"],"align":["left"]},{"label":["scanorama_reduction_CellType_ari"],"name":[6],"type":["fct"],"align":["left"]},{"label":["harmony_CellType_nmi"],"name":[7],"type":["fct"],"align":["left"]},{"label":["harmony_CellType_ari"],"name":[8],"type":["fct"],"align":["left"]},{"label":["cca_CellType_nmi"],"name":[9],"type":["fct"],"align":["left"]},{"label":["cca_CellType_ari"],"name":[10],"type":["fct"],"align":["left"]},{"label":["rpca_CellType_nmi"],"name":[11],"type":["fct"],"align":["left"]},{"label":["rpca_CellType_ari"],"name":[12],"type":["fct"],"align":["left"]},{"label":["scanvi_CellType_nmi"],"name":[13],"type":["fct"],"align":["left"]},{"label":["scanvi_CellType_ari"],"name":[14],"type":["fct"],"align":["left"]},{"label":["bbknn_CellType_nmi"],"name":[15],"type":["fct"],"align":["left"]},{"label":["bbknn_CellType_ari"],"name":[16],"type":["fct"],"align":["left"]}],"data":[{"1":"3","2":"3","3":"1","4":"1","5":"1","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"1","_rn_":"pbmc1_SM2_Cell_108"},{"1":"1","2":"1","3":"1","4":"1","5":"1","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"1","_rn_":"pbmc1_SM2_Cell_115"},{"1":"3","2":"3","3":"1","4":"1","5":"1","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"1","_rn_":"pbmc1_SM2_Cell_133"},{"1":"1","2":"1","3":"1","4":"1","5":"2","6":"2","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"1","_rn_":"pbmc1_SM2_Cell_142"},{"1":"3","2":"3","3":"1","4":"1","5":"1","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"1","_rn_":"pbmc1_SM2_Cell_143"},{"1":"4","2":"4","3":"1","4":"1","5":"2","6":"2","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"1","_rn_":"pbmc1_SM2_Cell_144"},{"1":"1","2":"1","3":"1","4":"1","5":"1","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"1","_rn_":"pbmc1_SM2_Cell_146"},{"1":"1","2":"1","3":"1","4":"1","5":"2","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"1","_rn_":"pbmc1_SM2_Cell_148"},{"1":"1","2":"1","3":"1","4":"1","5":"1","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"1","_rn_":"pbmc1_SM2_Cell_152"},{"1":"1","2":"1","3":"1","4":"1","5":"2","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"1","_rn_":"pbmc1_SM2_Cell_153"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["scanorama_counts_CellType_nmi"],"name":[1],"type":["fct"],"align":["left"]},{"label":["scanorama_counts_CellType_ari"],"name":[2],"type":["fct"],"align":["left"]},{"label":["unintegrated_CellType_nmi"],"name":[3],"type":["fct"],"align":["left"]},{"label":["unintegrated_CellType_ari"],"name":[4],"type":["fct"],"align":["left"]},{"label":["scanorama_reduction_CellType_nmi"],"name":[5],"type":["fct"],"align":["left"]},{"label":["scanorama_reduction_CellType_ari"],"name":[6],"type":["fct"],"align":["left"]},{"label":["harmony_CellType_nmi"],"name":[7],"type":["fct"],"align":["left"]},{"label":["harmony_CellType_ari"],"name":[8],"type":["fct"],"align":["left"]},{"label":["cca_CellType_nmi"],"name":[9],"type":["fct"],"align":["left"]},{"label":["cca_CellType_ari"],"name":[10],"type":["fct"],"align":["left"]},{"label":["rpca_CellType_nmi"],"name":[11],"type":["fct"],"align":["left"]},{"label":["rpca_CellType_ari"],"name":[12],"type":["fct"],"align":["left"]},{"label":["scanvi_CellType_nmi"],"name":[13],"type":["fct"],"align":["left"]},{"label":["scanvi_CellType_ari"],"name":[14],"type":["fct"],"align":["left"]},{"label":["bbknn_CellType_nmi"],"name":[15],"type":["fct"],"align":["left"]},{"label":["bbknn_CellType_ari"],"name":[16],"type":["fct"],"align":["left"]}],"data":[{"1":"3","2":"3","3":"1","4":"1","5":"1","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"8","15":"1","16":"2","_rn_":"pbmc1_SM2_Cell_108"},{"1":"1","2":"1","3":"1","4":"1","5":"1","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"2","_rn_":"pbmc1_SM2_Cell_115"},{"1":"3","2":"3","3":"1","4":"1","5":"1","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"5","15":"1","16":"2","_rn_":"pbmc1_SM2_Cell_133"},{"1":"1","2":"1","3":"1","4":"1","5":"2","6":"2","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"2","_rn_":"pbmc1_SM2_Cell_142"},{"1":"3","2":"3","3":"1","4":"1","5":"1","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"2","_rn_":"pbmc1_SM2_Cell_143"},{"1":"4","2":"4","3":"1","4":"1","5":"2","6":"2","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"2","_rn_":"pbmc1_SM2_Cell_144"},{"1":"1","2":"1","3":"1","4":"1","5":"1","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"2","_rn_":"pbmc1_SM2_Cell_146"},{"1":"1","2":"1","3":"1","4":"1","5":"2","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"2","_rn_":"pbmc1_SM2_Cell_148"},{"1":"1","2":"1","3":"1","4":"1","5":"1","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"2","_rn_":"pbmc1_SM2_Cell_152"},{"1":"1","2":"1","3":"1","4":"1","5":"2","6":"1","7":"1","8":"1","9":"0","10":"0","11":"1","12":"1","13":"2","14":"3","15":"1","16":"2","_rn_":"pbmc1_SM2_Cell_153"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
@@ -672,7 +672,7 @@ conservation), run <code><a href="../reference/CellCycleScoringPerBatch.html">Ce
 <code class="sourceCode R"><span><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/paged_table.html" class="external-link">paged_table</a></span><span class="op">(</span><span class="fu"><a href="../reference/get-score.html">IntegrationScores</a></span><span class="op">(</span><span class="va">seu</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Integration"],"name":[1],"type":["chr"],"align":["left"]},{"label":["PCA.regression"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["PCA.density"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["cell.cycle.conservation"],"name":[4],"type":["list"],"align":["right"]},{"label":["ASW"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["ASW.batch"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["NMI"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["ARI"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Graph.connectivity"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["ASW_CellType"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["ASW.batch_CellType"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["ARI_CellType"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["NMI_CellType"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["Graph.connectivity_CellType"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["kBET_CellType"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["iLISI_Method"],"name":[16],"type":["numrc_ls"],"align":["right"]},{"label":["cLISI_CellType"],"name":[17],"type":["numrc_ls"],"align":["right"]}],"data":[{"1":"Unintegrated","2":"9.938453e-33","3":"0.42889628","4":"<tibble[,2]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"0.5543013","11":"0.7655136","12":"0.7586378","13":"0.7887182","14":"0.9534725","15":"0.5998129","16":"1.058542","17":"1.018809"},{"1":"CCA","2":"2.447451e-03","3":"0.48887307","4":"<tibble[,2]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"0.5066540","11":"0.8250420","12":"0.5919543","13":"0.6871637","14":"0.9658361","15":"0.4807587","16":"1.595616","17":"1.418842"},{"1":"RPCA","2":"1.246080e-01","3":"0.41347618","4":"<tibble[,2]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"0.5787869","11":"0.8487809","12":"0.7446937","13":"0.7947530","14":"0.9424623","15":"0.5216103","16":"1.232795","17":"1.006020"},{"1":"Harmony","2":"4.617056e-02","3":"0.45488749","4":"<tibble[,2]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"0.5977252","11":"0.8472633","12":"0.6714181","13":"0.7369587","14":"0.9389699","15":"0.4194419","16":"1.395941","17":"1.021301"},{"1":"MNN","2":"NA","3":"NA","4":"<lgl [1]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"NA","12":"NA","13":"NA","14":"NA","15":"NA","16":"NA","17":"NA"},{"1":"FastMNN","2":"NA","3":"NA","4":"<lgl [1]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"NA","12":"NA","13":"NA","14":"NA","15":"NA","16":"NA","17":"NA"},{"1":"BBKNN","2":"NA","3":"NA","4":"<lgl [1]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"NA","12":"0.5608836","13":"0.6045187","14":"0.8759149","15":"0.5314811","16":"1.984795","17":"1.295424"},{"1":"ComBat","2":"NA","3":"NA","4":"<lgl [1]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"NA","12":"NA","13":"NA","14":"NA","15":"NA","16":"NA","17":"NA"},{"1":"Scanorama_reduction","2":"1.606113e-01","3":"0.34479126","4":"<tibble[,2]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"0.5116296","11":"0.7832223","12":"0.6525726","13":"0.5908032","14":"0.9225986","15":"0.7542150","16":"1.067041","17":"1.188885"},{"1":"Scanorama_counts","2":"1.299169e-01","3":"0.32499565","4":"<tibble[,2]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"0.5275665","11":"0.6732213","12":"0.6207683","13":"0.6450650","14":"0.9048762","15":"0.7351793","16":"1.049071","17":"1.098436"},{"1":"scVI","2":"NA","3":"NA","4":"<lgl [1]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"NA","12":"NA","13":"NA","14":"NA","15":"NA","16":"NA","17":"NA"},{"1":"scANVI","2":"8.550245e-01","3":"0.01271029","4":"<tibble[,2]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"0.2776570","11":"0.2049291","12":"0.6505520","13":"0.6305290","14":"0.7346842","15":"0.9084372","16":"1.000000","17":"1.117207"},{"1":"trVAE","2":"NA","3":"NA","4":"<lgl [1]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"NA","12":"NA","13":"NA","14":"NA","15":"NA","16":"NA","17":"NA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["Integration"],"name":[1],"type":["chr"],"align":["left"]},{"label":["PCA.regression"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["PCA.density"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["cell.cycle.conservation"],"name":[4],"type":["list"],"align":["right"]},{"label":["ASW"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["ASW.batch"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["NMI"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["ARI"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Graph.connectivity"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["scGraph"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["ASW_CellType"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["ASW.batch_CellType"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["ARI_CellType"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["NMI_CellType"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["Graph.connectivity_CellType"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["kBET_CellType"],"name":[16],"type":["dbl"],"align":["right"]},{"label":["iLISI_Method"],"name":[17],"type":["numrc_ls"],"align":["right"]},{"label":["cLISI_CellType"],"name":[18],"type":["numrc_ls"],"align":["right"]}],"data":[{"1":"Unintegrated","2":"1.121929e-32","3":"0.42926882","4":"<tibble[,2]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"0.5542597","12":"0.7650845","13":"0.7594933","14":"0.7915069","15":"0.9543614","16":"0.6049240","17":"1.057049","18":"1.017499"},{"1":"CCA","2":"2.480638e-03","3":"0.49069096","4":"<tibble[,2]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"0.5067378","12":"0.8254421","13":"0.5700285","14":"0.6701240","15":"0.9658361","16":"0.4764475","17":"1.594119","18":"1.389791"},{"1":"RPCA","2":"1.211963e-01","3":"0.41810432","4":"<tibble[,2]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"0.5791180","12":"0.8483531","13":"0.7446937","14":"0.7947530","15":"0.9420988","16":"0.5195855","17":"1.226146","18":"1.006171"},{"1":"Harmony","2":"4.694488e-02","3":"0.45689548","4":"<tibble[,2]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"0.5983759","12":"0.8478559","13":"0.6728764","14":"0.7387283","15":"0.9472662","16":"0.4284868","17":"1.389340","18":"1.021445"},{"1":"MNN","2":"NA","3":"NA","4":"<lgl [1]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"NA","12":"NA","13":"NA","14":"NA","15":"NA","16":"NA","17":"NA","18":"NA"},{"1":"FastMNN","2":"NA","3":"NA","4":"<lgl [1]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"NA","12":"NA","13":"NA","14":"NA","15":"NA","16":"NA","17":"NA","18":"NA"},{"1":"BBKNN","2":"NA","3":"NA","4":"<lgl [1]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"NA","12":"NA","13":"0.5327984","14":"0.5849817","15":"0.9043189","16":"0.5525364","17":"1.949006","18":"1.308230"},{"1":"ComBat","2":"NA","3":"NA","4":"<lgl [1]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"NA","12":"NA","13":"NA","14":"NA","15":"NA","16":"NA","17":"NA","18":"NA"},{"1":"Scanorama_reduction","2":"1.606113e-01","3":"0.34479126","4":"<tibble[,2]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"0.5116296","12":"0.7832223","13":"0.6525726","14":"0.5908032","15":"0.9225986","16":"0.7542150","17":"1.067041","18":"1.188885"},{"1":"Scanorama_counts","2":"1.299169e-01","3":"0.32499565","4":"<tibble[,2]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"0.5275665","12":"0.6732213","13":"0.6207683","14":"0.6450650","15":"0.9048762","16":"0.7351793","17":"1.049071","18":"1.098436"},{"1":"scVI","2":"NA","3":"NA","4":"<lgl [1]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"NA","12":"NA","13":"NA","14":"NA","15":"NA","16":"NA","17":"NA","18":"NA"},{"1":"scANVI","2":"8.532317e-01","3":"0.01261555","4":"<tibble[,2]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"0.2776260","12":"0.2056726","13":"0.6471458","14":"0.6305290","15":"0.7346842","16":"0.9085664","17":"1.000000","18":"1.120358"},{"1":"trVAE","2":"NA","3":"NA","4":"<lgl [1]>","5":"NA","6":"NA","7":"NA","8":"NA","9":"NA","10":"NA","11":"NA","12":"NA","13":"NA","14":"NA","15":"NA","16":"NA","17":"NA","18":"NA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
@@ -688,32 +688,32 @@ comparable):</p>
 <code class="sourceCode R"><span><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/paged_table.html" class="external-link">paged_table</a></span><span class="op">(</span><span class="fu"><a href="../reference/get-score.html">IntegrationScores</a></span><span class="op">(</span><span class="va">seu</span>, scaled <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Integration"],"name":[1],"type":["chr"],"align":["left"]},{"label":["PCA.regression"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["PCA.density"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["cell.cycle.conservation"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["ASW_CellType"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["ASW.batch_CellType"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["ARI_CellType"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["NMI_CellType"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Graph.connectivity_CellType"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["kBET_CellType"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["iLISI_Method"],"name":[11],"type":["numrc_ls"],"align":["right"]},{"label":["cLISI_CellType"],"name":[12],"type":["numrc_ls"],"align":["right"]},{"label":["Bio.conservation"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["Batch.correction"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["Overall.score"],"name":[15],"type":["dbl"],"align":["right"]}],"data":[{"1":"Unintegrated","2":"0","3":"0.00000000","4":"1.0000000","5":"0.5543013","6":"0.7655136","7":"0.7586378","8":"0.7887182","9":"0.9534725","10":"0.40018708","11":"0.02927093","12":"0.9976489","13":"0.8198612","14":"0.3580740","15":"0.6351463"},{"1":"CCA","2":"0","3":"0.12268377","4":"0.7545196","5":"0.5066540","6":"0.8250420","7":"0.5919543","8":"0.6871637","9":"0.9658361","10":"0.51924134","11":"0.29780811","12":"0.9476447","13":"0.6975873","14":"0.4551019","15":"0.6005931"},{"1":"RPCA","2":"0","3":"0.00000000","4":"0.9295404","5":"0.5787869","6":"0.8487809","7":"0.7446937","8":"0.7947530","9":"0.9424623","10":"0.47838966","11":"0.11639749","12":"0.9992476","13":"0.8094043","14":"0.3976717","15":"0.6447113"},{"1":"Harmony","2":"0","3":"0.05713768","4":"0.8817346","5":"0.5977252","6":"0.8472633","7":"0.6714181","8":"0.7369587","9":"0.9389699","10":"0.58055814","11":"0.19797066","12":"0.9973374","13":"0.7770348","14":"0.4369833","15":"0.6410142"},{"1":"BBKNN","2":"NA","3":"NA","4":"NA","5":"NA","6":"NA","7":"0.5608836","8":"0.6045187","9":"0.8759149","10":"0.46851886","11":"0.49239764","12":"0.9630720","13":"0.7094914","14":"0.6122771","15":"0.6706057"},{"1":"Scanorama_reduction","2":"0","3":"0.00000000","4":"0.7731061","5":"0.5116296","6":"0.7832223","7":"0.6525726","8":"0.5908032","9":"0.9225986","10":"0.24578501","11":"0.03352049","12":"0.9763894","13":"0.7009002","14":"0.3308544","15":"0.5528819"},{"1":"Scanorama_counts","2":"0","3":"0.00000000","4":"0.6434536","5":"0.5275665","6":"0.6732213","7":"0.6207683","8":"0.6450650","9":"0.9048762","10":"0.26482067","11":"0.02453554","12":"0.9876955","13":"0.6849098","14":"0.3112423","15":"0.5354428"},{"1":"scANVI","2":"0","3":"0.00000000","4":"0.4274816","5":"0.2776570","6":"0.2049291","7":"0.6505520","8":"0.6305290","9":"0.7346842","10":"0.09156279","11":"0.00000000","12":"0.9853491","13":"0.5943137","14":"0.1718627","15":"0.4253333"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["Integration"],"name":[1],"type":["chr"],"align":["left"]},{"label":["PCA.regression"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["PCA.density"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["cell.cycle.conservation"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["ASW_CellType"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["ASW.batch_CellType"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["ARI_CellType"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["NMI_CellType"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Graph.connectivity_CellType"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["kBET_CellType"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["iLISI_Method"],"name":[11],"type":["numrc_ls"],"align":["right"]},{"label":["cLISI_CellType"],"name":[12],"type":["numrc_ls"],"align":["right"]},{"label":["Bio.conservation"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["Batch.correction"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["Overall.score"],"name":[15],"type":["dbl"],"align":["right"]}],"data":[{"1":"Unintegrated","2":"0","3":"0.00000000","4":"1.0000000","5":"0.5542597","6":"0.7650845","7":"0.7594933","8":"0.7915069","9":"0.9543614","10":"0.39507597","11":"0.02852471","12":"0.9978126","13":"0.8206145","14":"0.3571744","15":"0.6352385"},{"1":"CCA","2":"0","3":"0.12517481","4":"0.7566480","5":"0.5067378","6":"0.8254421","7":"0.5700285","8":"0.6701240","9":"0.9658361","10":"0.52355245","11":"0.29705961","12":"0.9512761","13":"0.6909629","14":"0.4561775","15":"0.5970487"},{"1":"RPCA","2":"0","3":"0.00000000","4":"0.9283229","5":"0.5791180","6":"0.8483531","7":"0.7446937","8":"0.7947530","9":"0.9420988","10":"0.48041447","11":"0.11307314","12":"0.9992286","13":"0.8092233","14":"0.3973232","15":"0.6444633"},{"1":"Harmony","2":"0","3":"0.06046605","4":"0.8656651","5":"0.5983759","6":"0.8478559","7":"0.6728764","8":"0.7387283","9":"0.9472662","10":"0.57151318","11":"0.19467011","12":"0.9973194","13":"0.7745930","14":"0.4369619","15":"0.6395406"},{"1":"BBKNN","2":"NA","3":"NA","4":"NA","5":"NA","6":"NA","7":"0.5327984","8":"0.5849817","9":"0.9043189","10":"0.44746357","11":"0.47450280","12":"0.9614712","13":"0.6930838","14":"0.6087617","15":"0.6593550"},{"1":"Scanorama_reduction","2":"0","3":"0.00000000","4":"0.7729399","5":"0.5116296","6":"0.7832223","7":"0.6525726","8":"0.5908032","9":"0.9225986","10":"0.24578501","11":"0.03352049","12":"0.9763894","13":"0.7008670","14":"0.3308544","15":"0.5528619"},{"1":"Scanorama_counts","2":"0","3":"0.00000000","4":"0.6431896","5":"0.5275665","6":"0.6732213","7":"0.6207683","8":"0.6450650","9":"0.9048762","10":"0.26482067","11":"0.02453554","12":"0.9876955","13":"0.6848570","14":"0.3112423","15":"0.5354111"},{"1":"scANVI","2":"0","3":"0.00000000","4":"0.4337324","5":"0.2776260","6":"0.2056726","7":"0.6471458","8":"0.6305290","9":"0.7346842","10":"0.09143359","11":"0.00000000","12":"0.9849553","13":"0.5947977","14":"0.1719651","15":"0.4256647"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p>To readily compare the integrations, let’s plot the scores:</p>
 <div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/PlotScores.html">PlotScores</a></span><span class="op">(</span><span class="va">seu</span><span class="op">)</span></span></code></pre></div>
-<p><img src="introduction_files/figure-html/unnamed-chunk-21-1.png" alt="Dot plot to compare performance of integrations based on scores" width="864"></p>
+<p><img src="introduction_files/figure-html/unnamed-chunk-22-1.png" alt="Dot plot to compare performance of integrations based on scores" width="864"></p>
 <p>One might notice a difference in scale for some of the scores, if
 comparing the plot with the table just before. This is the case for the
 PCA density score for instance.</p>
 <div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sort.html" class="external-link">sort</a></span><span class="op">(</span><span class="fu"><a href="../reference/get-score.html">IntegrationScores</a></span><span class="op">(</span><span class="va">seu</span>, scaled <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">$</span><span class="va">PCA.density</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">## [1] 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 0.05713768 0.12268377</span></span></code></pre>
+<pre><code><span><span class="co">## [1] 0.00000000 0.00000000 0.00000000 0.00000000 0.00000000 0.06046605 0.12517481</span></span></code></pre>
 <p>Indeed, <code><a href="../reference/PlotScores.html">PlotScores()</a></code> rescales the scores using min-max
 normalisation by default (<code>rescale = TRUE</code>). One might chose
 to disable it:</p>
 <div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/PlotScores.html">PlotScores</a></span><span class="op">(</span><span class="va">seu</span>, rescale <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
-<p><img src="introduction_files/figure-html/unnamed-chunk-23-1.png" alt="Dot plot of scores without min-max rescaling" width="864"></p>
+<p><img src="introduction_files/figure-html/unnamed-chunk-24-1.png" alt="Dot plot of scores without min-max rescaling" width="864"></p>
 <p>We notice that PCA based methods output very low scores in this case.
 Since they cannot be computed on knn graphs, scores are biased in favour
 of BBKNN. You can exclude some scores (and recompute overall scores on
 the fly)</p>
 <div class="sourceCode" id="cb42"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/PlotScores.html">PlotScores</a></span><span class="op">(</span><span class="va">seu</span>, rescale <span class="op">=</span> <span class="cn">FALSE</span>, exclude.score <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"pca.density"</span>, <span class="st">"pca.regression"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="introduction_files/figure-html/unnamed-chunk-24-1.png" alt="Dot plot of scores without min-max rescaling, excluding non-informative scores" width="816"></p>
+<p><img src="introduction_files/figure-html/unnamed-chunk-25-1.png" alt="Dot plot of scores without min-max rescaling, excluding non-informative scores" width="816"></p>
 <p>You can chose a different type of plot (<code>radar</code> or
 <code>lollipop</code>):</p>
 <div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
@@ -725,7 +725,7 @@ the fly)</p>
 <span>        axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## Warning: Removed 5 rows containing missing values or values outside the scale range</span></span>
 <span><span class="co">## (`geom_point()`).</span></span></code></pre>
-<p><img src="introduction_files/figure-html/unnamed-chunk-25-1.png" alt="Radar plot of scores" width="1152"></p>
+<p><img src="introduction_files/figure-html/unnamed-chunk-26-1.png" alt="Radar plot of scores" width="1152"></p>
 <p>In this last plot, we also exclude the non-integrated dataset. Since
 the <code>rescale</code> argument is true by default, the scores are
 rescaled without the excluded integration’s scores.</p>
@@ -736,7 +736,7 @@ rescaled without the excluded integration’s scores.</p>
 <span><span class="co">## (`geom_point()`).</span></span></code></pre>
 <pre><code><span><span class="co">## Warning: Removed 5 rows containing missing values or values outside the scale range</span></span>
 <span><span class="co">## (`geom_errorbarh()`).</span></span></code></pre>
-<p><img src="introduction_files/figure-html/unnamed-chunk-26-1.png" alt="Lollipop plot of scores without the unintegrated case" width="864"></p>
+<p><img src="introduction_files/figure-html/unnamed-chunk-27-1.png" alt="Lollipop plot of scores without the unintegrated case" width="864"></p>
 <p>We want to compare the UMAP embeddings. For this, we first compute
 the dimension reductions:</p>
 <div class="sourceCode" id="cb48"><pre class="downlit sourceCode r">
@@ -756,13 +756,20 @@ package:</p>
 <span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://future.futureverse.org" class="external-link">future</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://future.futureverse.org/reference/plan.html" class="external-link">plan</a></span><span class="op">(</span><span class="va">multisession</span><span class="op">)</span></span>
-<span><span class="va">seu</span> <span class="op"><a href="https://future.futureverse.org/reference/future.html" class="external-link">%&lt;-%</a></span> <span class="op">{</span></span>
+<span><span class="va">seu</span> <span class="op"><a href="https://future.futureverse.org/reference/futureAssign.html" class="external-link">%&lt;-%</a></span> <span class="op">{</span></span>
 <span>  <span class="fu">reticulate</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/reticulate/reference/use_python.html" class="external-link">use_condaenv</a></span><span class="op">(</span><span class="st">'umap_0.5.4'</span><span class="op">)</span></span>
 <span>  <span class="fu"><a href="https://satijalab.org/seurat/reference/RunUMAP.html" class="external-link">RunUMAP</a></span><span class="op">(</span><span class="va">seu</span>, graph <span class="op">=</span> <span class="st">"bbknn_ridge.residuals_connectivities"</span>, umap.method <span class="op">=</span> <span class="st">"umap-learn"</span>,</span>
 <span>          n.epochs <span class="op">=</span> <span class="fl">200L</span>, reduction.name <span class="op">=</span> <span class="st">"bbknn.umap"</span><span class="op">)</span> <span class="op">}</span></span>
-<span><span class="va">seu</span></span>
-<span><span class="fu"><a href="https://future.futureverse.org/reference/plan.html" class="external-link">plan</a></span><span class="op">(</span><span class="va">sequential</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb50"><pre class="downlit sourceCode r">
+<span><span class="va">seu</span></span></code></pre></div>
+<pre><code><span><span class="co">## Warning: UNRELIABLE VALUE: Future (NULL) unexpectedly generated random numbers</span></span>
+<span><span class="co">## without specifying argument 'seed'. There is a risk that those random numbers</span></span>
+<span><span class="co">## are not statistically sound and the overall results might be invalid. To fix</span></span>
+<span><span class="co">## this, specify 'seed=TRUE'. This ensures that proper, parallel-safe random</span></span>
+<span><span class="co">## numbers are produced. To disable this check, use 'seed=NULL', or set option</span></span>
+<span><span class="co">## 'future.rng.onMisuse' to "ignore".</span></span></code></pre>
+<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://future.futureverse.org/reference/plan.html" class="external-link">plan</a></span><span class="op">(</span><span class="va">sequential</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
 <span><span class="va">plot_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">integrations</span>, <span class="kw">function</span><span class="op">(</span><span class="va">integ</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="fu"><a href="https://satijalab.org/seurat/reference/DimPlot.html" class="external-link">DimPlot</a></span><span class="op">(</span><span class="va">seu</span>, reduction <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">integ</span>, <span class="st">".umap"</span><span class="op">)</span>, group.by <span class="op">=</span> <span class="va">batch.var</span><span class="op">)</span> <span class="op">+</span></span>
@@ -771,8 +778,8 @@ package:</p>
 <span><span class="op">}</span>, simplify <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">patchwork</span><span class="fu">::</span><span class="fu"><a href="https://patchwork.data-imaginist.com/reference/wrap_plots.html" class="external-link">wrap_plots</a></span><span class="op">(</span><span class="va">plot_list</span>, guides <span class="op">=</span> <span class="st">"collect"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="introduction_files/figure-html/unnamed-chunk-29-1.png" alt="UMAPs of unintegrated and integrated pbmcsca data with cells colored by sequencing method (i.e. batch)" width="960"></p>
-<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r">
+<p><img src="introduction_files/figure-html/unnamed-chunk-30-1.png" alt="UMAPs of unintegrated and integrated pbmcsca data with cells colored by sequencing method (i.e. batch)" width="960"></p>
+<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
 <span><span class="va">plot_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">integrations</span>, <span class="kw">function</span><span class="op">(</span><span class="va">integ</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="fu"><a href="https://satijalab.org/seurat/reference/DimPlot.html" class="external-link">DimPlot</a></span><span class="op">(</span><span class="va">seu</span>, reduction <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">integ</span>, <span class="st">".umap"</span><span class="op">)</span>, group.by <span class="op">=</span> <span class="va">cell.var</span><span class="op">)</span> <span class="op">+</span></span>
@@ -781,7 +788,7 @@ package:</p>
 <span><span class="op">}</span>, simplify <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">patchwork</span><span class="fu">::</span><span class="fu"><a href="https://patchwork.data-imaginist.com/reference/wrap_plots.html" class="external-link">wrap_plots</a></span><span class="op">(</span><span class="va">plot_list</span>, guides <span class="op">=</span> <span class="st">"collect"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="introduction_files/figure-html/unnamed-chunk-30-1.png" alt="UMAPs of unintegrated and integrated pbmcsca data with cells colored by cell type label" width="960"></p>
+<p><img src="introduction_files/figure-html/unnamed-chunk-31-1.png" alt="UMAPs of unintegrated and integrated pbmcsca data with cells colored by cell type label" width="960"></p>
 <p>There are several observations to be made here, that require further
 explanations:</p>
 <ul>
@@ -808,7 +815,7 @@ whether to use min-max rescaling <strong>is left to the user’s
 discretion</strong>.</li>
 </ul>
 <details><summary><strong>Session info</strong>
-</summary><pre><code><span>  <span class="co">## R version 4.4.3 (2025-02-28)</span></span>
+</summary><pre><code><span>  <span class="co">## R version 4.5.0 (2025-04-11)</span></span>
 <span>  <span class="co">## Platform: x86_64-pc-linux-gnu</span></span>
 <span>  <span class="co">## Running under: Ubuntu 24.04.2 LTS</span></span>
 <span>  <span class="co">## </span></span>
@@ -829,100 +836,98 @@ discretion</strong>.</li>
 <span>  <span class="co">## [1] stats     graphics  grDevices utils     datasets  methods   base     </span></span>
 <span>  <span class="co">## </span></span>
 <span>  <span class="co">## other attached packages:</span></span>
-<span>  <span class="co">## [1] future_1.34.0         ggplot2_3.5.1         SeuratIntegrate_0.4.0</span></span>
-<span>  <span class="co">## [4] Seurat_5.2.1          SeuratObject_5.0.2    sp_2.2-0             </span></span>
+<span>  <span class="co">## [1] ggplot2_3.5.2         future_1.49.0         SeuratIntegrate_0.4.0</span></span>
+<span>  <span class="co">## [4] Seurat_5.3.0          SeuratObject_5.1.0    sp_2.2-0             </span></span>
 <span>  <span class="co">## </span></span>
 <span>  <span class="co">## loaded via a namespace (and not attached):</span></span>
-<span>  <span class="co">##   [1] RcppAnnoy_0.0.22            splines_4.4.3              </span></span>
-<span>  <span class="co">##   [3] later_1.4.1                 batchelor_1.22.0           </span></span>
+<span>  <span class="co">##   [1] RcppAnnoy_0.0.22            splines_4.5.0              </span></span>
+<span>  <span class="co">##   [3] later_1.4.2                 batchelor_1.24.0           </span></span>
 <span>  <span class="co">##   [5] tibble_3.2.1                polyclip_1.10-7            </span></span>
 <span>  <span class="co">##   [7] XML_3.99-0.18               fastDummies_1.7.5          </span></span>
-<span>  <span class="co">##   [9] lifecycle_1.0.4             edgeR_4.4.2                </span></span>
-<span>  <span class="co">##  [11] globals_0.16.3              lattice_0.22-6             </span></span>
-<span>  <span class="co">##  [13] MASS_7.3-64                 backports_1.5.0            </span></span>
-<span>  <span class="co">##  [15] magrittr_2.0.3              limma_3.62.2               </span></span>
-<span>  <span class="co">##  [17] plotly_4.10.4               sass_0.4.9                 </span></span>
+<span>  <span class="co">##   [9] lifecycle_1.0.4             edgeR_4.6.2                </span></span>
+<span>  <span class="co">##  [11] globals_0.18.0              lattice_0.22-6             </span></span>
+<span>  <span class="co">##  [13] MASS_7.3-65                 backports_1.5.0            </span></span>
+<span>  <span class="co">##  [15] magrittr_2.0.3              limma_3.64.0               </span></span>
+<span>  <span class="co">##  [17] plotly_4.10.4               sass_0.4.10                </span></span>
 <span>  <span class="co">##  [19] rmarkdown_2.29              jquerylib_0.1.4            </span></span>
-<span>  <span class="co">##  [21] yaml_2.3.10                 httpuv_1.6.15              </span></span>
-<span>  <span class="co">##  [23] glmGamPoi_1.18.0            sctransform_0.4.1          </span></span>
+<span>  <span class="co">##  [21] yaml_2.3.10                 httpuv_1.6.16              </span></span>
+<span>  <span class="co">##  [23] glmGamPoi_1.20.0            sctransform_0.4.2          </span></span>
 <span>  <span class="co">##  [25] spam_2.11-1                 spatstat.sparse_3.1-0      </span></span>
 <span>  <span class="co">##  [27] reticulate_1.42.0           DBI_1.2.3                  </span></span>
 <span>  <span class="co">##  [29] cowplot_1.1.3               pbapply_1.7-2              </span></span>
-<span>  <span class="co">##  [31] RColorBrewer_1.1-3          ResidualMatrix_1.16.0      </span></span>
-<span>  <span class="co">##  [33] abind_1.4-8                 zlibbioc_1.52.0            </span></span>
-<span>  <span class="co">##  [35] Rtsne_0.17                  GenomicRanges_1.58.0       </span></span>
-<span>  <span class="co">##  [37] purrr_1.0.4                 BiocGenerics_0.52.0        </span></span>
-<span>  <span class="co">##  [39] tweenr_2.0.3                rappdirs_0.3.3             </span></span>
-<span>  <span class="co">##  [41] sva_3.54.0                  GenomeInfoDbData_1.2.13    </span></span>
-<span>  <span class="co">##  [43] IRanges_2.40.1              S4Vectors_0.44.0           </span></span>
-<span>  <span class="co">##  [45] ggrepel_0.9.6               irlba_2.3.5.1              </span></span>
-<span>  <span class="co">##  [47] listenv_0.9.1               spatstat.utils_3.1-3       </span></span>
-<span>  <span class="co">##  [49] genefilter_1.88.0           pbmcsca.SeuratData_3.0.0   </span></span>
-<span>  <span class="co">##  [51] goftest_1.2-3               RSpectra_0.16-2            </span></span>
-<span>  <span class="co">##  [53] annotate_1.84.0             spatstat.random_3.3-3      </span></span>
-<span>  <span class="co">##  [55] fitdistrplus_1.2-2          parallelly_1.43.0          </span></span>
-<span>  <span class="co">##  [57] pkgdown_2.1.1               DelayedMatrixStats_1.28.1  </span></span>
-<span>  <span class="co">##  [59] codetools_0.2-20            DelayedArray_0.32.0        </span></span>
-<span>  <span class="co">##  [61] ggforce_0.4.2               scuttle_1.16.0             </span></span>
-<span>  <span class="co">##  [63] tidyselect_1.2.1            UCSC.utils_1.2.0           </span></span>
-<span>  <span class="co">##  [65] farver_2.1.2                ScaledMatrix_1.14.0        </span></span>
-<span>  <span class="co">##  [67] matrixStats_1.5.0           stats4_4.4.3               </span></span>
-<span>  <span class="co">##  [69] spatstat.explore_3.4-2      jsonlite_1.9.1             </span></span>
-<span>  <span class="co">##  [71] BiocNeighbors_2.0.1         progressr_0.15.1           </span></span>
-<span>  <span class="co">##  [73] ggridges_0.5.6              survival_3.8-3             </span></span>
-<span>  <span class="co">##  [75] systemfonts_1.2.1           tools_4.4.3                </span></span>
-<span>  <span class="co">##  [77] ragg_1.3.3                  ica_1.0-3                  </span></span>
-<span>  <span class="co">##  [79] Rcpp_1.0.14                 glue_1.8.0                 </span></span>
-<span>  <span class="co">##  [81] gridExtra_2.3               SparseArray_1.6.2          </span></span>
-<span>  <span class="co">##  [83] mgcv_1.9-1                  xfun_0.51                  </span></span>
-<span>  <span class="co">##  [85] MatrixGenerics_1.18.1       GenomeInfoDb_1.42.3        </span></span>
-<span>  <span class="co">##  [87] dplyr_1.1.4                 withr_3.0.2                </span></span>
-<span>  <span class="co">##  [89] fastmap_1.2.0               digest_0.6.37              </span></span>
-<span>  <span class="co">##  [91] rsvd_1.0.5                  R6_2.6.1                   </span></span>
-<span>  <span class="co">##  [93] mime_0.13                   textshaping_1.0.0          </span></span>
-<span>  <span class="co">##  [95] colorspace_2.1-1            scattermore_1.2            </span></span>
-<span>  <span class="co">##  [97] tensor_1.5                  kBET_0.99.6                </span></span>
-<span>  <span class="co">##  [99] RSQLite_2.3.9               spatstat.data_3.1-6        </span></span>
-<span>  <span class="co">## [101] RhpcBLASctl_0.23-42         tidyr_1.3.1                </span></span>
-<span>  <span class="co">## [103] generics_0.1.3              data.table_1.17.0          </span></span>
-<span>  <span class="co">## [105] FNN_1.1.4.1                 httr_1.4.7                 </span></span>
-<span>  <span class="co">## [107] htmlwidgets_1.6.4           S4Arrays_1.6.0             </span></span>
-<span>  <span class="co">## [109] uwot_0.2.3                  pkgconfig_2.0.3            </span></span>
-<span>  <span class="co">## [111] gtable_0.3.6                blob_1.2.4                 </span></span>
-<span>  <span class="co">## [113] lmtest_0.9-40               SingleCellExperiment_1.28.1</span></span>
-<span>  <span class="co">## [115] XVector_0.46.0              htmltools_0.5.8.1          </span></span>
-<span>  <span class="co">## [117] dotCall64_1.2               scales_1.3.0               </span></span>
-<span>  <span class="co">## [119] Biobase_2.66.0              SeuratData_0.2.2.9002      </span></span>
-<span>  <span class="co">## [121] png_0.1-8                   lisi_1.0                   </span></span>
-<span>  <span class="co">## [123] harmony_1.2.3               spatstat.univar_3.1-2      </span></span>
-<span>  <span class="co">## [125] knitr_1.50                  reshape2_1.4.4             </span></span>
-<span>  <span class="co">## [127] nlme_3.1-167                cachem_1.1.0               </span></span>
-<span>  <span class="co">## [129] zoo_1.8-13                  stringr_1.5.1              </span></span>
-<span>  <span class="co">## [131] KernSmooth_2.23-26          parallel_4.4.3             </span></span>
-<span>  <span class="co">## [133] miniUI_0.1.1.1              AnnotationDbi_1.68.0       </span></span>
-<span>  <span class="co">## [135] desc_1.4.3                  pillar_1.10.1              </span></span>
-<span>  <span class="co">## [137] grid_4.4.3                  vctrs_0.6.5                </span></span>
-<span>  <span class="co">## [139] RANN_2.6.2                  promises_1.3.2             </span></span>
-<span>  <span class="co">## [141] BiocSingular_1.22.0         distances_0.1.11           </span></span>
-<span>  <span class="co">## [143] beachmat_2.22.0             xtable_1.8-4               </span></span>
-<span>  <span class="co">## [145] cluster_2.1.8               evaluate_1.0.3             </span></span>
-<span>  <span class="co">## [147] locfit_1.5-9.12             cli_3.6.4                  </span></span>
-<span>  <span class="co">## [149] compiler_4.4.3              rlang_1.1.5                </span></span>
-<span>  <span class="co">## [151] crayon_1.5.3                future.apply_1.11.3        </span></span>
-<span>  <span class="co">## [153] labeling_0.4.3              plyr_1.8.9                 </span></span>
-<span>  <span class="co">## [155] forcats_1.0.0               fs_1.6.5                   </span></span>
-<span>  <span class="co">## [157] stringi_1.8.4               viridisLite_0.4.2          </span></span>
-<span>  <span class="co">## [159] deldir_2.0-4                BiocParallel_1.40.0        </span></span>
-<span>  <span class="co">## [161] Biostrings_2.74.1           munsell_0.5.1              </span></span>
-<span>  <span class="co">## [163] lazyeval_0.2.2              spatstat.geom_3.3-6        </span></span>
-<span>  <span class="co">## [165] Matrix_1.7-2                RcppHNSW_0.6.0             </span></span>
-<span>  <span class="co">## [167] patchwork_1.3.0             bit64_4.6.0-1              </span></span>
-<span>  <span class="co">## [169] sparseMatrixStats_1.18.0    statmod_1.5.0              </span></span>
-<span>  <span class="co">## [171] KEGGREST_1.46.0             shiny_1.10.0               </span></span>
-<span>  <span class="co">## [173] SummarizedExperiment_1.36.0 ROCR_1.0-11                </span></span>
-<span>  <span class="co">## [175] memoise_2.0.1               igraph_2.1.4               </span></span>
-<span>  <span class="co">## [177] broom_1.0.7                 bslib_0.9.0                </span></span>
-<span>  <span class="co">## [179] bit_4.6.0</span></span></code></pre>
+<span>  <span class="co">##  [31] RColorBrewer_1.1-3          ResidualMatrix_1.18.0      </span></span>
+<span>  <span class="co">##  [33] abind_1.4-8                 Rtsne_0.17                 </span></span>
+<span>  <span class="co">##  [35] GenomicRanges_1.60.0        purrr_1.0.4                </span></span>
+<span>  <span class="co">##  [37] BiocGenerics_0.54.0         tweenr_2.0.3               </span></span>
+<span>  <span class="co">##  [39] rappdirs_0.3.3              sva_3.56.0                 </span></span>
+<span>  <span class="co">##  [41] GenomeInfoDbData_1.2.14     IRanges_2.42.0             </span></span>
+<span>  <span class="co">##  [43] S4Vectors_0.46.0            ggrepel_0.9.6              </span></span>
+<span>  <span class="co">##  [45] irlba_2.3.5.1               listenv_0.9.1              </span></span>
+<span>  <span class="co">##  [47] spatstat.utils_3.1-3        genefilter_1.90.0          </span></span>
+<span>  <span class="co">##  [49] pbmcsca.SeuratData_3.0.0    goftest_1.2-3              </span></span>
+<span>  <span class="co">##  [51] RSpectra_0.16-2             spatstat.random_3.3-3      </span></span>
+<span>  <span class="co">##  [53] annotate_1.86.0             fitdistrplus_1.2-2         </span></span>
+<span>  <span class="co">##  [55] parallelly_1.44.0           pkgdown_2.1.2              </span></span>
+<span>  <span class="co">##  [57] DelayedMatrixStats_1.30.0   codetools_0.2-20           </span></span>
+<span>  <span class="co">##  [59] DelayedArray_0.34.1         ggforce_0.4.2              </span></span>
+<span>  <span class="co">##  [61] scuttle_1.18.0              tidyselect_1.2.1           </span></span>
+<span>  <span class="co">##  [63] UCSC.utils_1.4.0            farver_2.1.2               </span></span>
+<span>  <span class="co">##  [65] ScaledMatrix_1.16.0         matrixStats_1.5.0          </span></span>
+<span>  <span class="co">##  [67] stats4_4.5.0                spatstat.explore_3.4-2     </span></span>
+<span>  <span class="co">##  [69] jsonlite_2.0.0              BiocNeighbors_2.2.0        </span></span>
+<span>  <span class="co">##  [71] progressr_0.15.1            ggridges_0.5.6             </span></span>
+<span>  <span class="co">##  [73] survival_3.8-3              systemfonts_1.2.3          </span></span>
+<span>  <span class="co">##  [75] tools_4.5.0                 ragg_1.4.0                 </span></span>
+<span>  <span class="co">##  [77] ica_1.0-3                   Rcpp_1.0.14                </span></span>
+<span>  <span class="co">##  [79] glue_1.8.0                  gridExtra_2.3              </span></span>
+<span>  <span class="co">##  [81] SparseArray_1.8.0           mgcv_1.9-1                 </span></span>
+<span>  <span class="co">##  [83] xfun_0.52                   MatrixGenerics_1.20.0      </span></span>
+<span>  <span class="co">##  [85] GenomeInfoDb_1.44.0         dplyr_1.1.4                </span></span>
+<span>  <span class="co">##  [87] withr_3.0.2                 fastmap_1.2.0              </span></span>
+<span>  <span class="co">##  [89] digest_0.6.37               rsvd_1.0.5                 </span></span>
+<span>  <span class="co">##  [91] R6_2.6.1                    mime_0.13                  </span></span>
+<span>  <span class="co">##  [93] textshaping_1.0.1           scattermore_1.2            </span></span>
+<span>  <span class="co">##  [95] tensor_1.5                  kBET_0.99.6                </span></span>
+<span>  <span class="co">##  [97] RSQLite_2.3.11              spatstat.data_3.1-6        </span></span>
+<span>  <span class="co">##  [99] RhpcBLASctl_0.23-42         tidyr_1.3.1                </span></span>
+<span>  <span class="co">## [101] generics_0.1.4              data.table_1.17.2          </span></span>
+<span>  <span class="co">## [103] FNN_1.1.4.1                 httr_1.4.7                 </span></span>
+<span>  <span class="co">## [105] htmlwidgets_1.6.4           S4Arrays_1.8.0             </span></span>
+<span>  <span class="co">## [107] uwot_0.2.3                  pkgconfig_2.0.3            </span></span>
+<span>  <span class="co">## [109] gtable_0.3.6                blob_1.2.4                 </span></span>
+<span>  <span class="co">## [111] lmtest_0.9-40               SingleCellExperiment_1.30.1</span></span>
+<span>  <span class="co">## [113] XVector_0.48.0              htmltools_0.5.8.1          </span></span>
+<span>  <span class="co">## [115] dotCall64_1.2               scales_1.4.0               </span></span>
+<span>  <span class="co">## [117] Biobase_2.68.0              SeuratData_0.2.2.9002      </span></span>
+<span>  <span class="co">## [119] png_0.1-8                   lisi_1.0                   </span></span>
+<span>  <span class="co">## [121] harmony_1.2.3               spatstat.univar_3.1-3      </span></span>
+<span>  <span class="co">## [123] knitr_1.50                  reshape2_1.4.4             </span></span>
+<span>  <span class="co">## [125] nlme_3.1-168                cachem_1.1.0               </span></span>
+<span>  <span class="co">## [127] zoo_1.8-14                  stringr_1.5.1              </span></span>
+<span>  <span class="co">## [129] KernSmooth_2.23-26          parallel_4.5.0             </span></span>
+<span>  <span class="co">## [131] miniUI_0.1.2                AnnotationDbi_1.70.0       </span></span>
+<span>  <span class="co">## [133] desc_1.4.3                  pillar_1.10.2              </span></span>
+<span>  <span class="co">## [135] grid_4.5.0                  vctrs_0.6.5                </span></span>
+<span>  <span class="co">## [137] RANN_2.6.2                  promises_1.3.2             </span></span>
+<span>  <span class="co">## [139] BiocSingular_1.24.0         distances_0.1.12           </span></span>
+<span>  <span class="co">## [141] beachmat_2.24.0             xtable_1.8-4               </span></span>
+<span>  <span class="co">## [143] cluster_2.1.8.1             evaluate_1.0.3             </span></span>
+<span>  <span class="co">## [145] locfit_1.5-9.12             cli_3.6.5                  </span></span>
+<span>  <span class="co">## [147] compiler_4.5.0              rlang_1.1.6                </span></span>
+<span>  <span class="co">## [149] crayon_1.5.3                future.apply_1.11.3        </span></span>
+<span>  <span class="co">## [151] labeling_0.4.3              plyr_1.8.9                 </span></span>
+<span>  <span class="co">## [153] forcats_1.0.0               fs_1.6.6                   </span></span>
+<span>  <span class="co">## [155] stringi_1.8.7               viridisLite_0.4.2          </span></span>
+<span>  <span class="co">## [157] deldir_2.0-4                BiocParallel_1.42.0        </span></span>
+<span>  <span class="co">## [159] Biostrings_2.76.0           lazyeval_0.2.2             </span></span>
+<span>  <span class="co">## [161] spatstat.geom_3.3-6         Matrix_1.7-3               </span></span>
+<span>  <span class="co">## [163] RcppHNSW_0.6.0              patchwork_1.3.0            </span></span>
+<span>  <span class="co">## [165] bit64_4.6.0-1               sparseMatrixStats_1.20.0   </span></span>
+<span>  <span class="co">## [167] statmod_1.5.0               KEGGREST_1.48.0            </span></span>
+<span>  <span class="co">## [169] shiny_1.10.0                SummarizedExperiment_1.38.1</span></span>
+<span>  <span class="co">## [171] ROCR_1.0-11                 memoise_2.0.1              </span></span>
+<span>  <span class="co">## [173] igraph_2.1.4                broom_1.0.8                </span></span>
+<span>  <span class="co">## [175] bslib_0.9.0                 bit_4.6.0</span></span></code></pre>
 </details>
 </div>
 </div>
@@ -937,7 +942,7 @@ discretion</strong>.</li>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
 </div>
 
     </footer>

@@ -6,13 +6,18 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Memo: Scoring metrics • SeuratIntegrate</title>
-<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+<link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" sizes="any" href="../favicon.ico">
+<link rel="manifest" href="../site.webmanifest">
+<!-- mathjax math --><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script><script>
+  window.MathJax = {
+    chtml: {
+      fontURL: "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/output/chtml/fonts/woff-v2"
+    }
+  };
+</script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
@@ -52,6 +57,7 @@
     <li><a class="dropdown-item" href="../articles/memo_score.html">Scoring metrics</a></li>
   </ul>
 </li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
 <li class="nav-item"><form class="form-inline" role="search">
@@ -85,9 +91,9 @@
 }
 </style>
 <p>SeuratIntegrate incorporates 11 scoring metrics: 6 quantify the
-degree of batch mixing <img src="img%2Fbatch_correction.svg" title="batch correction" width="30" alt="batch correction"> (<em>batch
+degree of batch mixing <img src="img/batch_correction.svg" title="batch correction" width="30" alt="batch correction"> (<em>batch
 correction</em>), while 5 assess the preservation of biological
-differences <img src="img%2Fbio_conservation.svg" title="bio-conservation" width="30" alt="bio-conservation"> (<em>bio-conservation</em>) based
+differences <img src="img/bio_conservation.svg" title="bio-conservation" width="30" alt="bio-conservation"> (<em>bio-conservation</em>) based
 on ground truth cell type labels.</p>
 <p>Below is a table summarising each score’s input and type:</p>
 <table class="table">
@@ -112,94 +118,94 @@ type of scores it belongs to.</caption>
 <td align="left">Cell cycle regression</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center"><img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
-<td align="right"><img src="img%2Fbio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
+<td align="center"><img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
+<td align="right"><img src="img/bio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
 </tr>
 <tr class="even">
 <td align="left">PCA regression</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center"><img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
-<td align="right"><img src="img%2Fbatch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
+<td align="center"><img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
+<td align="right"><img src="img/batch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
 </tr>
 <tr class="odd">
 <td align="left">PCA density</td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center"><img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
-<td align="right"><img src="img%2Fbatch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
+<td align="center"><img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
+<td align="right"><img src="img/batch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
 </tr>
 <tr class="even">
 <td align="left">ASW batch</td>
-<td align="center"><img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
+<td align="center"><img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
 <td align="center"></td>
-<td align="center"><img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
-<td align="right"><img src="img%2Fbatch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
+<td align="center"><img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
+<td align="right"><img src="img/batch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
 </tr>
 <tr class="odd">
 <td align="left">ASW</td>
-<td align="center"><img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
+<td align="center"><img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
 <td align="center"></td>
-<td align="center"><img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
-<td align="right"><img src="img%2Fbio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
+<td align="center"><img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"></td>
+<td align="right"><img src="img/bio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
 </tr>
 <tr class="even">
 <td align="left">ARI</td>
-<td align="center"><img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
-<td align="center"><img src="img%2Fcell_cluster.svg" title="clustering variable" alt="clustering variable"></td>
+<td align="center"><img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
+<td align="center"><img src="img/cell_cluster.svg" title="clustering variable" alt="clustering variable"></td>
 <td align="center"></td>
-<td align="right"><img src="img%2Fbio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
+<td align="right"><img src="img/bio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
 </tr>
 <tr class="odd">
 <td align="left">NMI</td>
-<td align="center"><img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
-<td align="center"><img src="img%2Fcell_cluster.svg" title="clustering variable" alt="clustering variable"></td>
+<td align="center"><img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
+<td align="center"><img src="img/cell_cluster.svg" title="clustering variable" alt="clustering variable"></td>
 <td align="center"></td>
-<td align="right"><img src="img%2Fbio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
+<td align="right"><img src="img/bio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
 </tr>
 <tr class="even">
 <td align="left">cLISI</td>
-<td align="center"><img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
+<td align="center"><img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
 <td align="center"></td>
 <td align="center">
-<img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"> or
-<img src="img%2Fnetwork.svg" title="KNN graph" width="60" alt="KNN graph">
+<img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"> or
+<img src="img/network.svg" title="KNN graph" width="60" alt="KNN graph">
 </td>
-<td align="right"><img src="img%2Fbio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
+<td align="right"><img src="img/bio_conservation.svg" title="bio-conservation" width="60" alt="bio-conservation"></td>
 </tr>
 <tr class="odd">
 <td align="left">iLISI</td>
-<td align="center"><img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
+<td align="center"><img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
 <td align="center"></td>
 <td align="center">
-<img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"> or
-<img src="img%2Fnetwork.svg" title="KNN graph" width="60" alt="KNN graph">
+<img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"> or
+<img src="img/network.svg" title="KNN graph" width="60" alt="KNN graph">
 </td>
-<td align="right"><img src="img%2Fbatch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
+<td align="right"><img src="img/batch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
 </tr>
 <tr class="even">
 <td align="left">kBET</td>
-<td align="center"><img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
+<td align="center"><img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable"></td>
 <td align="center"></td>
 <td align="center">
-<img src="img%2Fembedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"> or
-<img src="img%2Fnetwork.svg" title="KNN graph" width="60" alt="KNN graph">
+<img src="img/embedding.svg" title="Dimension reduction" width="60" alt="Dimension reduction"> or
+<img src="img/network.svg" title="KNN graph" width="60" alt="KNN graph">
 </td>
-<td align="right"><img src="img%2Fbatch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
+<td align="right"><img src="img/batch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
 </tr>
 <tr class="odd">
 <td align="left">Graph connectivity</td>
 <td align="center">
-<img src="img%2Fcell_type.svg" title="cell-type variable" alt="cell-type variable">
+<img src="img/cell_type.svg" title="cell-type variable" alt="cell-type variable">
 (<code>per.component = TRUE</code>)</td>
 <td align="center"></td>
-<td align="center"><img src="img%2Fnetwork.svg" title="KNN graph" width="60" alt="KNN graph"></td>
-<td align="right"><img src="img%2Fbatch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
+<td align="center"><img src="img/network.svg" title="KNN graph" width="60" alt="KNN graph"></td>
+<td align="right"><img src="img/batch_correction.svg" title="batch correction" width="60" alt="batch correction"></td>
 </tr>
 </tbody>
 </table>
-<p>Most scores are computed on an embedding <img src="img%2Fembedding.svg" title="DimReduc object" width="30" alt="DimReduc object">
-(<code>Seurat::DimReduc</code> object) or a graph <img src="img%2Fnetwork.svg" title="Graph or Neighbor object" width="30" alt="Graph or Neighbor object"> (<code>Seurat::Neighbor</code> or
+<p>Most scores are computed on an embedding <img src="img/embedding.svg" title="DimReduc object" width="30" alt="DimReduc object">
+(<code>Seurat::DimReduc</code> object) or a graph <img src="img/network.svg" title="Graph or Neighbor object" width="30" alt="Graph or Neighbor object"> (<code>Seurat::Neighbor</code> or
 <code>Seurat::Graph</code> object). The exceptions are ARI and NMI,
 which compare two categorical variables thus don’t need anything else
 than a cell-type and a cluster assignment variables.d anything else than
@@ -219,7 +225,7 @@ suitable as ground truth.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
 </div>
 
     </footer>

@@ -10,6 +10,7 @@
 <url><loc>https://cbib.github.io/Seurat-Integrate/articles/setup_and_tips.html</loc></url>
 <url><loc>https://cbib.github.io/Seurat-Integrate/authors.html</loc></url>
 <url><loc>https://cbib.github.io/Seurat-Integrate/index.html</loc></url>
+<url><loc>https://cbib.github.io/Seurat-Integrate/news/index.html</loc></url>
 <url><loc>https://cbib.github.io/Seurat-Integrate/reference/CellCycleScoringPerBatch.html</loc></url>
 <url><loc>https://cbib.github.io/Seurat-Integrate/reference/CombatIntegration.html</loc></url>
 <url><loc>https://cbib.github.io/Seurat-Integrate/reference/CondaEnv-class.html</loc></url>
@@ -60,6 +61,7 @@
 <url><loc>https://cbib.github.io/Seurat-Integrate/reference/score-lisi.html</loc></url>
 <url><loc>https://cbib.github.io/Seurat-Integrate/reference/score-nmi.html</loc></url>
 <url><loc>https://cbib.github.io/Seurat-Integrate/reference/score-regressPC.html</loc></url>
+<url><loc>https://cbib.github.io/Seurat-Integrate/reference/score-scgraph.html</loc></url>
 <url><loc>https://cbib.github.io/Seurat-Integrate/reference/trVAEIntegration.html</loc></url>
 </urlset>
 
