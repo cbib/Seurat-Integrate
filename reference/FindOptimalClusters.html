@@ -71,7 +71,6 @@ cell-type label variable.</p>
 <span>  node.sizes <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  resolutions <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span>from <span class="op">=</span> <span class="fl">0.1</span>, to <span class="op">=</span> <span class="fl">2</span>, by <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span>,</span>
 <span>  optimisation.metric <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"nmi"</span>, <span class="st">"ari"</span><span class="op">)</span>,</span>
-<span>  method <span class="op">=</span> <span class="st">"matrix"</span>,</span>
 <span>  algorithm <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>  n.start <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>  n.iter <span class="op">=</span> <span class="fl">10</span>,</span>
@@ -110,8 +109,14 @@ column name (see <strong>Details</strong> section)</p></dd>
 <dd><p>Modularity function (1 = standard; 2 = alternative).</p></dd>
 
 
-<dt id="arg-initial-membership-node-sizes">initial.membership, node.sizes<a class="anchor" aria-label="anchor" href="#arg-initial-membership-node-sizes"></a></dt>
-<dd><p>Parameters to pass to the Python leidenalg function.</p></dd>
+<dt id="arg-initial-membership">initial.membership<a class="anchor" aria-label="anchor" href="#arg-initial-membership"></a></dt>
+<dd><p>Passed to the `initial_membership` parameter
+of `leidenbase::leiden_find_partition`.</p></dd>
+
+
+<dt id="arg-node-sizes">node.sizes<a class="anchor" aria-label="anchor" href="#arg-node-sizes"></a></dt>
+<dd><p>Passed to the `node_sizes` parameter of
+`leidenbase::leiden_find_partition`.</p></dd>
 
 
 <dt id="arg-resolutions">resolutions<a class="anchor" aria-label="anchor" href="#arg-resolutions"></a></dt>
@@ -123,15 +128,10 @@ column name (see <strong>Details</strong> section)</p></dd>
 The metric(s) to use to check clustering results against the <code>cell.var</code>.</p></dd>
 
 
-<dt id="arg-method">method<a class="anchor" aria-label="anchor" href="#arg-method"></a></dt>
-<dd><p>Method for running leiden (defaults to matrix which is fast for small datasets).
-Enable method = "igraph" to avoid casting large data to a dense matrix.</p></dd>
-
-
 <dt id="arg-algorithm">algorithm<a class="anchor" aria-label="anchor" href="#arg-algorithm"></a></dt>
 <dd><p>Algorithm for modularity optimization (1 = original Louvain
 algorithm; 2 = Louvain algorithm with multilevel refinement; 3 = SLM
-algorithm; 4 = Leiden algorithm). Leiden requires the leidenalg python.</p></dd>
+algorithm; 4 = Leiden algorithm).</p></dd>
 
 
 <dt id="arg-n-start">n.start<a class="anchor" aria-label="anchor" href="#arg-n-start"></a></dt>

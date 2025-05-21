@@ -189,7 +189,7 @@
 </ul>
 </div>
 <div class="section level2">
-<h2 id="scoring">Scoring<a class="anchor" aria-label="anchor" href="#scoring"></a>
+<h2 id="performance-assessment">Performance assessment<a class="anchor" aria-label="anchor" href="#performance-assessment"></a>
 </h2>
 <p>SeuratIntegrate incorporates 11 scoring metrics: 6 quantify the degree of batch mixing (<em>batch correction</em>), while 5 assess the preservation of biological differences (<em>bio-conservation</em>) based on ground truth cell type labels.</p>
 <p>Each score can be obtained using a function of the form <code>Score[score_name]()</code>, or directly saved in the Seurat object using the <code>AddScore[score_name]()</code> counterpart:</p>
@@ -199,7 +199,7 @@
 <span></span>
 <span><span class="co"># or save the score in the Seurat object</span></span>
 <span><span class="va">seu</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/score-regressPC.html">AddScoreRegressPC</a></span><span class="op">(</span><span class="va">seu</span>, integration <span class="op">=</span> <span class="st">"unintegrated"</span>, reduction <span class="op">=</span> <span class="st">"pca"</span><span class="op">)</span></span></code></pre></div>
-<p>The <code>AddScore</code> functions have an advantage over the <code>Score</code> functions. They allow to then scale the scores between zero and one and to standardize their direction (the closer to one, always the better), improving interpretability. Then, scores can be plotted to readily compare the different integrations:</p>
+<p>The <code>AddScore</code> functions have an advantage over the <code>Score</code> functions. They allow to then scale the scores between zero and one and to standardize their direction (the closer to one, always the better), facilitating their readability. Scores can eventually be plotted to readily compare the different integrations:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># scale</span></span>
 <span><span class="va">seu</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/ScaleScores.html">ScaleScores</a></span><span class="op">(</span><span class="va">seu</span><span class="op">)</span></span>

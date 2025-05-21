@@ -66,7 +66,7 @@
 <span>  include.score <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  exclude.score <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  recompute.overall.scores <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  rescale <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  rescale <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"rank"</span>, <span class="st">"score"</span>, <span class="st">"none"</span><span class="op">)</span>,</span>
 <span>  batch.coeff <span class="op">=</span> <span class="fl">0.4</span>,</span>
 <span>  bio.coeff <span class="op">=</span> <span class="fl">0.6</span>,</span>
 <span>  point.max.size <span class="op">=</span> <span class="fl">20L</span>,</span>
@@ -126,15 +126,18 @@ value (<code>NULL</code>) enable to include them all.</p></dd>
 
 <dt id="arg-recompute-overall-scores">recompute.overall.scores<a class="anchor" aria-label="anchor" href="#arg-recompute-overall-scores"></a></dt>
 <dd><p>whether to recompute overall scores. Useful
-when there is a restriction on scores to plot. When <code>FALSE</code>,
+when some scores or integrations are excluded. When <code>FALSE</code>,
 coefficient parameters have no impact.</p></dd>
 
 
 <dt id="arg-rescale">rescale<a class="anchor" aria-label="anchor" href="#arg-rescale"></a></dt>
 <dd><p>whether to rescale each score between 0 and 1 using min-max
-normalisation before computing overall scores. This ensures that each metric
-equally contributes to the overall scores. Has no effect when
-<code>recompute.overall.scores = FALSE</code>. <code>TRUE by default</code></p></dd>
+normalisation before computing overall scores. One of 'rank' (default),
+'score' or 'none'. The first two enable rescaling on ranks and scores
+respectively, while 'none' disables rescaling. Rescaling ensures that each
+metric equally contributes to the overall scores. 'rank' is more stable to
+changes in integrations included. Has no effect when
+<code>recompute.overall.scores = FALSE</code>.</p></dd>
 
 
 <dt id="arg-batch-coeff">batch.coeff<a class="anchor" aria-label="anchor" href="#arg-batch-coeff"></a></dt>
@@ -163,6 +166,34 @@ installed</p></dd>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     <p>a ggplot object</p>
+    </div>
+    <div class="section level2">
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
+    <p>The <code>rescale</code> parameter controls how scores are rescaled prior to
+computing overall scores. Thus, when <code>rescale != 'none'</code>,
+<code>recompute.overall.scores</code> should be <code>TRUE</code> (default). Otherwise,
+the overall scores will no longer match the scores displayed on the plot.</p>
+<p>Albeit the min-max rescaling of scores in Luecken M.D. <em>et al.</em>, 2022 is
+achievable with <code>rescale = 'score'</code>, min-max rescaling on ranks
+(<code>rescale = 'rank'</code>) is the default. Indeed, it results in more stable
+rankings of overall scores when the list of integrations to plot is
+modified.</p>
+<p>To plot non-rescaled scores, make sure to use
+<code><a href="ScaleScores.html">ScaleScores</a>(..., rescale = "none")</code> beforehand. To plot rescaled
+scores however, the <code>rescale</code> parameter of <code><a href="ScaleScores.html">ScaleScores</a></code> has
+no impact on the scores obtained for plotting.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+    <p>Luecken, M. D., Büttner, M., Chaichoompu, K., Danese, A.,
+Interlandi, M., Mueller, M. F., Strobl, D. C., Zappia, L., Dugas, M.,
+Colomé-Tatché, M. &amp; Theis, F. J. Benchmarking atlas-level data integration in
+single-cell genomics. Nat Methods 19, 41–50 (2021).
+<a href="https://doi.org/10.1038/s41592-021-01336-8" class="external-link">DOI</a></p>
+    </div>
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p><code><a href="ScaleScores.html">ScaleScores()</a></code></p></div>
     </div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

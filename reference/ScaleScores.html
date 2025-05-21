@@ -67,7 +67,7 @@ respectively). This is also a prerequisite for plotting.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">ScaleScores</span><span class="op">(</span></span>
 <span>  <span class="va">object</span>,</span>
 <span>  ref <span class="op">=</span> <span class="st">"Unintegrated"</span>,</span>
-<span>  rescale <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  rescale <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"none"</span>, <span class="st">"rank"</span>, <span class="st">"score"</span><span class="op">)</span>,</span>
 <span>  batch.coeff <span class="op">=</span> <span class="fl">0.4</span>,</span>
 <span>  bio.coeff <span class="op">=</span> <span class="fl">0.6</span></span>
 <span><span class="op">)</span></span></code></pre></div>
@@ -88,8 +88,11 @@ Useful for PCA regression (and density) and cell cycle conservation scores.</p><
 
 <dt id="arg-rescale">rescale<a class="anchor" aria-label="anchor" href="#arg-rescale"></a></dt>
 <dd><p>whether to rescale each score between 0 and 1 using min-max
-normalisation before computing overall scores. This ensures that each metric
-equally contributes to the overall scores. <code>TRUE by default</code></p></dd>
+normalisation before computing overall scores. One of 'none' (default, no
+rescaling), 'rank' or 'score', corresponding to no min-max normalisation of
+ranks or scores respectively. Beware that the argument of
+<code><a href="PlotScores.html">PlotScores()</a></code> <strong>overrides the choice here</strong> (see
+<strong>Details</strong> sections).</p></dd>
 
 
 <dt id="arg-batch-coeff">batch.coeff<a class="anchor" aria-label="anchor" href="#arg-batch-coeff"></a></dt>
@@ -102,6 +105,16 @@ scores in the overall score.</p></dd>
 in the overall score.</p></dd>
 
 </dl></div>
+    <div class="section level2">
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
+    <p>It is recommended to keep the default parameter <code>rescale = "none"</code> to
+retain the possibility to plot scores without min-max rescaling later with
+<code><a href="PlotScores.html">PlotScores()</a></code>.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p><code><a href="PlotScores.html">PlotScores()</a></code> for further details on rescaling</p></div>
+    </div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
