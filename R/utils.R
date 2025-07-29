@@ -803,3 +803,8 @@ CreateIntegrationGroups <- function(object, layers, scale.layer) {
   return(groups)
 }
 ############
+
+#' @method as.Graph Graph
+as.Graph.Graph <- function(x, ...) {
+  return(x)
+}

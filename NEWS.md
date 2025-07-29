@@ -1,5 +1,7 @@
 # SeuratIntegrate (development version)
 
+* Add method to preserve a `Graph` object's attributes when using `as.Graph` on
+a `Graph` object
 * Fix deprecation warning in `GetNeighborsPerBatch` (`Graph` method)
 * Minor fixes in docstrings
 
