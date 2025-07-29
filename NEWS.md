@@ -1,9 +1,14 @@
 # SeuratIntegrate (development version)
 
+* Created a first set of unit tests covering `utils.R` (testthat)
+
 * Add method to preserve a `Graph` object's attributes when using `as.Graph` on
 a `Graph` object
+
 * Fix deprecation warning in `GetNeighborsPerBatch` (`Graph` method)
+
 * Minor fixes in docstrings
+
 
 # SeuratIntegrate 0.4.1
 
