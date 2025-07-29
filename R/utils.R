@@ -185,34 +185,6 @@ symmetrize.pmin.sparse <- function(i, j, x, height) {
 
 }
 
-#' Normalise a matrix using L2 norm
-#'
-#' @description
-#' Normalise the rows or columns of a matrix using L2 norm
-#'
-#' @param mat a matrix (sparse or dense)
-#' @param MARGIN one of 1 or 2, corresponding to normalisation per rows and
-#' columns respectively
-#'
-#' @return the matrix with normalised rows or columns
-#'
-#' @importFrom rlang abort
-#' @importFrom Matrix rowSums colSums
-#' @note
-#' Adapted from \href{https://github.com/satijalab/seurat/blob/1549dcb3075eaeac01c925c4b4bb73c73450fc50/R/utilities.R#L1941-L1956}{Seurat:::L2Norm}
-#' @export
-
-NormaliseL2 <- function(mat, MARGIN = 1) {
-  marSums <- switch (MARGIN,
-                     `1` = rowSums,
-                     `2` = colSums,
-                     NULL
-  ) %||% abort(paste(sQuote(MARGIN), "is not a correct value for 'MARGIN'.",
-                     "Possible values are 1 (rows) or 2 (columns)"))
-  mat.norm <- sweep(mat, MARGIN = MARGIN, STATS = sqrt(marSums(mat^2)), FUN = `/`)
-  mat.norm[!is.finite(mat.norm)] <- 0
-  return(mat.norm)
-}
 ################################################################################
 ################################     NN cut     ################################
 #' Remove excessive number of neighbours in a knn graph
@@ -764,6 +736,36 @@ choose_matrix_format <- function(mat) {
   return(mat)
 }
 
+################################################################################
+###########################    Seurat extensions    ############################
+#' Normalise a matrix using L2 norm
+#'
+#' @description
+#' Normalise the rows or columns of a matrix using L2 norm
+#'
+#' @param mat a matrix (sparse or dense)
+#' @param MARGIN one of 1 or 2, corresponding to normalisation per rows and
+#' columns respectively
+#'
+#' @return the matrix with normalised rows or columns
+#'
+#' @importFrom rlang abort
+#' @importFrom Matrix rowSums colSums
+#' @note
+#' Adapted from \href{https://github.com/satijalab/seurat/blob/1549dcb3075eaeac01c925c4b4bb73c73450fc50/R/utilities.R#L1941-L1956}{Seurat:::L2Norm}
+#' @export
+
+NormaliseL2 <- function(mat, MARGIN = 1) {
+  marSums <- switch (MARGIN,
+                     `1` = rowSums,
+                     `2` = colSums,
+                     NULL
+  ) %||% abort(paste(sQuote(MARGIN), "is not a correct value for 'MARGIN'.",
+                     "Possible values are 1 (rows) or 2 (columns)"))
+  mat.norm <- sweep(mat, MARGIN = MARGIN, STATS = sqrt(marSums(mat^2)), FUN = `/`)
+  mat.norm[!is.finite(mat.norm)] <- 0
+  return(mat.norm)
+}
 
 # Creates data.frame with cell group assignments for integration
 # uses SCT models if SCTAssay and layers otherwise
