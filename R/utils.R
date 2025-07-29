@@ -725,12 +725,13 @@ n_zeros_mat <- function(mat) {
 #' @noRd
 choose_matrix_format <- function(mat) {
   max_int_32bit <- 2^31 - 1
-  if (all(c(ncol(mat), nrow(mat)) <= max_int_32bit)) { # should always be TRUE
+  if (all(c(ncol(mat), nrow(mat)) <= max_int_32bit) & length(mat) > 0) { # should always be TRUE
     n_0s <- n_zeros_mat(mat = mat)
-    if ( (n_0s > max_int_32bit) | (n_0s/length(mat) < .35) ) {
+    n_not0s <- length(mat) - n_0s
+    if ( (n_not0s > max_int_32bit) | (n_0s/length(mat) < .35) ) {
       mat <- as.matrix(mat)
     } else {
-      as.dgcmatrix(mat)
+      mat <- as.dgcmatrix(mat)
     }
   }
   return(mat)

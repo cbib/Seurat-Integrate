@@ -1,5 +1,7 @@
 # SeuratIntegrate (development version)
 
+* Fix `choose_matrix_format()` (`utils.R`)
+
 * Created a first set of unit tests covering `utils.R` (testthat)
 
 * Add method to preserve a `Graph` object's attributes when using `as.Graph` on
