@@ -526,7 +526,7 @@ setMethod("GetNeighborsPerBatch", c("Seurat", "data.frame"),
 #' @usage NULL
 setMethod("GetNeighborsPerBatch", "Graph",
   function(object, batch.var, count.self) {
-    knnmat <- as.dgcmatrix(object > 0)
+    knnmat <- as.dgcmatrix(as(object > 0, 'dsparseMatrix'))
     GetNeighborsPerBatch(object = knnmat, batch.var = batch.var,
                          count.self = count.self)
 })

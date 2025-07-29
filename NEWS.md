@@ -1,4 +1,7 @@
-<!-- # SeuratIntegrate (development version) -->
+# SeuratIntegrate (development version)
+
+* Fix deprecation warning in `GetNeighborsPerBatch` (`Graph` method)
+* Minor fixes in docstrings
 
 # SeuratIntegrate 0.4.1
 
