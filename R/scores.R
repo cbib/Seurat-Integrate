@@ -299,7 +299,7 @@ compute.overall.scores <- function(scaled.scores, batch.scores, bio.scores,
 #' normalisation before computing overall scores. One of 'none' (default, no
 #' rescaling), 'rank' or 'score', corresponding to no min-max normalisation of
 #' ranks or scores respectively. Beware that the argument of
-#' \code{\link{PlotScores()}} \strong{overrides the choice here} (see
+#' \code{\link{PlotScores}()} \strong{overrides the choice here} (see
 #' \strong{Details} sections).
 #' @param batch.coeff the weight of batch correction performance evaluation
 #' scores in the overall score.
@@ -309,9 +309,9 @@ compute.overall.scores <- function(scaled.scores, batch.scores, bio.scores,
 #' @details
 #' It is recommended to keep the default parameter \code{rescale = "none"} to
 #' retain the possibility to plot scores without min-max rescaling later with
-#' \code{\link{PlotScores()}}.
+#' \code{\link{PlotScores}()}.
 #'
-#' @seealso \code{\link{PlotScores()}} for further details on rescaling
+#' @seealso \code{\link{PlotScores}()} for further details on rescaling
 #'
 #' @importFrom SeuratObject Misc
 #' @importFrom dplyr %>% select arrange filter summarise across mutate bind_rows rowwise c_across ungroup case_when
@@ -528,7 +528,7 @@ IntegrationScores <- function(object, scaled = FALSE) {
 #' scores however, the \code{rescale} parameter of \code{\link{ScaleScores}} has
 #' no impact on the scores obtained for plotting.
 #'
-#' @seealso \code{\link{ScaleScores()}}
+#' @seealso \code{\link{ScaleScores}()}
 #'
 #' @references Luecken, M. D., Büttner, M., Chaichoompu, K., Danese, A.,
 #' Interlandi, M., Mueller, M. F., Strobl, D. C., Zappia, L., Dugas, M.,

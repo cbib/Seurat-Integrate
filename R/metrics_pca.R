@@ -528,7 +528,7 @@ AddScoreRegressPC.CellCycle <- function(object, integration,
 #'
 #' head(obj[[]])
 #' }
-#' @seealso \code{\link{CellCycleScoring}} to compute cc scores on the whole
+#' @seealso \code{\link[Seurat]{CellCycleScoring}} to compute cc scores on the whole
 #' dataset.
 
 CellCycleScoringPerBatch <- function(object, batch.var = NULL,

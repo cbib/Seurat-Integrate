@@ -109,5 +109,5 @@ single-cell genomics. Nat Methods 19, 41–50 (2021).
 \href{https://doi.org/10.1038/s41592-021-01336-8}{DOI}
 }
 \seealso{
-\code{\link{ScaleScores()}}
+\code{\link{ScaleScores}()}
 }

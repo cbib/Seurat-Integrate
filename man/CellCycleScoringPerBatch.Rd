@@ -61,6 +61,6 @@ head(obj[[]])
 }
 }
 \seealso{
-\code{\link{CellCycleScoring}} to compute cc scores on the whole
+\code{\link[Seurat]{CellCycleScoring}} to compute cc scores on the whole
 dataset.
 }

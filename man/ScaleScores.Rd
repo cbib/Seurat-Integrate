@@ -22,7 +22,7 @@ Useful for PCA regression (and density) and cell cycle conservation scores.}
 normalisation before computing overall scores. One of 'none' (default, no
 rescaling), 'rank' or 'score', corresponding to no min-max normalisation of
 ranks or scores respectively. Beware that the argument of
-\code{\link{PlotScores()}} \strong{overrides the choice here} (see
+\code{\link{PlotScores}()} \strong{overrides the choice here} (see
 \strong{Details} sections).}
 
 \item{batch.coeff}{the weight of batch correction performance evaluation
@@ -40,8 +40,8 @@ respectively). This is also a prerequisite for plotting.
 \details{
 It is recommended to keep the default parameter \code{rescale = "none"} to
 retain the possibility to plot scores without min-max rescaling later with
-\code{\link{PlotScores()}}.
+\code{\link{PlotScores}()}.
 }
 \seealso{
-\code{\link{PlotScores()}} for further details on rescaling
+\code{\link{PlotScores}()} for further details on rescaling
 }
