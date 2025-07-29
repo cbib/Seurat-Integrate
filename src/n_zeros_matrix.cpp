@@ -8,8 +8,8 @@ int64_t n_zeros_dense_mat(const arma::mat &mat) {
 }
 
 // [[Rcpp::export]]
-int64_t n_zeros_sparse_mat(const arma::sp_mat &mat) {
-  int64_t count = mat.n_elem - mat.n_nonzero;
+int64_t n_zeros_sparse_mat(arma::sp_mat &mat) {
+  int64_t count = mat.clean(0).n_elem - mat.n_nonzero;
   return count;
 }
 

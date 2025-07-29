@@ -1,5 +1,9 @@
 # SeuratIntegrate (development version)
 
+* Fix overestimation of number of zeros in sparse matrices: remaining 0s in the
+matrix values are discarded before counting non-zero values
+(`src/n_zeros_matrix.cpp`)
+
 * Fix `choose_matrix_format()` (`utils.R`)
 
 * Created a first set of unit tests covering `utils.R` (testthat)
