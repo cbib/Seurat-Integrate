@@ -364,7 +364,7 @@ setMethod(".cut.knn", "Neighbor",
             return(object)
           })
 
-#' Very similar to .cut.knn.Matrix, but doesn't contruct the trimmed knn network
+#' Very similar to .cut.knn.Matrix, but doesn't construct the trimmed knn network
 #' @description
 #' Requires that all cells have at least k.max neighbors
 #'
