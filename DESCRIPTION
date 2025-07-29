@@ -63,7 +63,8 @@ Suggests:
     Rfast,
     parallelDist,
     kBET,
-    ggforce
+    ggforce,
+    testthat (>= 3.0.0)
 Collate: 
     'Combat.R'
     'Harmony.R'
@@ -109,3 +110,4 @@ Remotes: SeuratData=github::satijalab/seurat-data,
 LinkingTo: 
     Rcpp,
     RcppArmadillo
+Config/testthat/edition: 3

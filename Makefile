@@ -28,3 +28,6 @@ check:
 
 website:
 	Rscript -e 'pkgdown::build_site(pkg = ".")'
+
+test:
+	Rscript -e 'devtools::test(pkg = ".")'
