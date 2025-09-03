@@ -734,12 +734,12 @@ integration performances.</p>
 <span>          umap.method <span class="op">=</span> <span class="st">"umap-learn"</span>, n.epochs <span class="op">=</span> <span class="fl">200L</span>,</span>
 <span>          reduction.name <span class="op">=</span> <span class="st">"umap.bbknn"</span><span class="op">)</span> <span class="op">}</span></span>
 <span><span class="va">liver_small</span></span></code></pre></div>
-<pre><code><span><span class="co">## Warning: UNRELIABLE VALUE: Future (NULL) unexpectedly generated random numbers</span></span>
-<span><span class="co">## without specifying argument 'seed'. There is a risk that those random numbers</span></span>
-<span><span class="co">## are not statistically sound and the overall results might be invalid. To fix</span></span>
-<span><span class="co">## this, specify 'seed=TRUE'. This ensures that proper, parallel-safe random</span></span>
-<span><span class="co">## numbers are produced. To disable this check, use 'seed=NULL', or set option</span></span>
-<span><span class="co">## 'future.rng.onMisuse' to "ignore".</span></span></code></pre>
+<pre><code><span><span class="co">## Warning: UNRELIABLE VALUE: Future (&lt;unnamed-9&gt;) unexpectedly generated random</span></span>
+<span><span class="co">## numbers without specifying argument 'seed'. There is a risk that those random</span></span>
+<span><span class="co">## numbers are not statistically sound and the overall results might be invalid.</span></span>
+<span><span class="co">## To fix this, specify 'seed=TRUE'. This ensures that proper, parallel-safe</span></span>
+<span><span class="co">## random numbers are produced. To disable this check, use 'seed=NULL', or set</span></span>
+<span><span class="co">## option 'future.rng.onMisuse' to "ignore".</span></span></code></pre>
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://future.futureverse.org/reference/plan.html" class="external-link">plan</a></span><span class="op">(</span><span class="va">sequential</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
@@ -764,9 +764,9 @@ UMAP of BBKNN integration
 </p>
 </div>
 <details><summary><strong>Session info</strong>
-</summary><pre><code><span>  <span class="co">## R version 4.5.0 (2025-04-11)</span></span>
+</summary><pre><code><span>  <span class="co">## R version 4.5.1 (2025-06-13)</span></span>
 <span>  <span class="co">## Platform: x86_64-pc-linux-gnu</span></span>
-<span>  <span class="co">## Running under: Ubuntu 24.04.2 LTS</span></span>
+<span>  <span class="co">## Running under: Ubuntu 24.04.3 LTS</span></span>
 <span>  <span class="co">## </span></span>
 <span>  <span class="co">## Matrix products: default</span></span>
 <span>  <span class="co">## BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 </span></span>
@@ -785,61 +785,61 @@ UMAP of BBKNN integration
 <span>  <span class="co">## [1] stats     graphics  grDevices utils     datasets  methods   base     </span></span>
 <span>  <span class="co">## </span></span>
 <span>  <span class="co">## other attached packages:</span></span>
-<span>  <span class="co">## [1] future_1.49.0         dplyr_1.1.4           SeuratIntegrate_0.4.1</span></span>
-<span>  <span class="co">## [4] Seurat_5.3.0          SeuratObject_5.1.0    sp_2.2-0             </span></span>
+<span>  <span class="co">## [1] future_1.67.0         dplyr_1.1.4           SeuratIntegrate_0.4.1</span></span>
+<span>  <span class="co">## [4] Seurat_5.3.0          SeuratObject_5.2.0    sp_2.2-0             </span></span>
 <span>  <span class="co">## </span></span>
 <span>  <span class="co">## loaded via a namespace (and not attached):</span></span>
-<span>  <span class="co">##   [1] RcppAnnoy_0.0.22            splines_4.5.0              </span></span>
-<span>  <span class="co">##   [3] later_1.4.2                 batchelor_1.24.0           </span></span>
-<span>  <span class="co">##   [5] tibble_3.2.1                polyclip_1.10-7            </span></span>
-<span>  <span class="co">##   [7] XML_3.99-0.18               fastDummies_1.7.5          </span></span>
-<span>  <span class="co">##   [9] lifecycle_1.0.4             edgeR_4.6.2                </span></span>
-<span>  <span class="co">##  [11] globals_0.18.0              lattice_0.22-6             </span></span>
+<span>  <span class="co">##   [1] RcppAnnoy_0.0.22            splines_4.5.1              </span></span>
+<span>  <span class="co">##   [3] later_1.4.4                 batchelor_1.24.0           </span></span>
+<span>  <span class="co">##   [5] tibble_3.3.0                polyclip_1.10-7            </span></span>
+<span>  <span class="co">##   [7] XML_3.99-0.19               fastDummies_1.7.5          </span></span>
+<span>  <span class="co">##   [9] lifecycle_1.0.4             edgeR_4.6.3                </span></span>
+<span>  <span class="co">##  [11] globals_0.18.0              lattice_0.22-7             </span></span>
 <span>  <span class="co">##  [13] MASS_7.3-65                 backports_1.5.0            </span></span>
-<span>  <span class="co">##  [15] magrittr_2.0.3              limma_3.64.0               </span></span>
-<span>  <span class="co">##  [17] plotly_4.10.4               sass_0.4.10                </span></span>
+<span>  <span class="co">##  [15] magrittr_2.0.3              limma_3.64.3               </span></span>
+<span>  <span class="co">##  [17] plotly_4.11.0               sass_0.4.10                </span></span>
 <span>  <span class="co">##  [19] rmarkdown_2.29              jquerylib_0.1.4            </span></span>
 <span>  <span class="co">##  [21] yaml_2.3.10                 httpuv_1.6.16              </span></span>
 <span>  <span class="co">##  [23] glmGamPoi_1.20.0            sctransform_0.4.2          </span></span>
 <span>  <span class="co">##  [25] spam_2.11-1                 spatstat.sparse_3.1-0      </span></span>
-<span>  <span class="co">##  [27] reticulate_1.42.0           DBI_1.2.3                  </span></span>
-<span>  <span class="co">##  [29] cowplot_1.1.3               pbapply_1.7-2              </span></span>
+<span>  <span class="co">##  [27] reticulate_1.43.0           DBI_1.2.3                  </span></span>
+<span>  <span class="co">##  [29] cowplot_1.2.0               pbapply_1.7-4              </span></span>
 <span>  <span class="co">##  [31] RColorBrewer_1.1-3          ResidualMatrix_1.18.0      </span></span>
 <span>  <span class="co">##  [33] abind_1.4-8                 Rtsne_0.17                 </span></span>
-<span>  <span class="co">##  [35] GenomicRanges_1.60.0        purrr_1.0.4                </span></span>
+<span>  <span class="co">##  [35] GenomicRanges_1.60.0        purrr_1.1.0                </span></span>
 <span>  <span class="co">##  [37] BiocGenerics_0.54.0         tweenr_2.0.3               </span></span>
 <span>  <span class="co">##  [39] rappdirs_0.3.3              sva_3.56.0                 </span></span>
 <span>  <span class="co">##  [41] GenomeInfoDbData_1.2.14     IRanges_2.42.0             </span></span>
 <span>  <span class="co">##  [43] S4Vectors_0.46.0            ggrepel_0.9.6              </span></span>
 <span>  <span class="co">##  [45] irlba_2.3.5.1               listenv_0.9.1              </span></span>
-<span>  <span class="co">##  [47] spatstat.utils_3.1-4        genefilter_1.90.0          </span></span>
+<span>  <span class="co">##  [47] spatstat.utils_3.1-5        genefilter_1.90.0          </span></span>
 <span>  <span class="co">##  [49] goftest_1.2-3               RSpectra_0.16-2            </span></span>
-<span>  <span class="co">##  [51] spatstat.random_3.4-1       annotate_1.86.0            </span></span>
-<span>  <span class="co">##  [53] fitdistrplus_1.2-2          parallelly_1.44.0          </span></span>
-<span>  <span class="co">##  [55] pkgdown_2.1.2               DelayedMatrixStats_1.30.0  </span></span>
+<span>  <span class="co">##  [51] spatstat.random_3.4-1       annotate_1.86.1            </span></span>
+<span>  <span class="co">##  [53] fitdistrplus_1.2-4          parallelly_1.45.1          </span></span>
+<span>  <span class="co">##  [55] pkgdown_2.1.3               DelayedMatrixStats_1.30.0  </span></span>
 <span>  <span class="co">##  [57] codetools_0.2-20            DelayedArray_0.34.1        </span></span>
-<span>  <span class="co">##  [59] ggforce_0.4.2               scuttle_1.18.0             </span></span>
+<span>  <span class="co">##  [59] ggforce_0.5.0               scuttle_1.18.0             </span></span>
 <span>  <span class="co">##  [61] tidyselect_1.2.1            UCSC.utils_1.4.0           </span></span>
 <span>  <span class="co">##  [63] farver_2.1.2                ScaledMatrix_1.16.0        </span></span>
-<span>  <span class="co">##  [65] matrixStats_1.5.0           stats4_4.5.0               </span></span>
-<span>  <span class="co">##  [67] spatstat.explore_3.4-2      jsonlite_2.0.0             </span></span>
+<span>  <span class="co">##  [65] matrixStats_1.5.0           stats4_4.5.1               </span></span>
+<span>  <span class="co">##  [67] spatstat.explore_3.5-2      jsonlite_2.0.0             </span></span>
 <span>  <span class="co">##  [69] BiocNeighbors_2.2.0         progressr_0.15.1           </span></span>
-<span>  <span class="co">##  [71] ggridges_0.5.6              survival_3.8-3             </span></span>
-<span>  <span class="co">##  [73] systemfonts_1.2.3           tools_4.5.0                </span></span>
+<span>  <span class="co">##  [71] ggridges_0.5.7              survival_3.8-3             </span></span>
+<span>  <span class="co">##  [73] systemfonts_1.2.3           tools_4.5.1                </span></span>
 <span>  <span class="co">##  [75] ragg_1.4.0                  ica_1.0-3                  </span></span>
-<span>  <span class="co">##  [77] Rcpp_1.0.14                 glue_1.8.0                 </span></span>
-<span>  <span class="co">##  [79] gridExtra_2.3               SparseArray_1.8.0          </span></span>
-<span>  <span class="co">##  [81] mgcv_1.9-1                  xfun_0.52                  </span></span>
-<span>  <span class="co">##  [83] MatrixGenerics_1.20.0       GenomeInfoDb_1.44.0        </span></span>
+<span>  <span class="co">##  [77] Rcpp_1.1.0                  glue_1.8.0                 </span></span>
+<span>  <span class="co">##  [79] gridExtra_2.3               SparseArray_1.8.1          </span></span>
+<span>  <span class="co">##  [81] mgcv_1.9-3                  xfun_0.53                  </span></span>
+<span>  <span class="co">##  [83] MatrixGenerics_1.20.0       GenomeInfoDb_1.44.2        </span></span>
 <span>  <span class="co">##  [85] withr_3.0.2                 fastmap_1.2.0              </span></span>
 <span>  <span class="co">##  [87] digest_0.6.37               rsvd_1.0.5                 </span></span>
 <span>  <span class="co">##  [89] R6_2.6.1                    mime_0.13                  </span></span>
-<span>  <span class="co">##  [91] textshaping_1.0.1           scattermore_1.2            </span></span>
-<span>  <span class="co">##  [93] tensor_1.5                  RSQLite_2.3.11             </span></span>
-<span>  <span class="co">##  [95] spatstat.data_3.1-6         RhpcBLASctl_0.23-42        </span></span>
+<span>  <span class="co">##  [91] textshaping_1.0.2           scattermore_1.2            </span></span>
+<span>  <span class="co">##  [93] tensor_1.5.1                RSQLite_2.4.3              </span></span>
+<span>  <span class="co">##  [95] spatstat.data_3.1-8         RhpcBLASctl_0.23-42        </span></span>
 <span>  <span class="co">##  [97] tidyr_1.3.1                 generics_0.1.4             </span></span>
-<span>  <span class="co">##  [99] data.table_1.17.2           httr_1.4.7                 </span></span>
-<span>  <span class="co">## [101] htmlwidgets_1.6.4           S4Arrays_1.8.0             </span></span>
+<span>  <span class="co">##  [99] data.table_1.17.8           httr_1.4.7                 </span></span>
+<span>  <span class="co">## [101] htmlwidgets_1.6.4           S4Arrays_1.8.1             </span></span>
 <span>  <span class="co">## [103] uwot_0.2.3                  pkgconfig_2.0.3            </span></span>
 <span>  <span class="co">## [105] gtable_0.3.6                blob_1.2.4                 </span></span>
 <span>  <span class="co">## [107] lmtest_0.9-40               SingleCellExperiment_1.30.1</span></span>
@@ -847,33 +847,33 @@ UMAP of BBKNN integration
 <span>  <span class="co">## [111] dotCall64_1.2               scales_1.4.0               </span></span>
 <span>  <span class="co">## [113] Biobase_2.68.0              png_0.1-8                  </span></span>
 <span>  <span class="co">## [115] lisi_1.0                    harmony_1.2.3              </span></span>
-<span>  <span class="co">## [117] spatstat.univar_3.1-3       knitr_1.50                 </span></span>
+<span>  <span class="co">## [117] spatstat.univar_3.1-4       knitr_1.50                 </span></span>
 <span>  <span class="co">## [119] reshape2_1.4.4              nlme_3.1-168               </span></span>
 <span>  <span class="co">## [121] cachem_1.1.0                zoo_1.8-14                 </span></span>
 <span>  <span class="co">## [123] stringr_1.5.1               KernSmooth_2.23-26         </span></span>
-<span>  <span class="co">## [125] parallel_4.5.0              miniUI_0.1.2               </span></span>
+<span>  <span class="co">## [125] parallel_4.5.1              miniUI_0.1.2               </span></span>
 <span>  <span class="co">## [127] AnnotationDbi_1.70.0        desc_1.4.3                 </span></span>
-<span>  <span class="co">## [129] pillar_1.10.2               grid_4.5.0                 </span></span>
+<span>  <span class="co">## [129] pillar_1.11.0               grid_4.5.1                 </span></span>
 <span>  <span class="co">## [131] vctrs_0.6.5                 RANN_2.6.2                 </span></span>
-<span>  <span class="co">## [133] promises_1.3.2              BiocSingular_1.24.0        </span></span>
+<span>  <span class="co">## [133] promises_1.3.3              BiocSingular_1.24.0        </span></span>
 <span>  <span class="co">## [135] distances_0.1.12            beachmat_2.24.0            </span></span>
 <span>  <span class="co">## [137] xtable_1.8-4                cluster_2.1.8.1            </span></span>
-<span>  <span class="co">## [139] evaluate_1.0.3              locfit_1.5-9.12            </span></span>
-<span>  <span class="co">## [141] cli_3.6.5                   compiler_4.5.0             </span></span>
+<span>  <span class="co">## [139] evaluate_1.0.5              locfit_1.5-9.12            </span></span>
+<span>  <span class="co">## [141] cli_3.6.5                   compiler_4.5.1             </span></span>
 <span>  <span class="co">## [143] rlang_1.1.6                 crayon_1.5.3               </span></span>
-<span>  <span class="co">## [145] future.apply_1.11.3         labeling_0.4.3             </span></span>
+<span>  <span class="co">## [145] future.apply_1.20.0         labeling_0.4.3             </span></span>
 <span>  <span class="co">## [147] plyr_1.8.9                  forcats_1.0.0              </span></span>
 <span>  <span class="co">## [149] fs_1.6.6                    stringi_1.8.7              </span></span>
 <span>  <span class="co">## [151] viridisLite_0.4.2           deldir_2.0-4               </span></span>
-<span>  <span class="co">## [153] BiocParallel_1.42.0         Biostrings_2.76.0          </span></span>
-<span>  <span class="co">## [155] lazyeval_0.2.2              spatstat.geom_3.4-1        </span></span>
+<span>  <span class="co">## [153] BiocParallel_1.42.1         Biostrings_2.76.0          </span></span>
+<span>  <span class="co">## [155] lazyeval_0.2.2              spatstat.geom_3.5-0        </span></span>
 <span>  <span class="co">## [157] Matrix_1.7-3                RcppHNSW_0.6.0             </span></span>
-<span>  <span class="co">## [159] patchwork_1.3.0             bit64_4.6.0-1              </span></span>
+<span>  <span class="co">## [159] patchwork_1.3.2             bit64_4.6.0-1              </span></span>
 <span>  <span class="co">## [161] sparseMatrixStats_1.20.0    ggplot2_3.5.2              </span></span>
-<span>  <span class="co">## [163] statmod_1.5.0               KEGGREST_1.48.0            </span></span>
-<span>  <span class="co">## [165] shiny_1.10.0                SummarizedExperiment_1.38.1</span></span>
+<span>  <span class="co">## [163] statmod_1.5.0               KEGGREST_1.48.1            </span></span>
+<span>  <span class="co">## [165] shiny_1.11.1                SummarizedExperiment_1.38.1</span></span>
 <span>  <span class="co">## [167] ROCR_1.0-11                 memoise_2.0.1              </span></span>
-<span>  <span class="co">## [169] igraph_2.1.4                broom_1.0.8                </span></span>
+<span>  <span class="co">## [169] igraph_2.1.4                broom_1.0.9                </span></span>
 <span>  <span class="co">## [171] bslib_0.9.0                 bit_4.6.0</span></span></code></pre>
 </details>
 </div>
@@ -888,7 +888,7 @@ UMAP of BBKNN integration
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
 </div>
 
     </footer>
