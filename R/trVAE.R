@@ -309,7 +309,7 @@ trVAEIntegration <- function(
       Matrix::t( GetAssayData(object, layer = layer)[features, ] )
     ),
     obs = reticulate::r_to_py(groups[, c(groups.name, surgery.name), drop = FALSE]),
-    var = reticulate::r_to_py(features)
+    var = r_to_py(data.frame(features = features))
   )
 
   adata <- sca$dataset$remove_sparsity(adata)

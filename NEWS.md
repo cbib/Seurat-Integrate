@@ -1,5 +1,7 @@
 # SeuratIntegrate (development version)
 
+* Fix AnnData initialization: the `var` argument for features is now a `data.frame`
+
 * Fix overestimation of number of zeros in sparse matrices: remaining 0s in the
 matrix values are discarded before counting non-zero values
 (`src/n_zeros_matrix.cpp`)

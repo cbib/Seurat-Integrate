@@ -203,7 +203,7 @@ scVIIntegration <- function(
       t( GetAssayData(object, layer = layer)[features ,] )
     ),
     obs = r_to_py(groups),
-    var = r_to_py(features)
+    var = r_to_py(data.frame(features = features))
   )
 
   args.call <- c(list(adata = adata, labels_key = r_to_py(labels.name),

@@ -203,7 +203,7 @@ bbknnIntegration <- function(
       Matrix::t(x = scaled.mat)
     ),
     obs = reticulate::r_to_py(x = groups[, groups.name, drop = FALSE]),
-    var = reticulate::r_to_py(x = features)
+    var = r_to_py(data.frame(features = features))
   )
   adata$X = adata$X$toarray()
   adata$obsm["X_pca"] = reticulate::r_to_py(x = X_pca)

@@ -258,7 +258,7 @@ scANVIIntegration <- function(
       t( GetAssayData(object, layer = layer)[features ,] )
     ),
     obs = r_to_py(groups),
-    var = r_to_py(features)
+    var = r_to_py(data.frame(features = features))
   )
   # ValueError raised if unlabeled_category = NULL/None => use unlikely cell label)
   labels.null <- labels.null %||% "Gloubi-boulga"
