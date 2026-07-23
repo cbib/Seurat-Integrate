@@ -82,6 +82,10 @@ SeuratIntegrate provides support to R- and Python-based integration methods. The
 
 ## Installation
 
+First, use the yaml files to creates environments using conda
+https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
+
+
 Install SeuratIntegrate from github directly:
 ```R
 if (!require("BiocManager", quietly = TRUE))
